@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dataset
+    xmlns="http://www.eol.org/transfer/content/0.3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/"
+    xmlns:adw="http://animaldiversity.ummz.umich.edu/morphology/"
+    xmlns:eol="http://www.eol.org/transfer/content/0.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	
+    xsi:schemaLocation=" PliC_3.0-AbstractModel.xsd">
+    <taxonRecord>
+		<TaxonRecodId>Ursus_maritimus</TaxonRecodId>
+		<dwc:taxonConceptID>1</dwc:taxonConceptID>
+		<abstract></abstract>
+		<dc:language>en</dc:language>
+		<audience></audience>
+		<audience></audience>
+		<Major></Major>
+		<Minor></Minor>
+		<dc:modified>2000-01-01T00:00:00</dc:modified>
+		<dateIssued></dateIssued>
+		<PreferredFlag></PreferredFlag>
+		<pubDate></pubDate>
+		<dc:created>2000-01-01T00:00:00</dc:created>
+		<dwc:ScientificName>Ursus maritimus</dwc:ScientificName>
+		<SynonymsUnstructured>Ursus maritimus marinus Pallas, 1776</SynonymsUnstructured>
+		<SynonymsUnstructured>Ursus maritimus maritimus Phipps, 1774</SynonymsUnstructured>
+		<NameUnstructured>polar bear</NameUnstructured>
+		<dwc:Kingdom>Animalia</dwc:Kingdom>
+        <dwc:Phylum>Chordata</dwc:Phylum>
+        <dwc:Class>Mammalia</dwc:Class>
+        <dwc:Order>Carnivora</dwc:Order>
+        <dwc:Family>Ursidae</dwc:Family>
+        <LifeForms>
+			<para>
+			The body of a polar bear is large and stocky, similar to that of a brown bear, except it lacks the shoulder hump. The head is relatively smaller than the heads of other bears and the neck is elongated. At the shoulder a polar bear can measure 1.6 m in height. Adult males weigh between 300-800 kg (660-1760 lbs) and can reach 2.5 m in length from tip of nose to tip of tail. Females are smaller, weighing 150 to 300 kg (330 to 660 lbs) and measuring 1.8 to 2 m in length. The pelage generally has a white appearance, but it can be yellowish in the summer due to oxidation or may even appear brown or gray, depending on the season and light conditions. Polar bear skin is black and the fur is actually clear, lacking in pigment. The white appearance is the result of light being refracted from the clear hair strands. The forepaws are broad and make excellent paddles while swimming. The soles of both hind and fore feet are furred for insulation and traction while walking on ice and snow. Polar bears have a plantigrade gait. Females have four functional mammae. (DeMaster and Stirling, 1981; Nowak, 1999)
+			</para>
+			<AncillaryData>
+				<dc:identifier>Ursus_maritimus/LifeForm</dc:identifier>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<agent role="author">Aren Gunderson</agent>
+				<agent role="editor">Jim Demastes</agent>
+				<agent role="editor">Tanya Dewey</agent>
+				<dcterms:created>2000-01-01T00:00:00</dcterms:created>
+				<dcterms:modified>2000-01-01T00:00:00</dcterms:modified>
+				<dc:title xml:lang="en">Physical Description</dc:title>
+				<dc:language>en</dc:language>
+				<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+				<dc:rights>©1995-2008, The Regents of the University of Michigan and its licensors</dc:rights>
+				<dcterms:rightsHolder>The Regents of the University of Michigan and its licensors</dcterms:rightsHolder>
+				<dcterms:bibliographicCitation>Gunderson, A. 2007. "Ursus maritimus" (On-line), Animal Diversity Web. Accessed May 01, 2008 at http://animaldiversity.ummz.umich.edu/site/accounts/information/Ursus_maritimus.html.</dcterms:bibliographicCitation>
+				<audience>General public</audience>
+				<subject></subject>
+				<dc:description xml:lang="en"></dc:description>
+				<reference>DeMaster, D., I. Stirling. 1981. *Ursus maritimus*. Mammalian Species, 145: 1-7.</reference>
+				<reference>Nowak, R. 1999. Walker's Mammals of the World. Baltimore and London: The Johns Hopkins University Press.</reference>
+			</AncillaryData> 
+		</LifeForms>
+        <Habitats>
+			<HabitatUnstructured>Polar bears are considered by many to be marine mammals. The name Ursus maritimus means maritime bear. Their preferred habitat is the pack ice of the Arctic Ocean. The ice edge and pressure ridges where fractures and refreezing occur provide the best hunting ground. Bears will travel as much as 1,000 km north and south, as the ice melts and freezes. During summer bears may remain on islands or coastlines with landfast ice, drift on ice flows, or get stranded on land where they are forced to endure warm weather. (DeMaster and Stirling, 1981; Nowak, 1999; Stirling and McEwan, 1975)
+			</HabitatUnstructured>
+			<AncillaryData>
+				<dc:identifier>Ursus_maritimus/Habitat</dc:identifier>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<agent role="author">Aren Gunderson</agent>
+				<agent role="editor">Jim Demastes</agent>
+				<agent role="editor">Tanya Dewey</agent>
+				<dcterms:created>2000-01-01T00:00:00</dcterms:created>
+				<dcterms:modified>2000-01-01T00:00:00</dcterms:modified>
+				<dc:title xml:lang="en">Habitat</dc:title>
+				<dc:language>en</dc:language>
+				<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+				<dc:rights>©1995-2008, The Regents of the University of Michigan and its licensors</dc:rights>
+				<dcterms:rightsHolder>The Regents of the University of Michigan and its licensors</dcterms:rightsHolder>
+				<dcterms:bibliographicCitation>Gunderson, A. 2007. "Ursus maritimus" (On-line), Animal Diversity Web. Accessed May 01, 2008 at http://animaldiversity.ummz.umich.edu/site/accounts/information/Ursus_maritimus.html.</dcterms:bibliographicCitation>
+				<audience>General public</audience>
+				<audience>Children</audience>
+				<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Habitat</subject>
+				<dc:description xml:lang="en"> Habitat </dc:description>
+				<reference>DeMaster, D., I. Stirling. 1981. *Ursus maritimus*. Mammalian Species, 145: 1-7.</reference>
+				<reference>Nowak, R. 1999. Walker's Mammals of the World. Baltimore and London: The Johns Hopkins University Press.</reference>
+				<reference>Stirling, I., E. McEwan. 1975. The caloric value of whole ringed seals (*Phoca hispida*) in relation to polar bear (*Ursus maritimus*) ecology and hunting behavior. Canadian Journal of Zoology, 53: 1021-1027.</reference>
+			</AncillaryData>			
+			<AncillaryData>
+				<dc:identifier>susan_hoffman/polarbear.jpg</dc:identifier>
+				<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+				<mimeType>image/jpeg</mimeType>
+				<agent homepage="http://zoology.muohio.edu/hoffman/" role="photographer">Susan Hoffman</agent>
+				<dc:title xml:lang="en">Ursus maritimus (polar bear)</dc:title>
+				<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+				<dc:rights>This resource may not be downloaded and used without permission of the copyright holder except for educational fair use.</dc:rights>
+				<dcterms:rightsHolder>Susan Hoffman</dcterms:rightsHolder>
+				<audience>General public</audience>
+				<audience>Children</audience>
+				<dc:description xml:lang="en">Polar bear</dc:description>
+				<mediaURL>http://animaldiversity.ummz.umich.edu/site/resources/susan_hoffman/polarbear.jpg/medium.jpg</mediaURL>
+				<thumbnailURL>http://animaldiversity.ummz.umich.edu/site/resources/susan_hoffman/polarbear.jpg/button.jpg</thumbnailURL>
+			</AncillaryData>
+        </Habitats>
+		<Distribution>
+			<DistributionArea>Polar bears have a circumpolar distribution. They range throughout the arctic region surrounding the North Pole. The limits of their range are determined by the ice pack of the Arctic Ocean and the landfast ice of surrounding coastal areas. Bears have been reported as far south as the southern tips of Greenland and Iceland. During the winter, polar bears will range along the southern edge of the ice pack or northern edge of ice formed off the coasts of the continents. Pregnant females will overwinter on the coastlines where denning habitat is available for bearing young. During the summer, bears will remain at the edge of the receding ice pack or on islands and coastal regions that retain landfast ice. Six different populations are recognized as: Wrangel Island and western Alaska, northern Alaska, the Canadian Arctic archipelago, Greenland, Svalbard-Franz Josef Land, and Central Siberia. (DeMaster and Stirling, 1981; Nowak, 1999).</DistributionArea>
+			<AncillaryData>
+				<dc:identifier>Ursus_maritimus/Distribution</dc:identifier>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<agent role="author">Aren Gunderson</agent>
+				<agent role="editor">Jim Demastes</agent>
+				<agent role="editor">Tanya Dewey</agent>
+				<dcterms:created>2000-01-01T00:00:00</dcterms:created>
+				<dcterms:modified>2000-01-01T00:00:00</dcterms:modified>
+				<dc:title xml:lang="en">Geographic Range</dc:title>
+				<dc:language>en</dc:language>
+				<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+				<dc:rights>©1995-2008, The Regents of the University of Michigan and its licensors</dc:rights>
+				<dcterms:rightsHolder>The Regents of the University of Michigan and its licensors</dcterms:rightsHolder>
+				<dcterms:bibliographicCitation>Gunderson, A. 2007. "Ursus maritimus" (On-line), Animal Diversity Web. Accessed May 01, 2008 at http://animaldiversity.ummz.umich.edu/site/accounts/information/Ursus_maritimus.html.</dcterms:bibliographicCitation>
+				<audience>General public</audience>
+				<audience>Children</audience>
+				<subject>Distribution</subject>
+				<dc:description xml:lang="en">Distribution Area</dc:description>
+				<reference>DeMaster, D., I. Stirling. 1981. *Ursus maritimus*. Mammalian Species, 145: 1-7.</reference>
+				<reference>Nowak, R. 1999. Walker's Mammals of the World. Baltimore and London: The Johns Hopkins University Press.</reference>
+			</AncillaryData>
+			<AncillaryData>
+				<dc:identifier>eva_hejda/eisbaerbaby.jpg</dc:identifier>
+				<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+				<mimeType>image/jpeg</mimeType>
+				<agent role="photographer">Eva Hejda</agent>
+				<dcterms:created>2002</dcterms:created>
+				<dc:title xml:lang="en">Ursus maritimus (polar bear)</dc:title>
+				<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+				<dc:rights>This resource may not be downloaded and used without permission of the copyright holder except for educational fair use.</dc:rights>
+				<dcterms:rightsHolder>Eva Hejda</dcterms:rightsHolder>
+				<audience>General public</audience>
+				<audience>Children</audience>
+				<dc:description xml:lang="en">Polar Bear cub (Thalarctos maritimus), captive</dc:description>
+				<mediaURL>http://animaldiversity.ummz.umich.edu/site/resources/eva_hejda/eisbaerbaby.jpg/medium.jpg</mediaURL>
+				<thumbnailURL>http://animaldiversity.ummz.umich.edu/site/resources/eva_hejda/eisbaerbaby.jpg/badge.jpg</thumbnailURL>
+				<location>Vienna Zoo, Austria</location>
+			</AncillaryData>
+		</Distribution>
+		<AncillaryData>
+            <dc:identifier>kerry_kilburn/polar_bear.jpg</dc:identifier>
+            <dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+            <mimeType>image/jpeg</mimeType>
+            <agent role="photographer">Dr. Kerry S. Kilburn</agent>
+            <dc:title xml:lang="en">Ursus maritimus (polar bear)</dc:title>
+            <license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+            <dc:rights>This resource may not be downloaded and used without permission of the copyright holder except for educational fair use.</dc:rights>
+            <dcterms:rightsHolder>Dr. Kerry S. Kilburn</dcterms:rightsHolder>
+            <audience>General public</audience>
+            <audience>Children</audience>
+            <dc:description xml:lang="en">profile, Rio Grande Zoo</dc:description>
+            <mediaURL>http://animaldiversity.ummz.umich.edu/site/resources/kerry_kilburn/polar_bear.jpg/medium.jpg</mediaURL>
+            <thumbnailURL>http://animaldiversity.ummz.umich.edu/site/resources/kerry_kilburn/polar_bear.jpg/badge.jpg</thumbnailURL>
+        </AncillaryData>
+        <reference url="http://endangered.fws.gov/wildlife.html">"Division of Endangered Species, Species Information" (On-line). Accessed Dec 5, 2001 at http://endangered.fws.gov/wildlife.html.</reference>
+        <reference>DeMaster, D., I. Stirling. 1981. *Ursus maritimus*. Mammalian Species, 145: 1-7.</reference>
+        <reference url="http://www.redlist.org/search/details.php?species=22823">Hilton-Taylor, C. 2000. "The 2000 IUCN Red List of Threatened Species" (On-line). Accessed Dec 5, 2001 at http://www.redlist.org/search/details.php?species=22823.</reference>
+        <reference>Nowak, R. 1999. Walker's Mammals of the World. Baltimore and London: The Johns Hopkins University Press.</reference>
+        <reference>Ramsey, M., I. Stirling. 1988. Reproductive biology and ecology of female polar bears (*Ursus maritimus*). Journal of Zoology, 214: 601-634.</reference>
+        <reference>Stirling, I., E. McEwan. 1975. The caloric value of whole ringed seals (*Phoca hispida*) in relation to polar bear (*Ursus maritimus*) ecology and hunting behavior. Canadian Journal of Zoology, 53: 1021-1027.</reference>
+        <reference>Stirling, I. 1974. Midsummer observations on the behavior of wild polar bears (*Ursus maritimus*). Canadian Journal of Zoology, 52: 1191-1198.</reference>
+        <reference>Talbot, S., G. Shields. 1996. Phylogeography of Brown Bears (Ursus arctos) of Alaska and Paraphyly within the Ursidae. Molecular Phylogenetics and Evolution, 5: 477-494.</reference>            
+    </taxonRecord>
+</dataset>

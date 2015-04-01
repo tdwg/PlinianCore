@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response xmlns="http://www.eol.org/transfer/content/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xsi:schemaLocation="http://www.eol.org/transfer/content/1.0 http://services.eol.org/schema/content_1_0.xsd">
+  <taxonConcept>
+    <taxonConceptID>328580</taxonConceptID>
+    <dwc:ScientificName>Ursus maritimus Phipps, 1774</dwc:ScientificName>
+    <commonName xml:lang="ar" eol_preferred="true">دب قطبي</commonName>
+    <commonName xml:lang="ar">دب أبيض</commonName>
+    <commonName xml:lang="ar">دب بحري</commonName>
+    <commonName xml:lang="de" eol_preferred="true">Polarbär</commonName>
+    <commonName xml:lang="de">Eisbär</commonName>
+    <commonName xml:lang="el" eol_preferred="true">Πολική αρκούδα</commonName>
+    <commonName xml:lang="en" eol_preferred="true">polar bear</commonName>
+    <commonName xml:lang="en">white bear</commonName>
+    <commonName xml:lang="es" eol_preferred="true">Oso polar</commonName>
+    <commonName xml:lang="fr" eol_preferred="true">ours blanc</commonName>
+    <commonName xml:lang="fr">Ours polaire</commonName>
+    <commonName xml:lang="lt" eol_preferred="true">Baltasis lokys</commonName>
+    <commonName xml:lang="nb" eol_preferred="true">Isbjørn</commonName>
+    <commonName xml:lang="nl" eol_preferred="true">Ijsbeer</commonName>
+    <commonName xml:lang="nn" eol_preferred="true">Isbjørn</commonName>
+    <commonName xml:lang="pl" eol_preferred="true">niedźwiedź polarny</commonName>
+    <commonName xml:lang="ru" eol_preferred="true">белый медведь</commonName>
+    <commonName xml:lang="sl" eol_preferred="true">beli medved</commonName>
+    <commonName xml:lang="tr" eol_preferred="true">Kutup ayısı</commonName>
+    <commonName xml:lang="tr">Kutup ayisi</commonName>
+    <commonName xml:lang="uk" eol_preferred="true">Ведмідь білий</commonName>
+    <commonName xml:lang="uk">Білий ведмідь</commonName>
+    <reference>"Division of Endangered Species, Species Information" (On-line). Accessed Dec 5, 2001 at http://endangered.fws.gov/wildlife.html.</reference>
+    <reference>1. IUCN Red List  (September, 2007) &lt;a href="http://www.iucnredlist.org"&gt;http://www.iucnredlist.org&lt;/a&gt;</reference>
+    <reference>1996. database, NODC Taxonomic Code</reference>
+    <reference>1998. website, Mammal Species of the World</reference>
+    <reference>2. International Association for Bear Research and Management  (February, 2004) &lt;a href="http://bearbiology.com"&gt;http://bearbiology.com&lt;/a&gt;</reference>
+    <reference>3. Macdonald, D.W. (2001) &lt;i&gt;The New Encyclopedia of Mammals&lt;/i&gt;. Oxford University Press, Oxford.</reference>
+    <reference>4. Polar Bears International  (February, 2004) &lt;a href="http://www.polarbearsinternational.org/bear-facts/"&gt;http://www.polarbearsinternational.org/bear-facts/&lt;/a&gt;</reference>
+    <reference>5. Buchanan, R. (2006) &lt;i&gt;Pers. Comm.&lt;/i&gt;</reference>
+    <reference>6. National Oceanic and Atmospheric Association (NOAA) Report  (February, 2004) &lt;a href="http://www.arctic.noaa.gov/essay_schliebe.html"&gt;http://www.arctic.noaa.gov/essay_schliebe.html&lt;/a&gt;</reference>
+    <reference>Banks, R. C., R. W. McDiarmid, A. L. Gardner, and W. C. Starnes. 2003. Checklist of Vertebrates of the United States, the U.S. Territories, and Canada</reference>
+    <reference>Banks, R. C., R. W. McDiarmid, and A. L. Gardner. 1987. Checklist of Vertebrates of the United States, the U.S. Territories, and Canada. Resource Publication, no. 166</reference>
+    <reference>Banks, R. C., R. W. McDiarmid, and A. L. Gardner. 1987. Checklist of Vertebrates of the United States, the U.S. Territories, and Canada. Resource Publication, no. 166. 79</reference>
+    <reference>Berta, A.; Churchill, M. (2012). &lt;i&gt;Ursus maritimus&lt;/i&gt; Phipps, 1774. Accessed through:  World Register of Marine Species at http://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=137085 on 2013-03-02</reference>
+    <reference>DeMaster, D., I. Stirling. 1981. *Ursus maritimus*. Mammalian Species, 145: 1-7.</reference>
+    <reference>Fiala, Anthony, 1869-1950. 1907. Fighting the Polar Ice. London : Hodder and Stroughton; Facing Page 227</reference>
+    <reference>Hilton-Taylor, C. 2000. "The 2000 IUCN Red List of Threatened Species" (On-line). Accessed Dec 5, 2001 at http://www.redlist.org/search/details.php?species=22823.</reference>
+    <reference>Kathy Kranking. 2001. Bear Necessities: How Polar Bears Survive the Deep Freeze. National Geographic Kids Magazine &lt;a target="_blank" href="http://www.nationalgeographic.com/ngkids/0112/ws_main.html"&gt;[Internet]&lt;/a&gt;, Accessed 9/24/2007.</reference>
+    <reference>Lindsay, David Moore. 1911. Voyage to the Arctic in the Whaler Aurora. Boston, MA : Dana Estes and Company Publishers; Facing page 116</reference>
+    <reference>Myers, P., R. Espinosa, C. S. Parr, T. Jones, G. S. Hammond, and T. A. Dewey. 2006. The Animal Diversity Web (online). Accessed February 16, 2011 at http://animaldiversity.org. http://www.animaldiversity.org</reference>
+    <reference>Nowak, R. 1999. Walker's Mammals of the World. Baltimore and London: The Johns Hopkins University Press.</reference>
+    <reference>One Species at a Time is brought to you by the Encyclopedia of Life, hosted by &lt;a href="http://aridanielshapiro.wordpress.com/"&gt;Ari Daniel Shapiro&lt;/a&gt; and produced by &lt;a href="http://www.atlantic.org/"&gt;Atlantic Public Media&lt;a&gt;</reference>
+    <reference>Original description: Phipps, C.J., 1774.&amp;nbsp; &lt;EM&gt;A voyage towards the North Pole&lt;/EM&gt;, p., 185.&amp;nbsp; J. Nourse, London, 253 pp.</reference>
+    <reference>Orrell T. (custodian) (2013). ITIS Global: The Integrated Taxonomic Information System (version Sept 12). In: Species 2000 &amp; ITIS Catalogue of Life, 11th March 2013 (Roskov Y., Kunze T., Paglinawan L., Orrell T., Nicolson D., Culham A., Bailly N., Kirk P., Bourgoin T., Baillargeon G., Hernandez F., De Wever A., eds). Digital resource at www.catalogueoflife.org/col/. Species 2000: Reading, UK.</reference>
+    <reference>Preciado JA; Rubinsky B; Otten D; Nelson B; Martin MC; Greif R.  2002. Radiative properties of polar bear hair.  Proceedings of the ASME International Mechanical Engineering Congress and Exposition. BED-53: 1-2.</reference>
+    <reference>R. F. Ewer. 1973. The Carnivores. Ithaca; Cornell University Press, 1973</reference>
+    <reference>Ramsey, M., I. Stirling. 1988. Reproductive biology and ecology of female polar bears (*Ursus maritimus*). Journal of Zoology, 214: 601-634.</reference>
+    <reference>Rice, Dale W. 1998. Marine Mammals of the World: Systematics and Distribution. Special Publications of the Society for Marine Mammals, no. 4</reference>
+    <reference>Rice, Dale W. 1998. Marine Mammals of the World: Systematics and Distribution. Special Publications of the Society for Marine Mammals, no. 4. ix + 231</reference>
+    <reference>Richard Weigl (2005) Longevity of Mammals in Captivity; from the Living Collections of the World. Kleine Senckenberg-Reihe 48: Stuttgart.</reference>
+    <reference>Ronald Nowak (1999) Walker's Mammals of the World. Johns Hopkins University Press: Baltimore.</reference>
+    <reference>Shields, GF, Adams, D, Garner, G, Labelle, M, Pietsch, J, Ramsay, M, Schwartz, C, Titus, K, Williamson, S. 2000. Phylogeography of mitochondrial DNA variation in brown bears and polar bears. Molecular Phylogenetics and Evolution 15:319-326.</reference>
+    <reference>Stirling, I. 1974. Midsummer observations on the behavior of wild polar bears (*Ursus maritimus*). Canadian Journal of Zoology, 52: 1191-1198.</reference>
+    <reference>Stirling, I., E. McEwan. 1975. The caloric value of whole ringed seals (*Phoca hispida*) in relation to polar bear (*Ursus maritimus*) ecology and hunting behavior. Canadian Journal of Zoology, 53: 1021-1027.</reference>
+    <reference>Talbot, S., G. Shields. 1996. Phylogeography of Brown Bears (Ursus arctos) of Alaska and Paraphyly within the Ursidae. Molecular Phylogenetics and Evolution, 5: 477-494.</reference>
+    <reference>UNESCO-IOC Register of Marine Organisms</reference>
+    <reference>V. S. Summerhayes and C. S. Elton, Contributions to the ecology of Spitsbergen and Bear Island, J. Ecol. 11:214-286, from p. 232 (1923).</reference>
+    <reference>Wilson D.E. &amp; Reeder D.A.M. (1993). Mammals species of the world. A taxonomic and geographic reference. Second edition. Smithsonian Institution Press, Washington, 1206 pp.</reference>
+    <reference>Wilson, Don E., and DeeAnn M. Reeder, eds. 1992. Mammal Species of the World: A Taxonomic and Geographic Reference, 2nd ed., 3rd printing</reference>
+    <reference>Wilson, Don E., and DeeAnn M. Reeder, eds. 1993. Mammal Species of the World: A Taxonomic and Geographic Reference, 2nd ed., 3rd printing. xviii + 1207</reference>
+    <reference>Wilson, Don E., and DeeAnn M. Reeder, eds. 2005. Mammal Species of the World: A Taxonomic and Geographic Reference, 3rd ed., vols. 1 &amp; 2</reference>
+    <reference>Wilson, Don E., and DeeAnn M. Reeder, eds. 2005. Mammal Species of the World: A Taxonomic and Geographic Reference, 3rd ed., vols. 1 &amp; 2. 2142</reference>
+    <reference>Wilson, Don E., and F. Russell Cole. 2000. Common Names of Mammals of the World</reference>
+    <reference>Wilson, Don E., and F. Russell Cole. 2000. Common Names of Mammals of the World. xiv + 204</reference>
+    <reference>van der Land, J. (2001). Tetrapoda, &lt;B&gt;&lt;I&gt;in&lt;/I&gt;&lt;/B&gt;: Costello, M.J. &lt;i&gt;et al.&lt;/i&gt; (Ed.) (2001). &lt;i&gt;European register of marine species: a check-list of the marine species in Europe and a bibliography of guides to their identification. Collection Patrimoines Naturels,&lt;/i&gt; 50: pp. 375-376</reference>
+    <additionalInformation>
+      <richness_score>90.5212</richness_score>
+      <taxon>
+        <dc:identifier>137085</dc:identifier>
+        <dwc:taxonID>20676727</dwc:taxonID>
+        <dwc:scientificName>Ursus maritimus Phipps, 1774</dwc:scientificName>
+        <dwc:nameAccordingTo>WORMS Species Information (Marine Species)</dwc:nameAccordingTo>
+        <dwc:taxonRank/>
+      </taxon>
+      <taxon>
+        <dc:identifier>IUCN-22823</dc:identifier>
+        <dwc:taxonID>24968024</dwc:taxonID>
+        <dwc:scientificName>Ursus maritimus</dwc:scientificName>
+        <dwc:nameAccordingTo>IUCN Red List (Species Assessed for Global Conservation)</dwc:nameAccordingTo>
+        <dwc:taxonRank/>
+      </taxon>
+      <taxon>
+        <dc:identifier>180542</dc:identifier>
+        <dwc:taxonID>46596143</dwc:taxonID>
+        <dwc:scientificName>Ursus maritimus Phipps, 1774</dwc:scientificName>
+        <dwc:nameAccordingTo>Integrated Taxonomic Information System (ITIS)</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+      <taxon>
+        <dc:identifier>urn:paleodb:tn52609</dc:identifier>
+        <dwc:taxonID>49340817</dwc:taxonID>
+        <dwc:scientificName>Ursus maritimus Phipps, 1774</dwc:scientificName>
+        <dwc:nameAccordingTo>Paleobiology Database</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+      <taxon>
+        <dc:identifier>29073</dc:identifier>
+        <dwc:taxonID>51376580</dwc:taxonID>
+        <dwc:scientificName>Ursus maritimus</dwc:scientificName>
+        <dwc:nameAccordingTo>NCBI Taxonomy</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+      <taxon>
+        <dc:identifier>6850390</dc:identifier>
+        <dwc:taxonID>52576561</dwc:taxonID>
+        <dwc:scientificName>Ursus maritimus Phipps, 1774</dwc:scientificName>
+        <dwc:nameAccordingTo>Species 2000 &amp; ITIS Catalogue of Life: April 2013</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+    </additionalInformation>
+  </taxonConcept>
+<dataObject>
+  <dataObjectID>69fe6d05e28b3c4d988db446d75ccfd7</dataObjectID>
+  <taxonConceptID>328580</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+<mimeType>text/html</mimeType>
+<agent homepage="http://www.mnh.si.edu/mna/main.cfm" role="project">Smithsonian Institution - North American Mammals</agent>
+<agent homepage="http://www.mnh.si.edu/mna" role="provider">Smithsonian's North American Mammals</agent>
+<dc:title>Description</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by/3.0/</license>
+<dcterms:rightsHolder>Smithsonian Institution</dcterms:rightsHolder>
+<audience>Expert users</audience>
+<audience>General public</audience>
+<dc:source>http://www.mnh.si.edu/mna/image_info.cfm?species_id=418</dc:source>
+<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#TaxonBiology</subject>
+<dc:description>Polar Bears prey mostly on Ringed Seals. In the spring, the pups are easy prey. They also hunt Bearded and Harp Seals, Walruses, Beluga, Narwhals, and sea ducks, and very occasionally eat small amounts of plant matter. They travel long distances to stay with pack ice, and fast for long periods of time if food is not available. In Hudson Bay, the ice melts by late July and the bears fast until November, when it freezes again. They do not drink water or urinate the whole time. Pregnant females, who enter dens to give birth, continue fasting for another four months, living only on stored fat for eight months. Cubs are born in December, and are ready to follow their mother out of the den and learn to hunt by March or April. They are independent when they are about two-and-a-half years old, at which point the female mates again.&lt;br&gt;&lt;br&gt;Links:&lt;br&gt;&lt;A href="http://www.bucknell.edu/msw3/" target=_blank&gt;Mammal Species of the World&lt;/A&gt;&lt;br&gt;&lt;A href="http://www.science.smith.edu/departments/Biology/VHAYSSEN/msi/pdf/i0076-3519-145-01-0001.pdf" target=_blank&gt;Click here for The American Society of Mammalogists species account&lt;/A&gt;&lt;br&gt;&lt;A href="http://www.arkive.org/species/GES/mammals/Ursus_maritimus/" target=_blank border="0"&gt;&lt;IMG height=32 alt="Visit ARKive for more images of the polar bear" src="images/arkive_logo.gif" width=69 border=0&gt;&amp;nbsp;&amp;nbsp;More images, video and sound&lt;/A&gt;</dc:description>
+<reference>Original description: Phipps, C.J., 1774.&amp;nbsp; &lt;EM&gt;A voyage towards the North Pole&lt;/EM&gt;, p., 185.&amp;nbsp; J. Nourse, London, 253 pp.</reference>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>4.0</dataRating>
+  <dataObjectVersionID>6625864</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+<dataObject>
+  <dataObjectID>b01e00ddac38dc2911be621ef030c57f</dataObjectID>
+  <taxonConceptID>328580</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+<mimeType>text/html</mimeType>
+<agent homepage="" role="editor">Tanya Dewey, Animal Diversity Web, University of Michigan Museum of Zoology</agent>
+<agent homepage="" role="editor">Jim Demastes, University of Northern Iowa</agent>
+<agent homepage="" role="author">Aren Gunderson, University of Northern Iowa</agent>
+<agent homepage="http://animaldiversity.ummz.umich.edu/" role="provider">Animal Diversity Web</agent>
+<dcterms:created>2009-03-20 16:22:00 UTC</dcterms:created>
+<dcterms:modified>2009-03-20 16:22:00 UTC</dcterms:modified>
+<dc:title>Geographic Range</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+<dc:rights>©1995-2012, The Regents of the University of Michigan and its licensors</dc:rights>
+<dcterms:rightsHolder>The Regents of the University of Michigan and its licensors</dcterms:rightsHolder>
+<dcterms:bibliographicCitation>Gunderson, A. 2009. "Ursus maritimus" (On-line), Animal Diversity Web. Accessed April 04, 2012 at http://animaldiversity.ummz.umich.edu/site/accounts/information/Ursus_maritimus.html</dcterms:bibliographicCitation>
+<audience>General public</audience>
+<audience>Children</audience>
+<dc:source>http://animaldiversity.ummz.umich.edu/site/accounts/information/Ursus_maritimus.html</dc:source>
+<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Distribution</subject>
+<dc:description>&lt;p&gt;Polar bears have a circumpolar distribution. They range throughout the arctic region surrounding the North Pole. The limits of their range are determined by the ice pack of the Arctic Ocean and the landfast ice of surrounding coastal areas. Bears have been reported as far south as the southern tips of Greenland and Iceland.  During the winter, polar bears will range along the southern edge of the ice pack or northern edge of ice formed off the coasts of the continents.  Pregnant females will overwinter on the coastlines where denning habitat is available for bearing young.  During the summer, bears will remain at the edge of the receding ice pack or on islands and coastal regions that retain landfast ice.  Six different populations are recognized as: Wrangel Island and western Alaska, northern Alaska, the Canadian Arctic archipelago, Greenland, Svalbard-Franz Josef Land, and Central Siberia. &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Biogeographic Regions: &lt;/strong&gt; nearctic  (Native ); palearctic  (Native ); arctic ocean  (Native )&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Other Geographic Terms: &lt;/strong&gt; holarctic &lt;/p&gt;</dc:description>
+<reference>Nowak, R. 1999. Walker's Mammals of the World. Baltimore and London: The Johns Hopkins University Press.</reference>
+<reference>DeMaster, D., I. Stirling. 1981. *Ursus maritimus*. Mammalian Species, 145: 1-7.</reference>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>2.5</dataRating>
+  <dataObjectVersionID>18678486</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+<dataObject>
+  <dataObjectID>60107d04864e08ea1e2257a718a7aaa7</dataObjectID>
+  <taxonConceptID>328580</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+<mimeType>image/jpeg</mimeType>
+<agent homepage="http://www.flickr.com/photos/34328261@N02" role="photographer">Blake Matheson</agent>
+<agent homepage="http://www.flickr.com/groups/encyclopedia_of_life" role="provider">Flickr: EOL Images</agent>
+<dcterms:created>2008-10-05 10:14:31 UTC</dcterms:created>
+<dc:title>Ursus maritimus II</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-nc/2.0/</license>
+<dc:source>http://www.flickr.com/photos/34328261@N02/3205002423/</dc:source>
+<dc:description>Boar Polar Bear. From the Beaufort Sea Population at Barter Island. By Blake Matheson.</dc:description>
+<mediaURL>http://farm4.static.flickr.com/3318/3205002423_119f8c7af7_o.jpg</mediaURL>
+<mediaURL>http://media.eol.org/content/2011/11/02/13/98177_orig.jpg</mediaURL>
+<thumbnailURL>http://media.eol.org/content/2011/11/02/13/98177_98_68.jpg</thumbnailURL>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>4.63636</dataRating>
+  <dataObjectVersionID>13538324</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+<dataObject>
+  <dataObjectID>13c704a388d83feb8ad5321d4d23e73d</dataObjectID>
+  <taxonConceptID>328580</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+<mimeType>image/jpeg</mimeType>
+<agent homepage="" role="photographer">Alan Wilson</agent>
+<agent homepage="http://commons.wikimedia.org/" role="provider">Wikimedia Commons</agent>
+<dc:title>File:Polar Bear - Alaska.jpg</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-sa/3.0/</license>
+<dc:source>http://commons.wikimedia.org/wiki/File:Polar_Bear_-_Alaska.jpg</dc:source>
+<mediaURL>http://upload.wikimedia.org/wikipedia/commons/0/09/Polar_Bear_-_Alaska.jpg</mediaURL>
+<mediaURL>http://media.eol.org/content/2013/04/19/01/36585_orig.jpg</mediaURL>
+<thumbnailURL>http://media.eol.org/content/2013/04/19/01/36585_98_68.jpg</thumbnailURL>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>3.2</dataRating>
+  <dataObjectVersionID>10062148</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+</response>

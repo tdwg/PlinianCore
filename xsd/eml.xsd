@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Francisco Pando (Real Jardin Botanico-CSIC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" targetNamespace="eml://ecoinformatics.org/eml-2.1.1" elementFormDefault="qualified">
+	<xs:import schemaLocation="eml-gbif-profile.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:element name="eml">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dataset"/>
+				<xs:element ref="additionalMetadata" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="packageId" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Unique global ID for this exact version of the EML document</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="scope" type="xs:string" use="required" fixed="system"/>
+			<xs:attribute name="system" use="required">
+				<xs:simpleType>
+					<xs:list itemType="xs:string"/>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute ref="xml:lang" use="optional">
+				<xs:annotation>
+					<xs:documentation>The language in which the metadata (as opposed to the resource being described by the metadata) is written</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

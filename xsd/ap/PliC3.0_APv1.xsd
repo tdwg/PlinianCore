@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:pce="http://www.pliniancore.org/pc2.2/pcelement" xmlns:pcc="http://rs.tdwg.org/dwc/pccore/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rs.tdwg.org/dwc/pccore/" elementFormDefault="qualified">
+	<!-- DiGIR's XML Schema is imported -->
+	<xsd:include schemaLocation="http://rs.tdwg.org/dwc/tdwg_basetypes.xsd"/>
+	<xsd:import namespace="http://www.pliniancore.org/pc2.2/pcelement" schemaLocation="http://www.pliniancore.org/test/pc_element.xsd"/>
+	<xs:element name="Dataset">
+		<xs:annotation>
+			<xs:documentation>Root element from which all other elements will branch from</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TaxonRecord" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaxonRecord" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Information about the record.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RecordMetadata"/>
+				<xs:element ref="BaseElements">
+					<xs:annotation>
+						<xs:documentation>Basic information to identify the record.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="NomenclatureAndClassification" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Standard information for every known taxon.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="TaxonomicalDescription" minOccurs="0"/>
+				<xs:element ref="NaturalHistory" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Most relevant description about the species.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Invasiveness" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Most relevant description about the species.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="HabitatAndDistribution" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Distribution of the species</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="DemographyAndConservation" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Information concerning the demographic aspects of the species, as well as the conservation status</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="UsesAndManagement" minOccurs="0"/>
+				<xs:element ref="Documentation" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>References and pointers to additional resources and information (multimedia or publications).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="MeasurementOrFact" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Description of the morphology of the taxon (size, weight, perimeter, length, volume, life expectancy, etc.). Makes reference to any meristic data of the species (wing span/maximum/228.6/ cm)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xsd:element name="Language" type="xsd:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xsd:annotation>
+			<xsd:documentation>Language used to write the species information.</xsd:documentation>
+			<xsd:documentation>Idioma en el que esta escrita la informacion de la especie. </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Audience" type="xsd:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xsd:annotation>
+			<xsd:documentation>Repetitive concept where the target audiences are written one by one. (Predetermined list:01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low).</xsd:documentation>
+			<xsd:documentation>Idioma en el que esta escrita la informacion de la especie. </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Major" type="xsd:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xsd:annotation>
+			<xsd:documentation>The major version number ('1' in 1.2) as defined by the content creators.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Minor" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>An optional minor version number ('2' in 1.2)</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Modifier" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DateIssued" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="OrganizationName" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The full name of the organization that is associated with the resource. This field is intended to describe which institution or overall organization is associated with the resource being described.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="individualName" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The individualName field contains subfields so that a person's name can be broken down into parts.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PositionName" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>This field is intended to be used instead of a particular person or full organization name. If the associated person who holds the role changes frequently, then Position Name would be used for consistency. E.g., GBIF Data Manager.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Rol" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Use this field to describe the role the party played with respect to the resource. Some potential roles include technician, reviewer, principal investigator, and many others.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PubDate" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The date on which the resource was published</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Created" type="xsd:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="TaxonRecordID" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Unique identifier of the record within the database.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="taxonConceptID" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ScientificName" type="xsd:string" substitutionGroup="pce:pcElement" nillable="false"/>
+	<xsd:element name="Synonyms" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Synonym" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CommonNames" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A list of common names, in alphabetic order and separated by comas.</xsd:documentation>
+			<xsd:documentation>Una lista de nombres comunes, en orden alfabetico y separados por comas.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CommonName" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Empire" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Kingdom" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The kingdom to which the species belongs, capitalized.</xsd:documentation>
+			<xsd:documentation>Reino al cual pertenece la especie, con la inicial en mayuscula.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SubPhylum" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PhylumDivision" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="InfraPhylum" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Class" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The name of the class in which the organism is classified.</xsd:documentation>
+			<xsd:documentation>El nombre de la clase dentro de la cual el organismo esta clasificado.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Order" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The order to which the species belongs, capitalized.</xsd:documentation>
+			<xsd:documentation>Orden a la cual pertenece la especie, con la inicial en mayuscula.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Family" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The family to which the species belongs, capitalized.</xsd:documentation>
+			<xsd:documentation>Familia a la cual pertenece la especie, con la inicial en mayuscula.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Tribe" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Genus" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The genus to which the species belongs, capitalized.</xsd:documentation>
+			<xsd:documentation>Genero a la cual pertenece la especie, con la inicial en mayuscula.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MiscDetails" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Miscellaneus: notes attached to the taxon information. E.g. Pronunciation, etymology, ...</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Detail" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="FullDescription" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism.</xsd:documentation>
+			<xsd:documentation>Descripcion  para distinguir la especie de otras similares.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Keys" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Dichotomic  or multientrance keys.</xsd:documentation>
+			<xsd:documentation>Abstract.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Key" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="LifeForm" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LifeCycle" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes. </xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AnnualCycle" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Set of changes or events that recurrently take place at the same time of year and are influenced by seasonal and interannual climate variations. For example: reproduction, flowering, fruiting, emergence of insects, etc. Also called phenology, mainly in plants. In the case of migration, refers only to the timing of it; other data about this are gathered in MigratoryData.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Feeding" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Information related to supply food for the development and sustenance of the individual and/or its offspring.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Dispersal" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The permanent spreading of individuals away from each other not including return. Dispersal determines the range over which genetic mixing occurs, and thus, the degree of homogeneity and inbreeding in a population</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Behavior" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Responses, reactions or movements made by an organism in a particular situation.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Interactions" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Mutual or reciprocal actions or influences.  For example, predation, parasitism, mutualism, etc.  Relations with products grown and stored by man (plagues) are also included.</xsd:documentation>
+			<xsd:documentation>Observaciones obtenidas del campo o de la literatura acerca de interacciones con otros organismos.  Por ejemplo depredacion, parasitoidismo, parasitismo, mutualismo, etc.  Se incluye ademas las relaciones con productos cultivados y almacenados por el hombre (plagas).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Interaction" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="MolecularData" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes,  mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)</xsd:documentation>
+			<xsd:documentation>Informacion sobre taxonomia molecular a partir de datos autor o de la literatura.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Migratory" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>The regular, usually seasonal, movement of all or part of an animal population to and from a given area, which can occur in variable periods of time and even involve more than one generation. </xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EcologicalSignificance" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Ecological importance of the taxon. (Placeholder)</xsd:documentation>
+			<xsd:documentation>EcologicalSignificance</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EnviromentalEnvelope" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Environmental ranges in who species living (ej. annual rainfall, average, 450, mm</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Invasiveness" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Most relevant description about the species.</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HabitatAndDistribution" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Habitat" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>General description of the sites where the species is found (ecosystem, forest, environment or microhabitat). (Placeholder).</xsd:documentation>
+						<xsd:documentation>Descripcion general de los sitios en que se encuentra la especie, puede ser a nivel de ecosistema, bosque, ambiente o de microhabitat.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Distribution" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Species geographical  distribution.</xsd:documentation>
+						<xsd:documentation>Comentarios respecto a la distribucion de la especie basados en la informacion de los sitios de colecta de los especimenes estudiados.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Endemic" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Organism that lives exclusively in a particular territory and not found anywhere else.</xsd:documentation>
+						<xsd:documentation>El endemismo describe a especies que son nativas de un area geografica particular o continente. El endemismo ocurre usualmente en areas que se encuentran aisladas de alguna manera.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Territory" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Information associated mostly to vertebrates, referring to the territorial extension of the individual or group in terms of its activities (feeding, mating, etc.)</xsd:documentation>
+			<xsd:documentation>Informacion asociada principalmente con vertebrados y se refiere a la extension territorial del individuo o grupo en terminos de sus actividades (alimentacion, reproduccion, etc.)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PopulationBiology" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Information about the number of individuals per area or time unit.</xsd:documentation>
+			<xsd:documentation>Informacion relacionada con numero de individuos por unidad de area o de tiempo.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ThreatStatus" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Conservation status according to UICN.</xsd:documentation>
+			<xsd:documentation>Estatus de conservacion de acuerdo a UICN.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="ThreatStatus" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Description of the threat status.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="AppliesTo" type="xsd:string" minOccurs="1" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Location where the status is used.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Legislation" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Conservation status according to CITES.</xsd:documentation>
+			<xsd:documentation>Estatus de conservacion de acuerdo a CITES.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="LegislationName" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Word or phrase to designate the law or group of laws</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="References" type="xsd:string" minOccurs="1" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation/>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Uses" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Known or potential uses of the species, at a direct economic level, as instruments of education, prospecting, eco-tourism, etc.  It includes published material or suggestions from the author or others.  In any event, the source must be explicitly quoted.</xsd:documentation>
+			<xsd:documentation>Usos conocidos o potenciales de la especie.  A nivel economico directo, como instrumento de educacion, en prospeccion, ecoturismo, etc.  Incluye lo publicado o sugerencias del autor u otras personas, en todo caso debe citarse la fuente de forma explicita.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Use" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Folklore" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Known myths or legends that people or literature contribute about the species.</xsd:documentation>
+			<xsd:documentation>Informacion acerca de mitos o leyendas que la gente o la literatura aporta acerca de la especie.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Management" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Documentation" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>References and pointers to additional resources and information (multimedia or publications).</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="1" maxOccurs="unbounded">
+				<xsd:element name="Publication" type="xsd:string" nillable="true">
+					<xsd:annotation>
+						<xsd:documentation/>
+						<xsd:documentation/>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Binary" type="xsd:string" nillable="true">
+					<xsd:annotation>
+						<xsd:documentation/>
+						<xsd:documentation/>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="MeasurementOrFact" type="xsd:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Description of the morphology of the taxon (size, weight, perimeter, length, volume, life expectancy, etc.). Makes reference to any meristic data of the species (wing span/maximum/228.6/ cm)</xsd:documentation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

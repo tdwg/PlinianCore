@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by Francisco Pando (Real Jardín Botánico - CSIC) -->
+<xs:schema xmlns:pce="http://www.pliniancore.org/pc2.2/pcelement" xmlns:pcc="http://rs.tdwg.org/dwc/pccore/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:gisin="http://www.gisin.org/gisin/SpeciesStatus" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:plic="http://www.gbif.es/PliC/" targetNamespace="http://rs.tdwg.org/dwc/pccore/" elementFormDefault="qualified">
+	<xs:include schemaLocation="http://rs.tdwg.org/dwc/tdwg_basetypes.xsd"/>
+	<xs:import namespace="http://rs.tdwg.org/dwc/terms/" schemaLocation="http://darwincore.googlecode.com/svn/trunk/xsd/tdwg_dwc_extensions.xsd"/>
+	<xs:import namespace="http://www.gisin.org/gisin/SpeciesStatus" schemaLocation="http://www.gisin.org/GISIN/SpeciesStatus_4_0_0.xsd"/>
+	<xs:import namespace="http://www.pliniancore.org/pc2.2/pcelement" schemaLocation="http://www.pliniancore.org/test/pc_element.xsd"/>
+	<xs:import schemaLocation="PliC_3.0-AbstractModel_v5.xsd"/>
+	<xs:element name="Dataset">
+		<xs:annotation>
+			<xs:documentation>Root element from which all other elements will branch from</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="pcc:TaxonRecord" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaxonRecord" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Information about the record.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BaseElements"/>
+				<xs:element ref="Audience" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Language" minOccurs="0"/>
+				<xs:element ref="Version"/>
+				<xs:element ref="Revision"/>
+				<xs:element ref="TaxonRecordName"/>
+				<xs:element ref="AtomizedSynonyms" minOccurs="0"/>
+				<xs:element ref="AtomizedCommonName" minOccurs="0"/>
+				<xs:element ref="Hierarchy" minOccurs="0"/>
+				<xs:element ref="AtomizedDetail" minOccurs="0"/>
+				<xs:element ref="BriefDescription" minOccurs="0"/>
+				<xs:element ref="AtomizedFullDescription"/>
+				<xs:element ref="IdentificationKeys"/>
+				<xs:element ref="LifeForm" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LifeCycle" minOccurs="0"/>
+				<xs:element ref="AtomizedReproduction" minOccurs="0"/>
+				<xs:element ref="AtomizedAnnualCycle" minOccurs="0"/>
+				<xs:element ref="AtomizedFeeding" minOccurs="0"/>
+				<xs:element ref="AtomizedDispersal" minOccurs="0"/>
+				<xs:element ref="AtomizedInteraction" minOccurs="0"/>
+				<xs:element ref="AtomizedBehavior" minOccurs="0"/>
+				<xs:element ref="AtomizedMolecularData" minOccurs="0"/>
+				<xs:element ref="AtomizedEcological" minOccurs="0"/>
+				<xs:element ref="AtomizedMigratory" minOccurs="0"/>
+				<xs:element ref="EnvironmentalUnstructured" minOccurs="0"/>
+				<xs:element ref="AtomizedInvasiveness" minOccurs="0"/>
+				<xs:element ref="AtomizedHabitat"/>
+				<xs:element ref="AtomizedDistribution" minOccurs="0"/>
+				<xs:element ref="AtomizedEndemism" minOccurs="0"/>
+				<xs:element ref="TerritoryUnstructured" minOccurs="0"/>
+				<xs:element ref="AtomizedPopulationBiology" minOccurs="0"/>
+				<xs:element ref="ThreatStatus" minOccurs="0"/>
+				<xs:element ref="DirectThreats" minOccurs="0"/>
+				<xs:element ref="AtomizedLegislation" minOccurs="0"/>
+				<xs:element ref="AtomizedUses" minOccurs="0"/>
+				<xs:element ref="AtomizedFolklore" minOccurs="0"/>
+				<xs:element ref="AtomizedManagement" minOccurs="0"/>
+				<xs:element ref="dwc:MeasurementOrFact" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="References" minOccurs="0"/>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AncillaryData" type="xs:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Language" type="xs:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Language used to write the species information.</xs:documentation>
+			<xs:documentation>Idioma en el que esta escrita la informacion de la especie. </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Audience" type="xs:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Repetitive concept where the target audiences are written one by one. (Predetermined list:01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low).</xs:documentation>
+			<xs:documentation>Idioma en el que esta escrita la informacion de la especie. </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Major" type="xs:string" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation>The major version number ('1' in 1.2) as defined by the content creators.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Minor" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>An optional minor version number ('2' in 1.2)</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Modifier" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DateIssued" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="OrganizationName" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The full name of the organization that is associated with the resource. This field is intended to describe which institution or overall organization is associated with the resource being described.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="individualName" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The individualName field contains subfields so that a person's name can be broken down into parts.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PositionName" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>This field is intended to be used instead of a particular person or full organization name. If the associated person who holds the role changes frequently, then Position Name would be used for consistency. E.g., GBIF Data Manager.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Rol" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Use this field to describe the role the party played with respect to the resource. Some potential roles include technician, reviewer, principal investigator, and many others.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PubDate" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The date on which the resource was published</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Created" type="xs:dateTime" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="TaxonRecordID" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Unique identifier of the record within the database.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="taxonConceptID" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ScientificName" type="xs:string" substitutionGroup="pce:pcElement" nillable="false"/>
+	<xs:element name="Synonyms" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Synonym" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CommonNames" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A list of common names, in alphabetic order and separated by comas.</xs:documentation>
+			<xs:documentation>Una lista de nombres comunes, en orden alfabetico y separados por comas.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CommonName" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Empire" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Kingdom" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The kingdom to which the species belongs, capitalized.</xs:documentation>
+			<xs:documentation>Reino al cual pertenece la especie, con la inicial en mayuscula.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SubPhylum" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PhylumDivision" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="InfraPhylum" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Class" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The name of the class in which the organism is classified.</xs:documentation>
+			<xs:documentation>El nombre de la clase dentro de la cual el organismo esta clasificado.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Order" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The order to which the species belongs, capitalized.</xs:documentation>
+			<xs:documentation>Orden a la cual pertenece la especie, con la inicial en mayuscula.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Family" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The family to which the species belongs, capitalized.</xs:documentation>
+			<xs:documentation>Familia a la cual pertenece la especie, con la inicial en mayuscula.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Tribe" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation/>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Genus" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The genus to which the species belongs, capitalized.</xs:documentation>
+			<xs:documentation>Genero a la cual pertenece la especie, con la inicial en mayuscula.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MiscDetails" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Miscellaneus: notes attached to the taxon information. E.g. Pronunciation, etymology, ...</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Detail" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FullDescription" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism.</xs:documentation>
+			<xs:documentation>Descripcion  para distinguir la especie de otras similares.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Keys" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Dichotomic  or multientrance keys.</xs:documentation>
+			<xs:documentation>Abstract.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Key" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LifeForm" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="LifeCycle" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes. </xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="reproduction" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>All data related to the production of offspring.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="AnnualCycle" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Set of changes or events that recurrently take place at the same time of year and are influenced by seasonal and interannual climate variations. For example: reproduction, flowering, fruiting, emergence of insects, etc. Also called phenology, mainly in plants. In the case of migration, refers only to the timing of it; other data about this are gathered in MigratoryData.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Feeding" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Information related to supply food for the development and sustenance of the individual and/or its offspring.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Dispersal" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The permanent spreading of individuals away from each other not including return. Dispersal determines the range over which genetic mixing occurs, and thus, the degree of homogeneity and inbreeding in a population</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Behavior" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Responses, reactions or movements made by an organism in a particular situation.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Interactions" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Mutual or reciprocal actions or influences.  For example, predation, parasitism, mutualism, etc.  Relations with products grown and stored by man (plagues) are also included.</xs:documentation>
+			<xs:documentation>Observaciones obtenidas del campo o de la literatura acerca de interacciones con otros organismos.  Por ejemplo depredacion, parasitoidismo, parasitismo, mutualismo, etc.  Se incluye ademas las relaciones con productos cultivados y almacenados por el hombre (plagas).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Interaction" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MolecularData" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes,  mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)</xs:documentation>
+			<xs:documentation>Informacion sobre taxonomia molecular a partir de datos autor o de la literatura.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Migratory" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>The regular, usually seasonal, movement of all or part of an animal population to and from a given area, which can occur in variable periods of time and even involve more than one generation. </xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EcologicalSignificance" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Ecological importance of the taxon. (Placeholder)</xs:documentation>
+			<xs:documentation>EcologicalSignificance</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EnviromentalEnvelope" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Environmental ranges in who species living (ej. annual rainfall, average, 450, mm</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Invasiveness" type="xs:string" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Most relevant description about the species.</xs:documentation>
+			<xs:documentation/>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="HabitatAndDistribution" substitutionGroup="pce:pcElement" nillable="true">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Habitat" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>General description of the sites where the species is found (ecosystem, forest, environment or microhabitat). (Placeholder).</xs:documentation>
+						<xs:documentation>Descripcion general de los sitios en que se encuentra la especie, puede ser a nivel de ecosistema, bosque, ambiente o de microhabitat.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Distribution" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Species geographical  distribution.</xs:documentation>
+						<xs:documentation>Comentarios respecto a la distribucion de la especie basados en la informacion de los sitios de colecta de los especimenes estudiados.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Endemic" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Organism that lives exclusively in a particular territory and not found anywhere else.</xs:documentation>
+						<xs:documentation>El endemismo describe a especies que son nativas de un area geografica particular o continente. El endemismo ocurre usualmente en areas que se encuentran aisladas de alguna manera.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
