@@ -205,9 +205,6 @@
 	<xs:element name="Feeding" type="FeedingType"/>
 	<xs:element name="FeedingAtomized" type="FeedingAtomizedType"/>
 	<xs:element name="FeedingUnstructured" type="xs:string"/>
-	<xs:element name="Folklore" type="FolkloreType"/>
-	<xs:element name="FolkloreAtomized" type="FolkloreAtomizedType"/>
-	<xs:element name="FolkloreUnstructured" type="xs:string"/>
 	<xs:element name="FullDescription" type="FullDescriptionType">
 		<xs:annotation>
 			<xs:documentation>Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism.</xs:documentation>
@@ -471,7 +468,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="AnnualCyclesType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="AnnualCycleAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -479,7 +476,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="AnnualCycleUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -489,43 +486,9 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="DistributionAtomizedType">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="GeographicEntity">
-					<xs:annotation>
-						<xs:documentation>Name of the geographic entity.</xs:documentation>
-					</xs:annotation>
-					<xs:complexType>
-						<xs:simpleContent>
-							<xs:extension base="xs:string">
-								<xs:attribute name="Catalogue" use="required">
-									<xs:annotation>
-										<xs:documentation>VC. The geographic entity according to ISO 3166.Catalogue where the GeographicEntity is documented.</xs:documentation>
-									</xs:annotation>
-								</xs:attribute>
-							</xs:extension>
-						</xs:simpleContent>
-					</xs:complexType>
-				</xs:element>
-				<xs:sequence>
-					<xs:element ref="dwc:country"/>
-					<xs:element ref="dwc:stateProvince" minOccurs="0"/>
-					<xs:element ref="dwc:county" minOccurs="0"/>
-					<xs:element ref="dwc:municipality" minOccurs="0"/>
-					<xs:element ref="dwc:locality" minOccurs="0"/>
-				</xs:sequence>
-			</xs:choice>
-			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation> </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="BehaviorType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="BehaviorAtomized"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -533,7 +496,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="BehaviorUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -562,11 +525,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="CommonNamesType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="CommonNamesAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="CommonNamesUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -630,7 +593,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="DispersalType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DispersalAtomized"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -638,7 +601,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DispersalUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -648,13 +611,47 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="DistributionAtomizedType">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="GeographicEntity">
+					<xs:annotation>
+						<xs:documentation>Name of the geographic entity.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Catalogue" use="required">
+									<xs:annotation>
+										<xs:documentation>VC. The geographic entity according to ISO 3166.Catalogue where the GeographicEntity is documented.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:sequence>
+					<xs:element ref="dwc:country"/>
+					<xs:element ref="dwc:stateProvince" minOccurs="0"/>
+					<xs:element ref="dwc:county" minOccurs="0"/>
+					<xs:element ref="dwc:municipality" minOccurs="0"/>
+					<xs:element ref="dwc:locality" minOccurs="0"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation> </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="DirectThreatsType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DirectThreatAtomized"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DirectThreatUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -730,7 +727,7 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:element>
 			<xs:element ref="temporalCoverage" minOccurs="0"/>
 			<xs:sequence>
-				<xs:sequence>
+				<xs:sequence minOccurs="0">
 					<xs:element ref="DistributionAtomized" maxOccurs="unbounded"/>
 					<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
@@ -738,7 +735,7 @@ If we are in a register of a genre, this register would include the keys of the 
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:sequence>
+				<xs:sequence minOccurs="0">
 					<xs:element ref="DistributionUnstructured"/>
 					<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
@@ -751,7 +748,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="EcologicalSignificanceType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="EcologicalAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -759,7 +756,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="EcologicalUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -771,7 +768,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="EndemicType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="EndemicAtomized" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>List of areas structured and categorized the degree of safety.</xs:documentation>
@@ -783,7 +780,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="EndemicUnstructured">
 					<xs:annotation>
 						<xs:documentation>List of areas presented in an unstructured and categorized the degree of safety.</xs:documentation>
@@ -799,11 +796,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="EnvironmentalType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="dwc:MeasurementOrFact" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="EnvironmentalUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -811,7 +808,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="FeedingType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="FeedingAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -819,7 +816,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="FeedingUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -891,24 +888,6 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:complexType>
-	<xs:complexType name="FolkloreType">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element ref="FolkloreAtomized" maxOccurs="unbounded"/>
-				<xs:element ref="FolkloreUnstructured"/>
-			</xs:choice>
-			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="FolkloreAtomizedType">
-		<xs:complexContent>
-			<xs:extension base="DetailType">
-				<xs:sequence>
-					<xs:element name="UsedBy"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="FullDescriptionType">
 		<xs:sequence>
 			<xs:sequence>
@@ -960,7 +939,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="HabitatsType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="HabitatAtomized" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>VCR.</xs:documentation>
@@ -972,7 +951,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="HabitatUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1082,7 +1061,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="InteractionsType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="InteractionAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1090,7 +1069,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="InteractionUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1102,11 +1081,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="InvasivenessType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="InvasivenessAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="InvasivenessUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -1205,20 +1184,19 @@ If we are in a register of a genre, this register would include the keys of the 
 			<xs:element name="LegislationRead" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The oficial document in which the user can read the legislation.</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>VCR: Consolidated, Repealed</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="Type" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>VCR: included, not included</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Norm" minOccurs="0">
-			</xs:element>
+			<xs:element name="Norm" minOccurs="0"/>
 			<xs:element name="AppliesTo" type="DistributionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Location where the legislation is used.</xs:documentation>
@@ -1233,7 +1211,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="LegislationType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LegislationAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1241,7 +1219,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LegislationUnstructured">
 					<xs:annotation>
 						<xs:documentation>Enumeration of the law or group of laws in an unstructured format.</xs:documentation>
@@ -1257,7 +1235,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="LifeCycleType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LifeCycleAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1265,7 +1243,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LifeCycleUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1277,7 +1255,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="LifeFormType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LifeFormAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1285,7 +1263,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LifeFormUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1297,11 +1275,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="ManagementAndConservationType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="ManagementAndConservationAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="ManagementAndConservationUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -1338,7 +1316,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
-			<xs:element name="HumanAndEnvironmentalrelevance" type="xs:string" minOccurs="0"/>
+			<xs:element name="HumanAndEnvironmentalrrelevance" type="xs:string" minOccurs="0"/>
 			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="type" type="xs:string">
@@ -1432,7 +1410,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="MigratoryType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="MigratoryAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1440,7 +1418,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="MigratoryUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1452,11 +1430,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="MiscDetailType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DetailAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DetailUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -1464,7 +1442,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="MolecularDataType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="MolecularDataAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1472,7 +1450,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="MolecularDataUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1609,15 +1587,15 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="PopulationBiologyType">
 		<xs:sequence>
-			<xs:sequence>
-				<xs:element ref="PopulationBiologyAtomized" maxOccurs="unbounded"/>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="PopulationBiologyAtomized" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation> </xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="PopulationBiologyUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1744,7 +1722,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="ReproductionType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="ReproductionAtomized" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>VC</xs:documentation>
@@ -1756,7 +1734,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="ReproductionUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1794,11 +1772,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="SynonymsType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="SynonymsAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="SynonymsUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -1834,7 +1812,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="TerritoryType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="TerritoryAtomized"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1842,7 +1820,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="TerritoryUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1879,11 +1857,11 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="ThreatStatusType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="ThreatStatusAtomized"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="ThreatStatusUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -1926,7 +1904,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="UsesType">
 		<xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="UsesAtomized" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Are also applied to Animals and Fungis</xs:documentation>
@@ -1934,7 +1912,7 @@ If we are in a register of a genre, this register would include the keys of the 
 				</xs:element>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="UsesUnstructured">
 					<xs:annotation>
 						<xs:documentation> </xs:documentation>
