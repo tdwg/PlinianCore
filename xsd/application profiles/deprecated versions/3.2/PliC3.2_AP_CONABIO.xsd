@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- editado con XMLSpy v2013 sp1 (x64) (http://www.altova.com) por Santiago Martínez de la Riva (Real Jardín Botánico - CSIC) -->
+<!-- edited with XMLSpy v2015 sp2 (http://www.altova.com) by Especies (Nacional Financiera Fideicomiso Fondo para la Biodiversidad) -->
+<xs:schema xmlns:pce="http://www.pliniancore.org/pc3.2/pcelement" xmlns:pc-conabio="http://rs.tdwg.org/dwc/pccore/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:gisin="http://www.gisin.org/gisin/SpeciesStatus" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:plic="http://www.gbif.es/PliC/" targetNamespace="http://rs.tdwg.org/dwc/pccore/" elementFormDefault="qualified">
+	<xs:import schemaLocation="PlinianCore_AbstractModel_v3.2.xsd"/>
+	<xs:element name="Dataset">
+		<xs:annotation>
+			<xs:documentation>Root element from which all other elements will branch from</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Metadata"/>
+				<xs:element ref="pc-conabio:TaxonRecord" maxOccurs="unbounded"/>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaxonRecord" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Information about the record.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BaseElements"/>
+				<xs:element ref="Language" minOccurs="0"/>
+				<xs:element ref="Version"/>
+				<xs:element ref="Revision" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TaxonRecordName"/>
+				<xs:element ref="SynonymsAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CommonNamesAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Hierarchy" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="BriefDescription" minOccurs="0"/>
+				<xs:element ref="FullDescription" minOccurs="0"/>
+				<xs:element ref="IdentificationKeys" minOccurs="0"/>
+				<xs:element ref="LifeFormAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LifeCycleUnstructured" minOccurs="0"/>
+				<xs:element ref="Reproduction"/>
+				<xs:element ref="AnnualCycleAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FeedingAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DispersalAtomized" minOccurs="0"/>
+				<xs:element ref="Behavior" minOccurs="0"/>
+				<xs:element ref="InteractionAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MolecularDataAtomized" minOccurs="0"/>
+				<xs:element ref="MigratoryAtomized" minOccurs="0"/>
+				<xs:element ref="EcologicalAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="EnvironmentalEnvelope" minOccurs="0"/>
+				<xs:element ref="Invasiveness" minOccurs="0"/>
+				<xs:element ref="HabitatAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DistributionAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="EndemicAtomized" minOccurs="0"/>
+				<xs:element ref="TerritoryUnstructured" minOccurs="0"/>
+				<xs:element ref="PopulationBiologyAtomized" minOccurs="0"/>
+				<xs:element ref="ThreatStatus" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DirectThreats" minOccurs="0"/>
+				<xs:element ref="LegislationAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Uses" minOccurs="0"/>
+				<xs:element ref="ManagementAndConservationAtomized" minOccurs="0"/>
+				<xs:element ref="MeasurementOrFact" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="associatedParty" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="References" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DetailAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

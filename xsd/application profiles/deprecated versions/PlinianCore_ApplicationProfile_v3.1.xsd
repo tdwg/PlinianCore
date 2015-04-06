@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- editado con XMLSpy v2013 sp1 (x64) (http://www.altova.com) por Santiago Martínez de la Riva (Real Jardín Botánico - CSIC) -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by Santiago Martínez de la Riva (Real Jardín Botánico - CSIC) -->
+<xs:schema xmlns:pce="http://www.pliniancore.org/pc2.2/pcelement" xmlns:pcc="http://rs.tdwg.org/dwc/pccore/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:gisin="http://www.gisin.org/gisin/SpeciesStatus" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:plic="http://www.gbif.es/PliC/" targetNamespace="http://rs.tdwg.org/dwc/pccore/" elementFormDefault="qualified">
+	<xs:include schemaLocation="http://rs.tdwg.org/dwc/tdwg_basetypes.xsd"/>
+	<xs:import namespace="http://rs.tdwg.org/dwc/terms/" schemaLocation="http://darwincore.googlecode.com/svn/trunk/xsd/tdwg_dwc_extensions.xsd"/>
+	<xs:import namespace="http://www.gisin.org/gisin/SpeciesStatus" schemaLocation="http://www.gisin.org/GISIN/SpeciesStatus_4_0_0.xsd"/>
+	<xs:import namespace="http://www.pliniancore.org/pc2.2/pcelement" schemaLocation="http://www.pliniancore.org/test/pc_element.xsd"/>
+	<xs:import schemaLocation="PlinianCore_AbstractModel_v3.1.xsd"/>
+	<xs:element name="Dataset">
+		<xs:annotation>
+			<xs:documentation>Root element from which all other elements will branch from</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Metadata"/>
+				<xs:element ref="pcc:TaxonRecord" maxOccurs="unbounded"/>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaxonRecord" substitutionGroup="pce:pcElement" nillable="false">
+		<xs:annotation>
+			<xs:documentation>Information about the record.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BaseElements"/>
+				<xs:element ref="Language" minOccurs="0"/>
+				<xs:element ref="Audience" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Version"/>
+				<xs:element ref="Revision"/>
+				<xs:element ref="TaxonRecordName"/>
+				<xs:element ref="Synonyms" minOccurs="0"/>
+				<xs:element ref="CommonNames" minOccurs="0"/>
+				<xs:element ref="Hierarchy" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="BriefDescription" minOccurs="0"/>
+				<xs:element ref="FullDescriptionUnstructured" minOccurs="0"/>
+				<xs:element ref="IdentificationKeys" minOccurs="0"/>
+				<xs:element ref="LifeForm" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LifeCycle" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Reproduction" minOccurs="0"/>
+				<xs:element ref="AnnualCycleUnstructured" minOccurs="0"/>
+				<xs:element ref="Feeding" minOccurs="0"/>
+				<xs:element ref="Dispersal" minOccurs="0"/>
+				<xs:element ref="BehaviorUnstructured" minOccurs="0"/>
+				<xs:element ref="MolecularDataAtomized" minOccurs="0"/>
+				<xs:element ref="MigratoryUnstructured" minOccurs="0"/>
+				<xs:element ref="EcologicalAtomized" minOccurs="0"/>
+				<xs:element ref="EnvironmentalUnstructured" minOccurs="0"/>
+				<xs:element ref="Invasiveness" minOccurs="0"/>
+				<xs:element ref="Habitats" minOccurs="0"/>
+				<xs:element ref="Distribution" minOccurs="0"/>
+				<xs:element ref="EndemicUnstructured" minOccurs="0"/>
+				<xs:element ref="TerritoryUnstructured" minOccurs="0"/>
+				<xs:element ref="PopulationBiologyUnstructured" minOccurs="0"/>
+				<xs:element ref="ThreatStatus" minOccurs="0"/>
+				<xs:element ref="DirectThreats" minOccurs="0"/>
+				<xs:element ref="Legislation" minOccurs="0"/>
+				<xs:element ref="Uses" minOccurs="0"/>
+				<xs:element ref="ManagementAndConservation" minOccurs="0"/>
+				<xs:element ref="associatedParty" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="dwc:MeasurementOrFact" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DetailAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

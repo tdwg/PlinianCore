@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Francisco Pando (Real Jardin Botanico-CSIC) -->
+<!--  publisher: Plinian Core Initiative  -->
+<!--description: The Plinian Core v2.0 is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. The current version compiles a list of high-priority concepts selected by different groups of people interested in having apt mechanisms to access integrated information of species using Internet. -->
+<!--issued:2007-03-16 -->
+<!--modified:2002-03-16-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcelem="http://purl.org/dc/elements/1.1/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:abcd="http://www.tdwg.org/schemas/abcd/2.06" xmlns:tcs="http://www.tdwg.org/schemas/tcs/1.01" xmlns:gisin="http://www.gisin.org/gisin/SpeciesStatus" xmlns:simple="http://rs.tdwg.org/dwc/xsd/simpledarwincore/" xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dc.xsd"/>
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="http://darwincore.googlecode.com/svn/trunk/xsd/dublin_core.xsd"/>
+	<xs:import namespace="http://www.tdwg.org/schemas/abcd/2.06" schemaLocation="http://rs.tdwg.org/abcd/2.06/ABCD_2.06.xsd"/>
+	<xs:import namespace="http://www.tdwg.org/schemas/tcs/1.01" schemaLocation="http://www.tdwg.org/uploads/media/v101.xsd"/>
+	<xs:import namespace="http://rs.tdwg.org/dwc/terms/" schemaLocation="http://darwincore.googlecode.com/svn/trunk/xsd/tdwg_dwc_extensions.xsd"/>
+	<xs:import namespace="http://www.gisin.org/gisin/SpeciesStatus" schemaLocation="http://www.gisin.org/GISIN/SpeciesStatus_4_0_0.xsd"/>
+	<xs:element name="Dataset">
+		<xs:annotation>
+			<xs:documentation>Root element from which all other elements will branch from</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Metadata" type="MetadataType">
+					<xs:annotation>
+						<xs:documentation>Information about the collections of records. This is an Extension of abcd: ContentMetadata.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TaxonRecord" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Information about the record.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RecordMetadata">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Language" type="NormalString" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The language of the taxon record, according to ISO 639.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="TargetAudiences" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Users to which the information is addressed. The defined audiences are: Biodiversity researchers, teachers and students, decision makers, professionals from another areas and general public.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="Audience" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Repetitive concept where the target audiences are written one by one. (Predetermined list:
+01. Expert (High).
+02. Knowledgeable (Medium).
+03. General (Low).
+															</xs:documentation>
+														</xs:annotation>
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:enumeration value="Expert"/>
+																<xs:enumeration value="Knowledgeable"/>
+																<xs:enumeration value="General"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="Un-structuredAudiences" type="NormalString">
+														<xs:annotation>
+															<xs:documentation>List audience codes separated by means of comma or /.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Version" type="VersionType" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Number and date of the current version.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="RevisionData" type="abcd:RevisionData">
+											<xs:annotation>
+												<xs:documentation>Creators, revision status and dates of the entire data collection from which the current dataset is derived from  abcd: RevisonData.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BaseElements">
+								<xs:annotation>
+									<xs:documentation>Basic information to identify the record.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="TaxonRecordID" type="NormalString">
+											<xs:annotation>
+												<xs:documentation>Unique identifier of the record within the database.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element ref="dwc:taxonConceptID">
+											<xs:annotation>
+												<xs:documentation>An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="GlobalUniqueIdentifier" type="NormalString" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>According to DarwinCore: An Uniform Resource Name (URN) used as an unique identifier of the taxon record.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Abstract" type="TextDescriptionType" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>A brief summary of the most relevant or attractive chacteristics of this taxón to the general public.  Could point to any kind of information.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NomenclatureAndClassification" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Standard information for every known taxon.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="TaxonRecordName">
+											<xs:annotation>
+												<xs:documentation>Complete information about the name of the taxon</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ScientificName" type="tcs:ScientificName">
+														<xs:annotation>
+															<xs:documentation>Complete name of the taxon.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Bibliographic and multimedia reference IDs. </xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Synonyms" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Different names for this taxon. This concept is a placeholder field. </xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="Synonym" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Structured information.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="SynonymName" type="tcs:ScientificName"/>
+																<xs:element name="SynonymStatus" type="NormalString" minOccurs="0"/>
+																<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+																	<xs:annotation>
+																		<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="SynonymsText" type="TextDescriptionType">
+														<xs:annotation>
+															<xs:documentation>Unstructured information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="CommonNames" type="CommonNameType" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>List of  vernacular names.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="FlatHierarchy">
+											<xs:annotation>
+												<xs:documentation>Hierarchical categories. Modified from Linnean Core. Option: fill all or principal ranks and optionally provide keys</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Empire" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Empire name. </xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="EmpireURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Kingdom" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Kingdom name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="KingdomURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubKingdom" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SubKingdom name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubKingdomURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="InfraKingdom" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>InfraKingdom name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="InfraKingdomURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperPhylum" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SuperPhylum name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperPhylumURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="PhylumDivision" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Phylum o Division name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="PhylumDivisionURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubPhylum" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SubPhylum name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubPhylumURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="InfraPhylum" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>InfraPhylum name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="InfraPhylumURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Superclass" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SuperClass name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperclassURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Class" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Class name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="ClassURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubClass" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SubClass name.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubClassURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperOrder" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SuperOrder name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperOrderURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Order" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Order name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="OrderURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubOrder" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SubOrder name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubOrderURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperFamily" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SuperFamily name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SuperFamilyURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Family" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Family name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="FamilyURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubFamily" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>SubFamily name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="SubFamilyURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Tribe" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Tribe name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="TribeURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Genus" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Genus name</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="GenusURI" type="xs:anyURI" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Link to external information</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element ref="dwc:higherClassification"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="MiscDetails" type="MiscDetailType" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Miscellaneus: notes attached to the taxon information. E.g. Pronunciation, etymology, ...</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Description" type="TaxonomicalDescriptionType" minOccurs="0"/>
+							<xs:element name="NaturalHistory" type="NaturalHistoryType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Most relevant description about the species.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="HabitatAndDistribution" type="HabitatAndDistributionType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Distribution of the species</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="DemographyAndConservation" type="DemographyAndConservationType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Information concerning the demographic aspects of the species, as well as the conservation status</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="UsesAndManagement" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Uses" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation> Known or potential uses of the species, at a direct economic level, as instruments of education, prospecting, eco-tourism, etc. It includes published material or suggestions from the author or others. In any event, the source must be explicitly quoted. </xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="Un-structuredUses" type="NormalString" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Uses in a unstructured format.</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="Use" minOccurs="0" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Uses in a structured format.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="SourceOfInformation" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="References" type="tcs:ReferenceType" maxOccurs="unbounded"/>
+																			<xs:element name="SourceOfInformationText"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Use-Value" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="PartUsed" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Users" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="VernacularNameUseAnnotations" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany. The name of the taxon should be distinguished from part5 names. Name may be restricted to a time of the year or occasion, or have sacred connotations</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="ProductionDetaiils" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="MeansOfApplication-Administration" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="SeasonOfAvailability-Use" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Conservatio-ExplotationData" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="UseType" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany. traditional, industrial; past, current, possible</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="RatingPopularity" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Properties" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Problems" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Potential" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Acc. TDWG Economic Botany</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="UseNotes" minOccurs="0"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Folklore" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Known myths or legends that people or literature contribute about the species.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ancillaryData" type="AncillaryDataType"/>
+													<xs:choice>
+														<xs:element name="StructuredFolklore">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Attribute"/>
+																	<xs:element name="Value"/>
+																	<xs:element name="UsedBy"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Un-structuredDescription" type="NormalString"/>
+													</xs:choice>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Management" type="TextDescriptionType" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Breeding and  cultivation  Control.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Documentation" type="DocumentationType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>References and pointers to additional resources and information (multimedia or publications).</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="MeasurementOrFact" type="MeasurementOrFactType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Nuevo</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--  =============================================   -->
+	<!--Datatypes-->
+	<!--  =============================================   -->
+	<xs:complexType name="CommonNameType">
+		<xs:choice>
+			<xs:element name="CommonName" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Structured information.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Name" type="NormalString"/>
+						<xs:element name="Language" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ISO639" type="NormalString" minOccurs="0"/>
+									<xs:element name="LanguageName" type="NormalString" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="UsedIn" type="DistributionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Location where the common name is used</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="UsedBy" type="NormalString" minOccurs="0"/>
+						<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CommonNamesText" type="TextDescriptionType">
+				<xs:annotation>
+					<xs:documentation>Unstructured information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="MetadataType">
+		<xs:annotation>
+			<xs:documentation> From ABCD v. 2.06</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="abcd:ContentMetadata">
+				<xs:sequence>
+					<xs:element name="Source" type="NormalString">
+						<xs:annotation>
+							<xs:documentation>Information about the data set provenance.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Dataset_ID" type="NormalString" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DocumentationType">
+		<xs:choice>
+			<xs:element name="Publication" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="dcelem:elementsGroup"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Multimedia" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="dcelem:elementsGroup"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Un-structuredDocumentation" type="NormalString"/>
+		</xs:choice>
+		<xs:attribute name="ID"/>
+		<xs:attribute name="Annotation">
+			<xs:annotation>
+				<xs:documentation>On why this information item is here</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DescriptionItemType">
+		<xs:sequence>
+			<xs:element name="ItemAttribute"/>
+			<xs:element name="ItemValue"/>
+			<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TextDescriptionType">
+		<xs:sequence>
+			<xs:element name="AncilliaryData" type="AncillaryDataType"/>
+			<xs:element name="Un-structuredDescription" type="NormalString"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TaxonomicalDescriptionType">
+		<xs:sequence>
+			<xs:element name="BriefDescription" type="TextDescriptionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Brief description, presented in a simple technical language, to distinguish the species from other close or similar ones.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FullDescription" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Diagnostic description.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="DescriptionItem" type="DescriptionItemType" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Structured diagnostic characters.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DescriptionText" type="TextDescriptionType">
+							<xs:annotation>
+								<xs:documentation>Unstructured diagnostic characters.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="IdentificationKeys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Keys to identify infraranks.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Keys" type="TextDescriptionType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Dichotomic  or multientrance keys.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NaturalHistoryType">
+		<xs:choice>
+			<xs:element name="NaturalData">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="LifeForm" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants.  Comprising its size, shape, texture and orientation. Example:  tree, shrubs, herbs.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LifeCycle" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes. </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Reproduction" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>All data related to the production of offspring. </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AnnualCycle" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Recurrent biological phenomena correlated with climatic conditions, as bird migration or plant flowering.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Feeding" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Information related to supply food for the development and sustenance of the individual and/or its offspring.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="TextDescriptionType">
+										<xs:choice>
+											<xs:sequence>
+												<xs:element name="Un-structuredDescription" type="NormalString"/>
+												<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+											<xs:sequence>
+												<xs:element name="TrophicStrategy">
+													<xs:annotation>
+														<xs:documentation>nuevo</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="TrophicStrategyQualifier">
+													<xs:annotation>
+														<xs:documentation>nuevo</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:choice>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Dispersal" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Nuevo</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Behavior" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Responses, reactions or movements made by an organism in a particular situation.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Interactions" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Mutual or reciprocal actions or influences.  For example, predation, parasitism, mutualism, etc.  Relations with products grown and stored by man (plagues) are also included.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TextInteractions" type="TextDescriptionType" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>List of interactions.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Interaction" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>Interactions in structured format.</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="InteractionType">
+													<xs:annotation>
+														<xs:documentation>String with the type of interaction.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="InteractionSpecies" type="ResourceRelationshipType">
+													<xs:annotation>
+														<xs:documentation>The category of information pertaining to relationships between resources (instances of data records, such as Occurrences, Taxa, Locations, Events.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="InteractionComments" type="NormalString" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Notes about the interactions.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="MolecularData" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Placeholder for information about molecular data</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MigratoryData" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Information about migrations. (Placeholder) </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EcologicalSignificance" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Ecological importance of the taxon. (Placeholder)</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MiscDetails" type="MiscDetailType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Miscellaneus: notes attached to the taxon natural history information</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Un-structuredDescription" type="NormalString"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="DemographyAndConservationType">
+		<xs:sequence>
+			<xs:element name="Territory" type="TextDescriptionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Information associated mostly to vertebrates, referring to the territorial extension of the individual or group in terms of its activities (feeding, mating, etc.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PopulationBiology" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Placeholder for an extension for Population biology data</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Trend"/>
+						<xs:element name="TextPopulationBiology"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ThreatStatus" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the status of the taxon.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ThreatStatus" type="NormalString">
+							<xs:annotation>
+								<xs:documentation>Description of the threat status.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Thread"/>
+						<xs:element name="ConservatioActions"/>
+						<xs:element name="Authority" type="NormalString">
+							<xs:annotation>
+								<xs:documentation>Criteria apply to assess such status.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AppliesTo" type="DistributionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Location where the status is used.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Legislation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A national proposed law or group of laws. A regional proposed law or group of laws.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="LegislationText" type="TextDescriptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Enumeration of the law or group of laws in an unstructured format.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Legislation" type="LegislationType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Structured information.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DistributionType">
+		<xs:choice>
+			<xs:element name="AtomizedDistribution" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of regions structured and categorized the degree of safety.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Catalogue" type="NormalString">
+							<xs:annotation>
+								<xs:documentation>Catalogue where the GeographicEntity is documented.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="GeographicEntity" type="NormalString">
+							<xs:annotation>
+								<xs:documentation>Name of the geographic entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DistributionArea" type="TextDescriptionType">
+				<xs:annotation>
+					<xs:documentation>Description of the distribution of the species.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="LegislationType">
+		<xs:sequence>
+			<xs:element name="LegislationName" type="NormalString">
+				<xs:annotation>
+					<xs:documentation>Word or phrase to designate the law or group of laws</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProtectionLegalStatus" type="NormalString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the status.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="References" type="tcs:ReferenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VersionType">
+		<xs:annotation>
+			<xs:documentation> From ABCD v. 2.06 + PreferredFlag</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Major" type="xs:nonNegativeInteger">
+				<xs:annotation>
+					<xs:documentation>The major version number ('1' in 1.2) as defined by the content creators.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Minor" type="xs:nonNegativeInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An optional minor version number ('2' in 1.2)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Modifier" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateIssued" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PreferredFlag" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>TRUE to indicate currente version when providers serve more than one record per taxon.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HabitatAndDistributionType">
+		<xs:sequence>
+			<xs:element name="Habitat" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>General description of the sites where the species is found (ecosystem, forest, environment or microhabitat). (Placeholder).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="Un-structuredHabitat" type="NormalString"/>
+						<xs:element name="StructuredHabitat" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="VocabularyUsed"/>
+									<xs:element name="HabitatType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Distribution" type="DistributionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Species geographical  distribution.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Endemicity" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Belonging to a particular area or environment.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="AtomizedEndemsm" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>List of areas structured and categorized the degree of safety.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="EdemicFor" type="NormalString">
+										<xs:annotation>
+											<xs:documentation>Description of the distribution of the species.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="EndemicIn" type="NormalString">
+										<xs:annotation>
+											<xs:documentation>List of countries according to the ISO 3166 standard. Structured and categorized the degree of safety.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="EdemismText" type="TextDescriptionType">
+							<xs:annotation>
+								<xs:documentation>List of areas presented in an unstructured and categorized the degree of safety.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MiscDetailType">
+		<xs:choice>
+			<xs:element name="Detail" type="DescriptionItemType" maxOccurs="unbounded"/>
+			<xs:element name="DetailsText" type="TextDescriptionType"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="UsesType">
+		<xs:sequence>
+			<xs:element name="TypeOfUse" type="NormalString"/>
+			<xs:element name="Description" type="NormalString" minOccurs="0"/>
+			<xs:element name="Region" type="NormalString" minOccurs="0"/>
+			<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeasurementOrFactType">
+		<xs:sequence>
+			<xs:element ref="dwc:MeasurementOrFact"/>
+			<xs:element name="RelatedTo" type="NormalString" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResourceRelationshipType">
+		<xs:sequence>
+			<xs:element ref="dwc:ResourceRelationship"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AncillaryDataType">
+		<xs:sequence>
+			<xs:element ref="dcterms:accessRights"/>
+			<xs:element name="References" type="tcs:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Bibliographic and multimedia reference IDs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  =============================================   -->
+	<!--Basic datatypes-->
+	<!--  =============================================   -->
+	<xs:complexType name="NormalString">
+		<xs:annotation>
+			<xs:documentation>String (i. e. xs:string with minimum length=1) extended with language attribute</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="language" type="xs:language" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="NormalDate">
+		<xs:annotation>
+			<xs:documentation>String (i. e. xs:string with minimum length=1) extended with language attribute</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:date">
+				<xs:attribute name="language" type="xs:language" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
