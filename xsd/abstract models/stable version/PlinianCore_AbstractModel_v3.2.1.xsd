@@ -331,17 +331,7 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="TaxonRecordName">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="ScientificName" type="tcs:ScientificName">
-					<xs:annotation>
-						<xs:documentation>Complete name of the taxon.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
-			</xs:sequence>
-		</xs:complexType>
+	<xs:element name="TaxonRecordName" type="TaxonRecordNameType">
 	</xs:element>
 	<xs:element name="TerritoryUnstructured" type="xs:string"/>
 	<xs:element name="Territory" type="TerritoryType"/>
@@ -1012,15 +1002,15 @@ If we are in a register of a genre, this register would include the keys of the 
 		<xs:attribute name="classification"/>
 		<xs:attribute name="recommended"/>
 	</xs:complexType>
-	<xs:complexType name="IdentificationKeysType">		
-			<xs:sequence>
-				<xs:element ref="Keys" minOccurs="0" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>Dichotomic  or multientrance keys.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
-			</xs:sequence>
+	<xs:complexType name="IdentificationKeysType">
+		<xs:sequence>
+			<xs:element ref="Keys" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Dichotomic  or multientrance keys.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="InteractionAtomizedType">
 		<xs:sequence>
@@ -1815,6 +1805,16 @@ If we are in a register of a genre, this register would include the keys of the 
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="TaxonRecordNameType">
+			<xs:sequence>
+				<xs:element name="ScientificName" type="tcs:ScientificName">
+					<xs:annotation>
+						<xs:documentation>Complete name of the taxon.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>	
 	</xs:complexType>
 	<xs:complexType name="TerritoryType">
 		<xs:sequence>
