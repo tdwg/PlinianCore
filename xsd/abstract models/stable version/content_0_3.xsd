@@ -4,8 +4,8 @@
 	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://services.eol.org/schema/xml.xsd"/>
 	<xsd:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dc.xsd"/>
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dcterms.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2003/01/geo/wgs84_pos#" schemaLocation="http://services.eol.org/schema/w3c_geo.xsd"/>
-	<xsd:import namespace="http://rs.tdwg.org/dwc/dwcore/" schemaLocation="http://services.eol.org/schema/tdwg_dw_core.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2003/01/geo/wgs84_pos#" schemaLocation="http://rs.tdwg.org/tapir/1.0/schema/w3c_geo.xsd"/>
+	<xsd:import namespace="http://rs.tdwg.org/dwc/dwcore/" schemaLocation="http://rs.tdwg.org/dwc/tdwg_dw_core.xsd"/>
 	<xsd:element name="response" type="responseType"/>
 	<xsd:complexType name="responseType">
 		<xsd:sequence>
