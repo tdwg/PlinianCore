@@ -172,23 +172,13 @@
 	<xs:element name="HabitatUnstructured" type="xs:string"/>
 	<xs:element name="Hierarchy" type="HierarchyType"/>
 	<xs:element name="InteractionAtomized" type="InteractionAtomizedType"/>
-	<xs:element name="IdentificationKeys">
+	<xs:element name="IdentificationKeys" type="IdentificationKeysType">
 		<xs:annotation>
 			<xs:documentation>Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys.                                                      A taxon includes a key or an identification of key  in the subordinate taxons.
 For example: 
 If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)
 </xs:documentation>
 		</xs:annotation>
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="Keys" minOccurs="0" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>Dichotomic  or multientrance keys.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
-			</xs:sequence>
-		</xs:complexType>
 	</xs:element>
 	<xs:element name="Interactions" type="InteractionsType"/>
 	<xs:element name="InteractionUnstructured" type="xs:string"/>
@@ -1021,6 +1011,16 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 		<xs:attribute name="classification"/>
 		<xs:attribute name="recommended"/>
+	</xs:complexType>
+	<xs:complexType name="IdentificationKeysType">		
+			<xs:sequence>
+				<xs:element ref="Keys" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Dichotomic  or multientrance keys.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="InteractionAtomizedType">
 		<xs:sequence>
