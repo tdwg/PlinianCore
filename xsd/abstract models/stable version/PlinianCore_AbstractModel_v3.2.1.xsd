@@ -139,8 +139,8 @@
 			<xs:documentation>Ecological importance of the taxon. (Placeholder)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="EcologicalAtomized" type="DetailType"/>
-	<xs:element name="EcologicalUnstructured" type="xs:string"/>
+	<xs:element name="EcologicalSignificanceAtomized" type="DetailType"/>
+	<xs:element name="EcologicalSignificanceUnstructured" type="xs:string"/>
 	<xs:element name="Endemic" type="EndemicType"/>
 	<xs:element name="EndemicAtomized" type="EndemicAtomizedType">
 		<xs:annotation>
@@ -704,7 +704,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:complexType name="EcologicalSignificanceType">
 		<xs:sequence>
 			<xs:sequence minOccurs="0">
-				<xs:element ref="EcologicalAtomized" maxOccurs="unbounded"/>
+				<xs:element ref="EcologicalSignificanceAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation> </xs:documentation>
@@ -712,7 +712,7 @@ If we are in a register of a genre, this register would include the keys of the 
 				</xs:element>
 			</xs:sequence>
 			<xs:sequence minOccurs="0">
-				<xs:element ref="EcologicalUnstructured"/>
+				<xs:element ref="EcologicalSignificanceUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation> </xs:documentation>
@@ -774,7 +774,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	</xs:complexType>
 	<xs:complexType name="EnvironmentalEnvelopeType">
 		<xs:sequence>
-            <xs:sequence minOccurs="0">
+			<xs:sequence minOccurs="0">
 				<xs:element ref="EnvironmentalEnvelopeAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
