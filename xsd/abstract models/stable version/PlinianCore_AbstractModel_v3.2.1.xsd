@@ -304,34 +304,10 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:element name="PopulationBiology" type="PopulationBiologyType"/>
 	<xs:element name="PopulationBiologyAtomized" type="PopulationBiologyAtomizedType"/>
 	<xs:element name="PopulationBiologyUnstructured" type="xs:string"/>
-	<xs:element name="RecordMetadata">
+	<xs:element name="RecordMetadata" type="RecordMetadataType">
 		<xs:annotation>
 			<xs:documentation>This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record.</xs:documentation>
 		</xs:annotation>
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="Language" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>The language of the taxon record, according to ISO 639.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="TargetAudiences" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Users to which the information is addressed. The defined audiences are: Biodiversity researchers, teachers and students, decision makers, professionals from another areas and general public.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="Version">
-					<xs:annotation>
-						<xs:documentation>Number and date of the current version.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="Revision" minOccurs="0" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation> Creators, revision status and dates of the entire data collection.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
 	</xs:element>
 	<xs:element name="ReproductionAtomized" type="DetailType"/>
 	<xs:element name="Revision" type="RevisionType"/>
@@ -1722,6 +1698,30 @@ If we are in a register of a genre, this register would include the keys of the 
 			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="Region"/>
+	</xs:complexType>
+	<xs:complexType name="RecordMetadataType">
+		<xs:sequence>
+			<xs:element ref="Language" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The language of the taxon record, according to ISO 639.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="TargetAudiences" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Users to which the information is addressed. The defined audiences are: Biodiversity researchers, teachers and students, decision makers, professionals from another areas and general public.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="Version">
+				<xs:annotation>
+					<xs:documentation>Number and date of the current version.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="Revision" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation> Creators, revision status and dates of the entire data collection.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ReproductionType">
 		<xs:sequence>
