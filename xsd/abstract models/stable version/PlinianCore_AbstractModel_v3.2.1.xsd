@@ -80,29 +80,6 @@
 	</xs:element>
 	<xs:element name="BehaviorAtomized" type="DetailType"/>
 	<xs:element name="BehaviorUnstructured" type="xs:string"/>
-	<xs:element name="Binary">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="MIME-Type">
-					<xs:annotation>
-						<xs:documentation>Controlled Vocavulary: Application, Audio, Image, Message, Model, Multipart, Text and Video. http://www.iana.org/assignments/media-types/index.html</xs:documentation>
-					</xs:annotation>
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:enumeration value="Application"/>
-							<xs:enumeration value="Audio"/>
-							<xs:enumeration value="Image"/>
-							<xs:enumeration value="Message"/>
-							<xs:enumeration value="Model"/>
-							<xs:enumeration value="Multipart"/>
-							<xs:enumeration value="Text"/>
-							<xs:enumeration value="Video"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
 	<xs:element name="BriefDescription">
 		<xs:annotation>
 			<xs:documentation>Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa.</xs:documentation>
@@ -267,8 +244,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:element name="SynonymsAtomized" type="SynonymsAtomizedType"/>
 	<xs:element name="Synonyms" type="SynonymsType"/>
 	<xs:element name="SynonymsUnstructured" type="xs:string"/>
-	<xs:element name="TargetAudiences" type="TargetAudiencesType">
-	</xs:element>
+	<xs:element name="TargetAudiences" type="TargetAudiencesType"/>
 	<xs:element name="TaxonomicalDescription" type="TaxonomicalDescriptionType"/>
 	<xs:element name="TaxonomicalDescriptionUnstructured" type="xs:string"/>
 	<xs:element name="TaxonRecord">
@@ -1763,19 +1739,19 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TargetAudiencesType">
-			<xs:choice>
-				<xs:element ref="Audience" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>VC. Repetitive concept where the target audiences are written one by one. (Predetermined list:						01. Expert (High).							02. Knowledgeable (Medium).							03. General (Low).
+		<xs:choice>
+			<xs:element ref="Audience" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>VC. Repetitive concept where the target audiences are written one by one. (Predetermined list:						01. Expert (High).							02. Knowledgeable (Medium).							03. General (Low).
 									</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AudiencesUnstructured">
-					<xs:annotation>
-						<xs:documentation>List audience codes separated by means of comma or /.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>	
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="AudiencesUnstructured">
+				<xs:annotation>
+					<xs:documentation>List audience codes separated by means of comma or /.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="TaxonomicalDescriptionType">
 		<xs:choice>
