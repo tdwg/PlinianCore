@@ -72,8 +72,7 @@
 			<xs:documentation>List audience codes separated by means of comma or /.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="BaseElements" type="BaseElementsType">
-	</xs:element>
+	<xs:element name="BaseElements" type="BaseElementsType"/>
 	<xs:element name="Behavior" type="BehaviorType">
 		<xs:annotation>
 			<xs:documentation>Responses, reactions or movements made by an organism in a particular situation.</xs:documentation>
@@ -253,12 +252,11 @@ If we are in a register of a genre, this register would include the keys of the 
 			<xs:documentation/>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="ManagementAndConservation" type="ManagementAndConservationType">
+	<xs:element name="ManagementAndConservationAtomized" type="ManagementAndConservationAtomizedType">
 		<xs:annotation>
 			<xs:documentation>Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve species </xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="ManagementAndConservationAtomized" type="ManagementAndConservationType"/>
 	<xs:element name="ManagementAndConservationUnstructured" type="xs:string"/>
 	<xs:element name="MeasurementOrFact" type="MeasurementOrFactType"/>
 	<xs:element name="Metadata" type="MetadataType"/>
@@ -442,28 +440,28 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BaseElementsType">
-			<xs:sequence>
-				<xs:element name="TaxonRecordID" type="xs:string">
-					<xs:annotation>
-						<xs:documentation>Unique identifier of the record within the database.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="dwc:taxonConceptID" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="GlobalUniqueIdentifier" type="xs:string" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>An Uniform Resource Name (URN) used as an unique identifier of the taxon record.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="Abstract" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>A brief summary of the most relevant or attractive features of this taxón to the general public.  Could point to any kind of information. Example: Blue whale is the largest mammal in the world.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:sequence>	
+		<xs:sequence>
+			<xs:element name="TaxonRecordID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Unique identifier of the record within the database.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="dwc:taxonConceptID" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GlobalUniqueIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An Uniform Resource Name (URN) used as an unique identifier of the taxon record.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="Abstract" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A brief summary of the most relevant or attractive features of this taxón to the general public.  Could point to any kind of information. Example: Blue whale is the largest mammal in the world.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BehaviorType">
 		<xs:sequence>
@@ -1897,7 +1895,7 @@ If we are in a register of a genre, this register would include the keys of the 
 						<xs:documentation>Ways in which species are utilized by people. Including Folklore</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element ref="ManagementAndConservation" minOccurs="0"/>
+				<xs:element ref="ManagementAndConservationAtomized" minOccurs="0"/>
 			</xs:sequence>
 			<xs:sequence>
 				<xs:element ref="UsesManagementAndConservationUnstructured"/>
