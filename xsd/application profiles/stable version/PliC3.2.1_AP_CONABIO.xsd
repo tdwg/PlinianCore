@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- editado con XMLSpy v2013 sp1 (x64) (http://www.altova.com) por Santiago Martínez de la Riva (Real Jardín Botánico - CSIC) -->
-<!-- edited with XMLSpy v2015 sp2 (http://www.altova.com) by Especies (Nacional Financiera Fideicomiso Fondo para la Biodiversidad) -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by Francisco Pando (Real Jardín Botánico - CSIC) -->
 <xs:schema xmlns:pce="http://www.pliniancore.org/pc3.2/pcelement" xmlns:pc-conabio="http://rs.tdwg.org/dwc/pccore/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:gisin="http://www.gisin.org/gisin/SpeciesStatus" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:plic="http://www.gbif.es/PliC/" targetNamespace="http://rs.tdwg.org/dwc/pccore/" elementFormDefault="qualified">
 	<xs:import schemaLocation="PlinianCore_AbstractModel_v3.2.1.xsd"/>
 	<xs:element name="Dataset">
@@ -42,7 +42,7 @@
 				<xs:element ref="InteractionAtomized" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="MolecularDataAtomized" minOccurs="0"/>
 				<xs:element ref="MigratoryAtomized" minOccurs="0"/>
-				<xs:element ref="EcologicalAtomized" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="EcologicalSignificanceAtomized" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="EnvironmentalEnvelope" minOccurs="0"/>
 				<xs:element ref="Invasiveness" minOccurs="0"/>
 				<xs:element ref="HabitatAtomized" minOccurs="0" maxOccurs="unbounded"/>
