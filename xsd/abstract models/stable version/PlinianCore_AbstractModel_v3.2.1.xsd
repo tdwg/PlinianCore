@@ -21,7 +21,7 @@
 			<xs:sequence>
 				<xs:element ref="Metadata">
 					<xs:annotation>
-						<xs:documentation>Information about the collections of records. This is an Extension of abcd: ContentMetadata.</xs:documentation>
+						<xs:documentation>Information about the collections of records. This is an extension of the metadata  of eml-gbif-profile.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element ref="TaxonRecord" maxOccurs="unbounded"/>
@@ -305,6 +305,9 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:element name="PopulationBiologyAtomized" type="PopulationBiologyAtomizedType"/>
 	<xs:element name="PopulationBiologyUnstructured" type="xs:string"/>
 	<xs:element name="RecordMetadata">
+		<xs:annotation>
+			<xs:documentation>This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record.</xs:documentation>
+		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="Language" minOccurs="0">
@@ -1337,7 +1340,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:complexType name="MetadataType">
 		<xs:sequence>
 			<xs:element name="Dataset_ID" type="xs:string"/>
-			<xs:element name="dateStamp">
+			<xs:element name="dateStamp" type="xs:date">
 				<xs:annotation>
 					<xs:documentation>The date the metadata document was created or modified.</xs:documentation>
 				</xs:annotation>
@@ -1360,7 +1363,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					<xs:documentation>URL of the logo associated with this dataset.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="References" minOccurs="0"/>
+			<xs:element ref="References" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="MigratoryAtomizedType">
