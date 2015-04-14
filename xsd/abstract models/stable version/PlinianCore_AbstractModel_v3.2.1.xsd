@@ -142,33 +142,10 @@
 	<xs:element name="EcologicalAtomized" type="DetailType"/>
 	<xs:element name="EcologicalUnstructured" type="xs:string"/>
 	<xs:element name="Endemic" type="EndemicType"/>
-	<xs:element name="EndemicAtomized">
+	<xs:element name="EndemicAtomized" type="EndemicAtomizedType">
 		<xs:annotation>
 			<xs:documentation>List of areas structured and categorized the degree of safety.</xs:documentation>
 		</xs:annotation>
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="EdemicTo" type="xs:string" minOccurs="0" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>The concept is applied to one or several countries. Ex:-	Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. 
-	-	Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama
-	</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="EndemicIn" type="xs:string" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>The concept is applied to an area either multinational or local. Ex: 	- Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region.
-	- Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain).
-	</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation> </xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
 	</xs:element>
 	<xs:element name="EnvironmentalEnvelope" type="EnvironmentalType"/>
 	<xs:element name="EnvironmentalUnstructured" type="xs:string"/>
@@ -741,6 +718,29 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EndemicAtomizedType">
+		<xs:sequence>
+			<xs:element name="EdemicTo" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The concept is applied to one or several countries. Ex:-	Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. 
+	-	Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama
+	</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndemicIn" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The concept is applied to an area either multinational or local. Ex: 	- Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region.
+	- Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain).
+	</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation> </xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="EndemicType">
