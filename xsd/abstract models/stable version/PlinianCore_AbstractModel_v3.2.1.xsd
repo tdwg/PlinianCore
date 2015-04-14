@@ -267,22 +267,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:element name="SynonymsAtomized" type="SynonymsAtomizedType"/>
 	<xs:element name="Synonyms" type="SynonymsType"/>
 	<xs:element name="SynonymsUnstructured" type="xs:string"/>
-	<xs:element name="TargetAudiences">
-		<xs:complexType>
-			<xs:choice>
-				<xs:element ref="Audience" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>VC. Repetitive concept where the target audiences are written one by one. (Predetermined list:						01. Expert (High).							02. Knowledgeable (Medium).							03. General (Low).
-									</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AudiencesUnstructured">
-					<xs:annotation>
-						<xs:documentation>List audience codes separated by means of comma or /.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
-		</xs:complexType>
+	<xs:element name="TargetAudiences" type="TargetAudiencesType">
 	</xs:element>
 	<xs:element name="TaxonomicalDescription" type="TaxonomicalDescriptionType"/>
 	<xs:element name="TaxonomicalDescriptionUnstructured" type="xs:string"/>
@@ -331,8 +316,7 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="TaxonRecordName" type="TaxonRecordNameType">
-	</xs:element>
+	<xs:element name="TaxonRecordName" type="TaxonRecordNameType"/>
 	<xs:element name="TerritoryUnstructured" type="xs:string"/>
 	<xs:element name="Territory" type="TerritoryType"/>
 	<xs:element name="TerritoryAtomized" type="TerritoryAtomizedType"/>
@@ -1778,6 +1762,21 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:sequence>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="TargetAudiencesType">
+			<xs:choice>
+				<xs:element ref="Audience" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>VC. Repetitive concept where the target audiences are written one by one. (Predetermined list:						01. Expert (High).							02. Knowledgeable (Medium).							03. General (Low).
+									</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="AudiencesUnstructured">
+					<xs:annotation>
+						<xs:documentation>List audience codes separated by means of comma or /.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>	
+	</xs:complexType>
 	<xs:complexType name="TaxonomicalDescriptionType">
 		<xs:choice>
 			<xs:sequence>
@@ -1807,14 +1806,14 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="TaxonRecordNameType">
-			<xs:sequence>
-				<xs:element name="ScientificName" type="tcs:ScientificName">
-					<xs:annotation>
-						<xs:documentation>Complete name of the taxon.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
-			</xs:sequence>	
+		<xs:sequence>
+			<xs:element name="ScientificName" type="tcs:ScientificName">
+				<xs:annotation>
+					<xs:documentation>Complete name of the taxon.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TerritoryType">
 		<xs:sequence>
