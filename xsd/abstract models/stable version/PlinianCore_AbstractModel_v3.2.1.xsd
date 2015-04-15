@@ -287,7 +287,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 				<xs:element ref="UsesManagementAndConservation" minOccurs="0"/>
-				<xs:element ref="associatedParty" minOccurs="0"/>
+				<xs:element ref="associatedParty" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="References" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
