@@ -432,8 +432,8 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="DemographyAndThreatType">
-		<xs:choice>
-			<xs:sequence>
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="Territory" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Information associated mostly to vertebrates, referring to the territorial extension of the individual or group in terms of its activities (feeding, mating, etc.)</xs:documentation>
@@ -460,7 +460,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="DemographyAndThreatUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -468,7 +468,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="DescriptionItemType">
 		<xs:sequence>
@@ -832,8 +832,8 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="HabitatAndDistributionType">
-		<xs:choice>
-			<xs:sequence>
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="Habitats" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>General description of the sites where the species are found (ecosystem, forest, environment or microhabitat). (Placeholder).</xs:documentation>
@@ -850,7 +850,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="HabitatAndDistributionUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -858,7 +858,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="HabitatsType">
 		<xs:sequence>
@@ -1405,8 +1405,8 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="NaturalHistoryType">
-		<xs:choice>
-			<xs:sequence>
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="LifeForm" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>VC. General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs. </xs:documentation>
@@ -1473,7 +1473,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="NaturalHistoryUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
@@ -1481,11 +1481,11 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="NomenclatureAndClassificationType">
-		<xs:choice>
-			<xs:sequence>
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="TaxonRecordName">
 					<xs:annotation>
 						<xs:documentation>Complete information about the name of the taxon</xs:documentation>
@@ -1512,11 +1512,11 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element name="NomenclatureAndClassificationUnstructured" type="xs:string"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PopulationBiologyType">
 		<xs:sequence>
@@ -1755,8 +1755,8 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="TaxonomicalDescriptionType">
-		<xs:choice>
-			<xs:sequence>
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="BriefDescription" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa.</xs:documentation>
@@ -1776,11 +1776,11 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="TaxonomicalDescriptionUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TaxonRecordNameType">
 		<xs:sequence>
@@ -1869,8 +1869,8 @@ If we are in a register of a genre, this register would include the keys of the 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="UsesManagementAndConservationType">
-		<xs:choice>
-			<xs:sequence>
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="Uses" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Ways in which species are utilized by people. Including Folklore</xs:documentation>
@@ -1878,11 +1878,11 @@ If we are in a register of a genre, this register would include the keys of the 
 				</xs:element>
 				<xs:element ref="ManagementAndConservation" minOccurs="0"/>
 			</xs:sequence>
-			<xs:sequence>
+			<xs:sequence minOccurs="0">
 				<xs:element ref="UsesManagementAndConservationUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
-		</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="UsesType">
 		<xs:sequence>
