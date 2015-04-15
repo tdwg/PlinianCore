@@ -54,7 +54,7 @@
 				<xs:element ref="DirectThreats" minOccurs="0"/>
 				<xs:element ref="Legislation" minOccurs="0"/>
 				<xs:element ref="UsesAtomized" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element ref="ManagementAndConservationAtomized" minOccurs="0"/>
+				<xs:element ref="ManagementAndConservation" minOccurs="0"/>
 				<xs:element ref="associatedParty" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="MeasurementOrFact" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="References" minOccurs="0"/>
