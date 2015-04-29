@@ -246,8 +246,8 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:element name="Synonyms" type="SynonymsType"/>
 	<xs:element name="SynonymsUnstructured" type="xs:string"/>
 	<xs:element name="TargetAudiences" type="TargetAudiencesType"/>
-	<xs:element name="TaxonomicalDescription" type="TaxonomicalDescriptionType"/>
-	<xs:element name="TaxonomicalDescriptionUnstructured" type="xs:string"/>
+	<xs:element name="TaxonomicDescription" type="TaxonomicDescriptionType"/>
+	<xs:element name="TaxonomicDescriptionUnstructured" type="xs:string"/>
 	<xs:element name="TaxonRecord">
 		<xs:annotation>
 			<xs:documentation>Information about the record.</xs:documentation>
@@ -265,7 +265,7 @@ If we are in a register of a genre, this register would include the keys of the 
 						<xs:documentation>Standard information for every known taxon.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element ref="TaxonomicalDescription" minOccurs="0"/>
+				<xs:element ref="TaxonomicDescription" minOccurs="0"/>
 				<xs:element ref="NaturalHistory" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Most relevant description about the species.</xs:documentation>
@@ -1058,7 +1058,7 @@ If we are in a register of a genre, this register would include the keys of the 
 			<xs:element name="Route" minOccurs="0"/>
 			<xs:element name="impactTarget" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Who/what WHATEVER is impacting.</xs:documentation>
+					<xs:documentation>Who/what is impacting.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -1249,7 +1249,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
-			<xs:element name="HumanAndEnvironmentalrrelevance" type="xs:string" minOccurs="0"/>
+			<xs:element name="HumanAndEnvironmentalRelevance" type="xs:string" minOccurs="0"/>
 			<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="type" type="xs:string">
@@ -1550,29 +1550,10 @@ If we are in a register of a genre, this register would include the keys of the 
 					<xs:documentation>Size of a population in relation to a definite unit of space </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PatternDistribution" minOccurs="0">
+			<xs:element name="PatternDistribution" type="DetailType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>VCR Clumped, Uniform and  Random</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:enumeration value=" Clumped">
-							<xs:annotation>
-								<xs:documentation>Distribution in which individuals occur in groups</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="Uniform">
-							<xs:annotation>
-								<xs:documentation>Distribution in which individuals are more or less evenly spaced</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value=" Random">
-							<xs:annotation>
-								<xs:documentation>Distribution in which the position of each individual is independent of the others</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element name="Size" type="DetailType" minOccurs="0">
 				<xs:annotation>
@@ -1616,7 +1597,7 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:element>
 			<xs:element name="Recruitment" type="DetailType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>proportion of plants or animals that reach a size or age when they become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce </xs:documentation>
+					<xs:documentation>Proportion of plants or animals that reach a size or age when they become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PopulationGrowthRate" type="DetailType" minOccurs="0">
@@ -1754,7 +1735,7 @@ If we are in a register of a genre, this register would include the keys of the 
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
-	<xs:complexType name="TaxonomicalDescriptionType">
+	<xs:complexType name="TaxonomicDescriptionType">
 		<xs:sequence>
 			<xs:sequence minOccurs="0">
 				<xs:element ref="BriefDescription" minOccurs="0">
@@ -1777,7 +1758,7 @@ If we are in a register of a genre, this register would include the keys of the 
 				</xs:element>
 			</xs:sequence>
 			<xs:sequence minOccurs="0">
-				<xs:element ref="TaxonomicalDescriptionUnstructured"/>
+				<xs:element ref="TaxonomicDescriptionUnstructured"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:sequence>
@@ -1966,7 +1947,7 @@ f ert ilisers).</xs:documentation>
 			<xs:element name="Conservation-ExplotationData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Acc. TDWG Economic Botany. Record frequency of plants, details of rege neration, sustainabi lity or
-over-exploitation and note any locally imposed bans on felling or harvesting .</xs:documentation>
+over-exploitation and note any locally imposed bans on felling or harvesting.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UseTypeAtomized" minOccurs="0">
