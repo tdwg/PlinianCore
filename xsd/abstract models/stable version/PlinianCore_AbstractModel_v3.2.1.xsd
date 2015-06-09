@@ -288,6 +288,7 @@ If we are in a register of a genre, this register would include the keys of the 
 				</xs:element>
 				<xs:element ref="UsesManagementAndConservation" minOccurs="0"/>
 				<xs:element ref="associatedParty" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="dwc:MeasurementOrFact" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="References" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
@@ -365,6 +366,7 @@ If we are in a register of a genre, this register would include the keys of the 
 					<xs:documentation>Unique identifier of the record within the database.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element ref="dwc:nameAccordingTo" minOccurs="0"/>
 			<xs:element ref="dwc:taxonConceptID" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.</xs:documentation>
@@ -444,7 +446,7 @@ If we are in a register of a genre, this register would include the keys of the 
 						<xs:documentation>Study of the variations in time and space as well as size and density of populations, and the factors that cause such variations. </xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element ref="ThreatStatus" minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ThreatStatus" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Information about the status of the taxon.</xs:documentation>
 					</xs:annotation>
@@ -1821,7 +1823,7 @@ If we are in a register of a genre, this register would include the keys of the 
 	<xs:complexType name="ThreatStatusType">
 		<xs:sequence>
 			<xs:sequence minOccurs="0">
-				<xs:element ref="ThreatStatusAtomized"/>
+				<xs:element ref="ThreatStatusAtomized" maxOccurs="unbounded"/>
 				<xs:element ref="AncillaryData" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 			<xs:sequence minOccurs="0">
