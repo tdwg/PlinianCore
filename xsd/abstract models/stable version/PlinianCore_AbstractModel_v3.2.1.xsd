@@ -1891,8 +1891,7 @@ If we are in a register of a genre, this register would include the keys of the 
 		<xs:sequence>
 			<xs:element name="SourceOfInformation" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations sho uld be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the inform ant recorded (name, gender, approximate age, occupation, ethnic identi t y, locality
-and language spo ken).</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations should be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the informant recorded (name, gender, approximate age, occupation, ethnic identity, locality and language spoken).</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -1904,41 +1903,41 @@ and language spo ken).</xs:documentation>
 			<xs:element name="Use-Value" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a
-weed affecting f ood product ion, or as an accid ent al poison)?</xs:documentation>
+weed affecting food product ion, or as an accident al poison)?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PartUsed" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Whi ch plant parts are used, or have any negative va lues ?</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. Which plant parts are used, or have any negative values ?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Users" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Who recognises the value of t he pla nt? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/a rea ).</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. Who recognises the value of the plant? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/area ).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Organisms" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Which organisms use t he plant/plant parts (e.g . for forage , medicines) or are affect ed by the plant (e.g. by poisons)?</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. Which organisms use the plant/plant parts (e.g . for forage , medicines) or are affected by the plant (e.g. by poisons)?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VernacularNameUseAnnotations" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. The name of the ta xon mus t be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refe rs t o more t han one ta xon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to whi ch the names belong should be stated along wi t h details of ethnic group . Care should be t aken with transl iteration int o the Roman alphabet; if a standard system exists, use it and note which one it is.</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. The name of the taxon must be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refers to more than one taxon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to which the names belong should be stated along with details of ethnic group . Care should be taken with transliteration into the Roman alphabet; if a standard system exists, use it and note which one it is.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProductionDetails" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Acc. TDWG Economic Botany. (where relevant). Are wild /protected /cultivated plants used? Give
-details of cultivation, harvesting , yie lds, processing and storage methods and take note
-of specia l t ools, t iming etc.</xs:documentation>
+details of cultivation, harvesting , yields, processing and storage methods and take note
+of special tools, timing etc.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeansOfApplication-Administration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Acc. TDWG Economic Botany. This is of particular relevance to medicines,
-poisons (e.g. insecticides), so cial products and some environmental purposes (e.g.
-f ert ilisers).</xs:documentation>
+poisons (e.g. insecticides), social products and some environmental purposes (e.g.
+fert ilisers).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SeasonOfAvailability-Use" minOccurs="0">
@@ -1948,13 +1947,13 @@ f ert ilisers).</xs:documentation>
 			</xs:element>
 			<xs:element name="Conservation-ExplotationData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Record frequency of plants, details of rege neration, sustainabi lity or
+					<xs:documentation>Acc. TDWG Economic Botany. Record frequency of plants, details of regeneration, sustainability or
 over-exploitation and note any locally imposed bans on felling or harvesting.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UseTypeAtomized" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Is it a traditional, modern indust rial or just a possible use?</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Is it a traditional, modern industrial or just a possible use?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Economics" minOccurs="0">
@@ -1964,21 +1963,21 @@ over-exploitation and note any locally imposed bans on felling or harvesting.</x
 			</xs:element>
 			<xs:element name="RatingPopularity" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Is the plant highly valued for its use or are ot her species pref erred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessi bilit y, depleted source, or low quality, ineffecti veness, difficult harvesting or proc essing requi rements.</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. Is the plant highly valued for its use or are other species preferred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessibility, depleted source, or low quality, ineffectiveness, difficult harvesting or processing requirements.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Properties" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Acc. TDWG Economic Botany. Provide details of properties which influence its value for a specified
-purp ose, e.g . nutritional value for foods; occurrence of bioactive compounds for
-med icines/poisons; mechanical and physical properties of woods; nectar flow periods
+purpose, e.g . nutritional value for foods; occurrence of bioactive compounds for
+medicines/poisons; mechanical and physical properties of woods; nectar flow periods
 and flowering dates for bee plants; calorific values and burning qualities of fuels; sizes
 of plants used environmentally etc.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Potential" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Acc. TDWG Economic Botany. Coul d the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?</xs:documentation>
+					<xs:documentation>Acc. TDWG Economic Botany. Could the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UseNotes" minOccurs="0"/>
