@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/human.xsl"?>
+<extension xmlns="http://rs.gbif.org/extension/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:dc="http://purl.org/dc/terms/"    
+    xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd" 
+    dc:title="Plinian Core Extension Endemic" name="PlinianCore_Endemic_v3.2.1" 
+    namespace="http://purl.org/pliniancore/terms" 
+    rowType="http://purl.org/pliniancore/terms/EndemicAtomizedClass"
+    dc:subject="dwc:Taxon; plic:Endemic"
+    dc:relation="https://github.com/PlinianCore/Documentation/wiki/EndemicAtomizedClass"
+    dc:description="Organism that lives exclusively in a particular territory and not found anywhere else.">
+	
+	
+	<property name='EdemicTo'
+		group=""
+        namespace='http://purl.org/pliniancore/terms/' 
+        type="string"
+        qualName='http://purl.org/pliniancore/terms/EndemicTo' 
+        dc:relation='https://github.com/PlinianCore/Documentation/wiki/EndemicAtomizedClass#endemicto' 
+        dc:description='The concept is applied to one or several countries.' 
+        examples='Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China.Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama' 
+        required='false'/>
+	<property name='EndemicIn'
+		group=""
+        namespace='http://purl.org/pliniancore/terms/' 
+        type="string"        
+        qualName='http://purl.org/pliniancore/terms/EndemicIn' 
+        dc:relation='https://github.com/PlinianCore/Documentation/wiki/EndemicAtomizedClass#endemicin' 
+        dc:description='The concept is applied to an area either multinational or local.' 
+        examples='Vicuña (Vicugna vicugna Molina, 1782) endemic to the Andean region. Manzanilla Real (Artemisia granatensis Boiss.) endemic to the peaks of Sierra Nevada (Spain).' 
+        required='false'/>   
+</extension>
