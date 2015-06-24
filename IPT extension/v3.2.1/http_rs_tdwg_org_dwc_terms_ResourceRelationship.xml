@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/human.xsl"?>
+<extension xmlns="http://rs.gbif.org/extension/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:dc="http://purl.org/dc/terms/"    
+    xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd" 
+    dc:title="Darwin Core Resource Relationship" 
+    name="ResourceRelationship" namespace="http://rs.tdwg.org/dwc/terms/" rowType="http://rs.tdwg.org/dwc/terms/ResourceRelationship"
+    dc:subject=""
+    dc:relation="http://rs.tdwg.org/dwc/terms/index.htm#relindex"
+    dc:description="Support for generic resource rleations according to Darwin Core terms.">
+
+    <property name='resourceRelationshipID' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/resourceRelationshipID' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#resourceRelationshipID' dc:description='An identifier for an instance of relationship between one resource (the subject) and another (relatedResource, the object).' examples='' required='false'/>
+    <property name='relatedResourceID' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/relatedResourceID' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#relatedResourceID' dc:description='An identifier for a related resource (the object, rather than the subject of the relationship).' examples='' required='false'/>
+    <property name='relationshipOfResource' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/relationshipOfResource' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#relationshipOfResource' dc:description='The relationship of the resource identified by relatedResourceID to the subject (optionally identified by the resourceID). Recommended best practice is to use a controlled vocabulary.' examples='duplicate of", "mother of", "endoparasite of", "host to", "sibling of", "valid synonym of", "located within"' required='false'/>
+    <property name='relationshipAccordingTo' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/relationshipAccordingTo' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#relationshipAccordingTo' dc:description='The source (person, organization, publication, reference) establishing the relationship between the two resources.' examples='Julie Woodruff' required='false'/>
+    <property name='relationshipEstablishedDate' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/relationshipEstablishedDate' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#relationshipEstablishedDate' dc:description='The date-time on which the relationship between the two resources was established. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).' examples='1963-03-08T14:07-0600' required='false'/>
+    <property name='relationshipRemarks' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/relationshipRemarks' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#relationshipRemarks' dc:description='Comments or notes about the relationship between the two resources.' examples='mother and offspring collected from the same nest' required='false'/>
+    <property name='scientificName' namespace='http://rs.tdwg.org/dwc/terms/' qualName='http://rs.tdwg.org/dwc/terms/scientificName' dc:relation='http://rs.tdwg.org/dwc/terms/index.htm#scientificName' dc:description='A taxon name that is the object (relatedResource) of an association with the subject (either a taxon or a taxon occurrence)' examples='Quercus agrifolia var. oxyadenia (Torr.)' required='false'/>
+    
+</extension>
