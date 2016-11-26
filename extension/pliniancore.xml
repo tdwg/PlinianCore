@@ -8,6 +8,7 @@
     namespace="http://purl.org/pliniancore/terms" 
     rowType="http://purl.org/pliniancore/terms/PlinianCoreTaxon"
     dc:subject="plic:Plinian Core; dwc:Taxon"
+    dc:issued="2015-05-20"
     dc:relation="https://github.com/PlinianCore/Documentation/wiki/TaxonRecordClass"
     dc:description="The Plinian Core is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. This extension is supposed to be used in addition to the taxon core and the simple images, vernacular names and references extension.">
 

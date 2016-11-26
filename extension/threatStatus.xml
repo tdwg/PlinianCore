@@ -8,6 +8,7 @@
     namespace="http://purl.org/pliniancore/terms" 
     rowType="http://purl.org/pliniancore/terms/ThreatStatusAtomizedClass"
     dc:subject="dwc:Taxon; plic:threatStatus"
+    dc:issued="2015-05-20"
     dc:relation="https://github.com/PlinianCore/Documentation/wiki/ThreatStatusAtomizedClass"
     dc:description="Information about the status of the taxon.">
     
