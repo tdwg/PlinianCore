@@ -8,6 +8,7 @@
     namespace="http://purl.org/pliniancore/terms" 
     rowType="http://purl.org/pliniancore/terms/EndemicAtomizedClass"
     dc:subject="dwc:Taxon; plic:Endemic"
+    dc:issued="2015-05-20"
     dc:relation="https://github.com/PlinianCore/Documentation/wiki/EndemicAtomizedClass"
     dc:description="Organism that lives exclusively in a particular territory and not found anywhere else.">
 	

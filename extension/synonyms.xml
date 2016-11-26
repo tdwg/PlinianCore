@@ -8,6 +8,7 @@
     namespace="http://purl.org/pliniancore/terms" 
     rowType="http://purl.org/pliniancore/terms/SynonymsAtomizedClass"
     dc:subject="dwc:Taxon; plic:Synonyms"
+    dc:issued="2015-05-20"
     dc:relation="https://github.com/PlinianCore/Documentation/wiki/SynonymsAtomizedClass"
     dc:description="Different names for this taxon. This concept is a placeholder field.">
 	
