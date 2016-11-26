@@ -20,7 +20,7 @@
         qualName='http://purl.org/pliniancore/terms/DistributionType'
         dc:relation='http://purl.org/pliniancore/terms/#distributiontype'
         dc:description='Controlled vocabulary. SD: Species Distribution, STSD: Species ThreatStatus Distribution, SLED: Species Legislation Distribution.'
-        examples='"SD";"THD";"LED"'
+        examples='"SD"; "THD"; "LED"'
         required='true'/>
 <property name='DistributionScope'
         group='Distribution'
