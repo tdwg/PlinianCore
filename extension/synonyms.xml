@@ -4,7 +4,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:dc="http://purl.org/dc/terms/"
         xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
-        dc:title="Plinian Synonym Extension "
+        dc:title="Plinian Synonym Extension"
         name="Synonyms" namespace="http://purl.org/pliniancore/terms" rowType="http://purl.org/pliniancore/terms/SynonymsAtomizedClass"
         dc:subject="dwc:Taxon; plic:Synonyms"
         dc:creator="Santigo Martínez de la Riva, GBIF Spain"
