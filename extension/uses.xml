@@ -8,7 +8,7 @@
         name="Uses" namespace="http://purl.org/pliniancore/terms" rowType="http://purl.org/pliniancore/terms/UsesAtomizedClass"
         dc:subject="dwc:Taxon; plic:Uses"
         dc:creator="Santigo Martínez de la Riva, GBIF Spain"
-        dc:issued="2015-05-20"
+        dc:issued="2016-11-28"
         dc:relation="https://github.com/PlinianCore/Documentation/wiki/UsesAtomizedClass"
         dc:description="Ways in which species are utilized by people. Including Folklore. Also applied to Animals and Fungi."
         dc:hasVersion="3.2.1">
