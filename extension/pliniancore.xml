@@ -5,11 +5,11 @@
         xmlns:dc="http://purl.org/dc/terms/"
         xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
         dc:title="Plinian Core Extension"
-        name="Plinian Core" namespace="http://purl.org/plic/terms" rowType="http://purl.org/plic/terms/TaxonRecord"
+        name="Plinian Core" namespace="http://purl.org/plic/terms/3.2.1" rowType="http://purl.org/plic/terms/3.2.1/PlinianCore"
         dc:subject="plic:Plinian Core; dwc:Taxon"
         dc:creator="Santigo Martínez de la Riva, GBIF Spain"
         dc:issued="2016-11-28"
-        dc:relation="http://purl.org/plic/wiki/TaxonRecord"
+        dc:relation="http://purl.org/plic/extension/3.2.1/pliniancore.xml"
         dc:description="The Plinian Core is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. This extension is supposed to be used in addition to the taxon core and the simple images, vernacular names and references extension."
         dc:hasVersion="3.2.1">
 
@@ -35,7 +35,7 @@
                 type='string'
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/Abstract'
-                dc:relation='https://github.com/PlinianCore/Documentation/wiki/BaseElementsClass#abstract'
+                dc:relation='http://purl.org/plic/wiki/Abstract'
                 dc:description='General description of the taxon. This concept could point out any information about the taxon. Its main goal is summarize the most relevant or attractive characteristics of this taxon to the general public.'
                 examples='A mottled bluish-grey rorqual which is the largest living animal and reaches lengths of up to 27 m [Balaenoptera musculus].'
                 required='false'/>
@@ -44,7 +44,7 @@
               type='string'
               namespace='http://purl.org/plic/terms/'
               qualName='http://purl.org/plic/terms/Language'
-              dc:relation='https://github.com/PlinianCore/Documentation/wiki/RecordMetadataClass#language'
+              dc:relation='http://purl.org/plic/wiki/Language'
               dc:description='Language used to write the species information, ISO 639-2 according to GBIF Metadata Profile, Reference Guide http://links.gbif.org/gbif_metadata_profile_guide_en_v1.'
               examples='"spa", "eng",...'
               required='false'/>
