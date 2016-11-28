@@ -7,11 +7,9 @@
         dc:title="Plinian Core Extension"
         name="Plinian Core" namespace="http://purl.org/plic/terms/3.2.1" rowType="http://purl.org/plic/terms/3.2.1/PlinianCore"
         dc:subject="plic:Plinian Core; dwc:Taxon"
-        dc:creator="Santigo Martínez de la Riva, GBIF Spain"
         dc:issued="2016-11-28"
         dc:relation="http://purl.org/plic/extension/3.2.1/pliniancore.xml"
-        dc:description="The Plinian Core is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. This extension is supposed to be used in addition to the taxon core and the simple images, vernacular names and references extension."
-        dc:hasVersion="3.2.1">
+        dc:description="Plinian Core is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. This extension is supposed to be used in addition to the taxon core and the simple images, vernacular names and references extension.">
 
 	
         <property name='TaxonRecordID'
@@ -53,7 +51,7 @@
                 type='string'
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/AudiencesUnstructured'
-                dc:relation='https://github.com/PlinianCore/Documentation/wiki/TargetAudiencesClass#audiences-unstructured'
+                dc:relation='http://purl.org/plic/wiki/AudiencesUnstructured'
                 dc:description='Users to which the information is addressed. The defined audiences are: Biodiversity researchers, teachers and students, decision makers, professionals from another areas and general public.This list audience codes has to be separated by means of comma or /.'
                 examples='"Teachers and students", "Decision makers"'
                 required='false'/>
