@@ -76,10 +76,10 @@
                 required='false'/>
         <property name='SynonymStatus'
                 group='Synonyms'
-                namespace='http://purl.org/pliniancore/terms'
+                namespace='http://purl.org/plic/terms'
                 type='string'
-                qualName='http://purl.org/pliniancore/terms/SynonymStatus'
-                dc:relation='https://github.com/PlinianCore/Documentation/wiki/SynonymsAtomizedClass#synonymstatus'
+                qualName='http://purl.org/plic/terms/SynonymStatus'
+                dc:relation='http://purl.org/plic/wiki/SynonymStatus'
                 dc:description='This is equivalent and probably replaceable by dc:nomenclaturalStatus. Controlled vocabulary is recommended.'
                 examples='"nom. ambig.", "nom. illeg.", "nom. subnud."'
                 required='false'/>
