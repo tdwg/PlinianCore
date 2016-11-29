@@ -70,8 +70,8 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/DetailUnstructured'
                 dc:relation='http://purl.org/plic/wiki/DetailUnstructured'
-                dc:description='Miscellaneous: notes attached to the taxon information. E.g. Pronunciation, etymology...In block text format'
-                examples=''
+                dc:description='Miscellaneous: notes attached to the taxon information. In block text format'
+                examples='"Pronunciation", "etymology"'
                 required='false'/>
         <property name='BriefDescription'
                 group='TaxonomicalDescription'
