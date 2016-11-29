@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/human.xsl"?>
+<extension xmlns="http://rs.gbif.org/extension/"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/terms/"
+           xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
+           dc:title="Plinian Endemism Extension"
+           name="Endemism" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Endemicity"
+           dc:subject="plic:Endemicity; dwc:Taxon"
+           dc:issued="2016-11-28"
+           dc:relation="http://purl.org/plic/extension/3.2.1/endemicity.xml"
+           dc:description="A marker that indicates that an organism lives exclusively in a particular territory and can not be found anywhere else. List of areas structured and categorized by the degree of safety.">
+
+    <property name='EdemicTo'
+              group='Endemicity'
+              namespace='http://purl.org/plic/terms/'
+              type='string'
+              qualName='http://purl.org/plic/terms/EndemicTo'
+              dc:relation='http://purl.org/wiki/terms/EndemicTo'
+              dc:description="The concept is applied to one or several countries, in this case it's recommended to separate the values with a vertical bar (';');"
+              examples='"Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China.";"Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama."'
+              required='false'/>
+    <property name='EndemicIn'
+              group='Endemicity'
+              namespace='http://purl.org/plic/terms/'
+              type='string'
+              qualName='http://purl.org/plic/terms/EndemicIn'
+              dc:relation='http://purl.org/plic/wiki/EndemicIn'
+              dc:description='The concept is applied to an area either multinational or local.'
+              examples='"Vicuña (Vicugna vicugna Molina, 1782) endemic to the Andean region.", "Manzanilla Real (Artemisia granatensis Boiss.) endemic to the peaks of Sierra Nevada (Spain)."'
+              required='false'/>
+</extension>
