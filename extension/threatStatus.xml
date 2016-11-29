@@ -18,7 +18,7 @@
                 qualName='http://purl.org/plic/terms/ThreatCategory'
                 dc:relation='http://purl.org/plic/wiki/ThreatCategory'
                 dc:description='Description of the threat status. A controlled vocabulary is recommended. e.g.: IUCN Red List Categories.'
-                examples='"EX" "EW" "CR "EN" "VU" "NT" "LC" "DD "NE"'
+                examples='"EX", "EW", "CR", "EN", "VU", "NT", "LC", "DD", "NE"'
                 required='false'/>
         <property name='Authority'
                 group='DemographyAndThreat'
