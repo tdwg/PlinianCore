@@ -267,7 +267,7 @@
             type='string'
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/MigratoryUnstructured'
-            dc:relation='https://github.com/pliniancore/documentation/wiki/MigratoryClass#migratoryunstructured'
+            dc:relation='http://purl.org/plic/wiki/MigratoryUnstructured'
             dc:description='The regular, usually seasonal, movement of all or part of an animal population to and from a given area, which can occur in variable periods of time and even involve more than one generation. In block text format.'
             examples=''
             required='false'/>
@@ -330,7 +330,7 @@
             type='string'
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/impactMechanism'
-            dc:relation='https://github.com/pliniancore/documentation/wiki/InvasivenessAtomizedClass#impactmechanism'
+            dc:relation='http://purl.org/plic/wiki/impactMechanism'
             dc:description='Mechanism of introduction or impact to a new location. This is equivalent and probably replaceable by gisin:impactMechanism.'
             examples=''
             required='false'/>
@@ -420,7 +420,7 @@
             type='string'
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/UsesUnstructured'
-            dc:relation='https://github.com/pliniancore/documentation/wiki/UsesClass#usesunstructured'
+            dc:relation='http://purl.org/plic/wiki/UsesUnstructured'
             dc:description='Ways in which species are utilized by people. Including Folklore. In block text format.'
             examples=''
             required='false'/>
@@ -429,7 +429,7 @@
             type='string'
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/ManagementAndConservationUnstructured'
-            dc:relation='https://github.com/pliniancore/documentation/wiki/ManagementAndConservationClass#managementandconservationunstructured'
+            dc:relation='http://purl.org/plic/wiki/ManagementAndConservationUnstructured'
             dc:description='Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve species. In block text format.'
             examples=''
             required='false'/>
