@@ -8,7 +8,7 @@
         name="Synonyms" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Synonyms"
         dc:subject="plic:Synonyms; dwc:Taxon"
         dc:issued="2016-11-28"
-        dc:relation="https://github.com/PlinianCore/Documentation/wiki/SynonymsAtomizedClass"
+        dc:relation="http://purl.org/plic/extension/3.2.1/synonyms.xml"
         dc:description="Different names for this taxon. This concept is a placeholder field.">
 
         <property name='scientificNameID'
