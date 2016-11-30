@@ -8,7 +8,7 @@
         name="ManagementAndConservation" namespace="http://purl.org/plic/terms/3.2.1/Legislation" rowType="http://purl.org/plic/terms/3.2.1/ManagementAndConservation"
         dc:subject="plic:ManagementAndConservation; dwc:Taxon"
         dc:issued="2016-11-28"
-        dc:relation="http://purl.org/plic/terms/3.2.1/managementAndConservation.xml"
+        dc:relation="http://purl.org/plic/extension/3.2.1/managementAndConservation.xml"
         dc:description="Management: actions directed at conserving or restoring species. / Conservation: interventions undertaken designed to preserve species.">
 		
         <property name='ManagementAndConservationType'
