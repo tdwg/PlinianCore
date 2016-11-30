@@ -8,7 +8,7 @@
         name="Legislation" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Legislation"
         dc:subject="plic:Legislation; dwc:Taxon"
         dc:issued="2016-11-28"
-        dc:relation="http://purl.org/plic/terms/3.2.1/legislation.xml"
+        dc:relation="http://purl.org/plic/extension/3.2.1/legislation.xml"
         dc:description="National and/or regional proposed law or group of laws.">
 
         <property name='LegislationName'
