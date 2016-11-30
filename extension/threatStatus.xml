@@ -8,7 +8,7 @@
         name="ThreatStatus" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/ThreatStatus"
         dc:subject="plic:threatStatus; dwc:Taxon"
         dc:issued="2016-11-28"
-        dc:relation="http://purl.org/plic/terms/3.2.1/threatStatus.xml"
+        dc:relation="http://purl.org/plic/extension/3.2.1/threatStatus.xml"
         dc:description="Information about the conservation status of the taxon.">
 
         <property name='ThreatCategory'
