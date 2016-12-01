@@ -61,8 +61,8 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/SynonymsUnstructured'
                 dc:relation='http://purl.org/plic/wiki/SynonymsUnstructured'
-                dc:description='Different names for this taxon. This concept is a placeholder field, in block text format'
-                examples=''
+                dc:description='A list of scientific names used for this taxon as a text block'
+                examples='Geranium acaule L.; Geranium bangii Hieron.; Geranium caespitosum Walp.; Geranium malpasense R. Knuth'
                 required='false'/>
          <property name='DetailUnstructured'
                 group='NomenclatureAndClasification'
@@ -80,7 +80,7 @@
                 qualName='http://purl.org/plic/terms/BriefDescription'
                 dc:relation='http://purl.org/plic/wiki/BriefDescription'
                 dc:description='Brief description, presented in a simple technical language, to distinguish the species from other close or similar ones.'
-                examples=''
+                examples='Cap 8–20(30)cm, brown often with a whitish bloom at first gradually lost on expanding leaving a white line at the margin, smooth and dry initially becoming greasy, in wet weather slightly viscid and polished. Stem 30–230 x 30–70(110)mm, robust, pallid with white net. Flesh white, unchanging, flushed dirty straw-colour or vinaceous in cap. '
                 required='false'/>
         <property name='FullDescriptionUnstructured'
                 group='TaxonomicalDescription'
@@ -88,7 +88,7 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/FullDescriptionUnstructured'
                 dc:relation='http://purl.org/plic/wiki/FullDescriptionUnstructured'
-                dc:description='Complete and detailed account of the taxonomic and systematic characters, e.g. those that define and allow to recognize an organism.'
+                dc:description='Complete and detailed account of the taxonomic and systematic characters, usually comprising several sections, and not limited to the diagnostic features.'
                 examples=''
                 required='false'/>
         <property name='Keys'
@@ -124,8 +124,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/ReproductionUnstructured'
             dc:relation='http://purl.org/plic/wiki/ReproductionUnstructured'
-            dc:description='All data related to the production of offspring. In block text format.'
-            examples=''
+            dc:description='All data related to the production of offspring as a  block of text.'
+            examples='It has both sexual and asexual reproduction (fragmentation), although sexual reproduction is little known and its expansion is mainly due to the dispersion of fragments in coastal marine areas of low depth (up to 30 meters deep) where it finds the ecological conditions suitable for their settlement and proliferation'
             required='false'/>
         <property name='Event'
             group='NaturalHistory'
@@ -133,8 +133,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/Event'
             dc:relation='http://purl.org/plic/wiki/Event'
-            dc:description='An action that occurs at some location during some time. A controlled vocabulary is recommended.'
-            examples=''
+            dc:description='An action in the natural history of the species that occurs at some location during some time. A controlled vocabulary is recommended.'
+            examples='"flowering", "migration", "courtship", "hatching "'
             required='false'/>
         <property name='StartTimeInterval'
             group='NaturalHistory'
@@ -161,7 +161,7 @@
             qualName='http://purl.org/plic/terms/AnnualCycleUnstructured'
             dc:relation='http://purl.org/plic/wiki/AnnualCycleUnstructured'
             dc:description='Set of changes or events that recurrently take place at the same time of year and are influenced by seasonal and inter-annual climate variations. For example: reproduction, flowering, fruiting, emergence of insects, etc. Also called phenology, mainly in plants. In the case of migration, refers only to the timing of it; other data about this are gathered in MigratoryData. In block text format.'
-            examples=''
+            examples='The butterfly hibernates over winter, The pairs only mate once after overwintering, eggs are laid in early spring, in batches of up to 400 at a time'
             required='false'/>
         <property name='FeedingType'
             group='NaturalHistory'
@@ -187,8 +187,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/TrophicStrategyRemarks'
             dc:relation='https://github.com/PlinianCore/Documentation/wiki/FeedingAtomizedClass#strategyremarks'
-            dc:description='Information notes about specific feeding strategies.'
-            examples=''
+            dc:description='Unstructure notes about feeding strategies.'
+            examples='an occasional scavenger'
             required='false'/>
         <property name='FeedingUnstructured'
             group='NaturalHistory'
@@ -196,8 +196,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/FeedingUnstructured'
             dc:relation='http://purl.org/plic/wiki/FeedingUnstructured'
-            dc:description='Information related to supply food for the development and sustenance of the individual and-or its offspring. In block text format.'
-            examples=''
+            dc:description='Information related to supply food for the development and sustenance of the individual and-or its offspring as  text block.'
+            examples=' it hunts rabbits and other mammals (including rodents and insectivores), birds (especially the red-legged partridge[citation needed]), reptiles and amphibians, most actively during twilight and at night'
             required='false'/>
         <property name='DispersalType'
             group='NaturalHistory'
