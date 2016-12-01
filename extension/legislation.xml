@@ -27,7 +27,7 @@
                 qualName='http://purl.org/plic/terms/ProtectionLegalStatus'
                 dc:relation='http://purl.org/plic/wiki/ProtectionLegalStatus'
                 dc:description='Description of the legal status. Controlled vocabulary is recommended.'
-                examples=''
+                examples='"Endangered", "Sensitive to habitat alteration", "Vulnerable" and "Of special interest".'
                 required='false'/>
         <property name='LegislationRead'
                 group='Legislation'
@@ -35,7 +35,7 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/LegislationRead'
                 dc:relation='http://purl.org/plic/wiki/LegislationRead'
-                dc:description='The official document in which the user can read the legislation.'
+                dc:description='The official document containing the piece of legislation.'
                 examples='https://www.legislation.gov.au/Details/C2016C00777'
                 required='false'/>
         <property name='Status'
@@ -44,7 +44,7 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/Status'
                 dc:relation='http://purl.org/plic/wiki/Status'
-                dc:description='Controlled vocabulary is recommended'
+                dc:description='Whether a piece of legislation is in force, or superseded, etc. A controlled vocabulary is recommended'
                 examples='"Consolidated", "Repealed"'
                 required='false'/>
         <property name='Type'
@@ -62,7 +62,7 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/Norm'
                 dc:relation='http://purl.org/plic/wiki/Norm'
-                dc:description='Norms are general legal principles that are widely accepted. This acceptance is evidenced in a number of ways, such as international agreements, national legislation, domestic and international judicial decisions, and scholarly writings.'
+                dc:description='A norm in which the piece of legislation is included. Norms are general legal principles that are widely accepted. This acceptance is evidenced in a number of ways, such as international agreements, national legislation, domestic and international judicial decisions, and scholarly writings.'
                 examples='Law 243 of 1995, International Convention for the Protection of Plants Varieties.'
                 required='false'/>
 </extension>        
