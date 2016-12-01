@@ -17,7 +17,7 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/ManagementAndConservationType'
                 dc:relation='http://purl.org/plic/wiki/ManagementAndConservationType'
-                dc:description='Type of management. Controlled vocabulary is recommended.'
+                dc:description='Type of management. A controlled vocabulary is recommended.'
                 examples='"Conservation", "Management", "Restoration", "Eradication"'
                 required='false'/>
         <property name='Objectives'
