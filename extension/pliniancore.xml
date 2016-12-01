@@ -70,7 +70,7 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/DetailUnstructured'
                 dc:relation='http://purl.org/plic/wiki/DetailUnstructured'
-                dc:description='Miscellaneous: notes attached to the taxon information. In block text format'
+                dc:description='Ways in which species are utilized by people --including folklore--  as a  text  block.'
                 examples='"Pronunciation", "etymology"'
                 required='false'/>
         <property name='BriefDescription'
