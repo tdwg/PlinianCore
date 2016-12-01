@@ -4,7 +4,7 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:dc="http://purl.org/dc/terms/"
            xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
-           dc:title="Plinian Endemism Extension"
+           dc:title="Plinian Endemicity Extension"
            name="Endemism" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Endemicity"
            dc:subject="plic:Endemicity; dwc:Taxon"
            dc:issued="2016-11-28"
