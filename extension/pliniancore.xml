@@ -70,7 +70,7 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/DetailUnstructured'
                 dc:relation='http://purl.org/plic/wiki/DetailUnstructured'
-                dc:description='Ways in which species are utilized by people --including folklore--  as a  text  block.'
+                dc:description='Unstructured information regarding the names of the species or taxon, whether these are scientific or not.'
                 examples='"Pronunciation", "etymology"'
                 required='false'/>
         <property name='BriefDescription'
@@ -224,7 +224,7 @@
             qualName='http://purl.org/plic/terms/DispersalUnstructured'
             dc:relation='http://purl.org/plic/wiki/DispersalUnstructured'
             dc:description='The permanent spreading of individuals away from each other not including return. Dispersal determines the range over which genetic mixing occurs, and thus, the degree of homogeneity and inbreeding in a population. In block text format.'
-            examples=''
+            examples='It is dispersed by small fragments that are dragged or carried in the anchors or nets of the boats.'
             required='false'/>
         <property name='BehaviorUnstructured'
             group='NaturalHistory'
@@ -233,7 +233,7 @@
             qualName='http://purl.org/plic/terms/BehaviorUnstructured'
             dc:relation='http://purl.org/plic/wiki/BehaviorUnstructured'
             dc:description='Responses, reactions or movements made by an organism in a particular situation. In block text format.'
-            examples=''
+            examples='It is able to leap up to 50 times its size. They use a tether of silk that they produce from their bodies to do so. They are able to use the hydraulic movement of their limbs in spite of not having muscles in their body to do so. They do have to stop now and then to be able to readjust their blood pressure. They are very curious by nature too. This is why they will leap when a human places their hand out. However, they may jump backwards too so that they can get enough distance from that object. They stay focused for long periods of time on what they approach too'
             required='false'/>
         <property name='InteractionSpeciesType'
             group='NaturalHistory'
@@ -251,7 +251,7 @@
             qualName='http://purl.org/plic/terms/InteractionUnstructured'
             dc:relation='http://purl.org/plic/wiki/InteractionUnstructured'
             dc:description='Mutual or reciprocal actions or influences. For example, predation, parasitism, mutualism, etc. Relations with products grown and stored by man (plagues) are also included. In block text format.'
-            examples=''
+            examples='It is a predator of small invertebrates. Leeches appear to be a major source of adult mortality. It is predated by  birds, mammals, fish, and other amphibians, however many of them are deterred by the its toxic skin secretions.'
             required='false'/>
         <property name='MolecularDataUnstructured'
             group='NaturalHistory'
@@ -259,8 +259,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/MolecularDataUnstructured'
             dc:relation='http://purl.org/plic/wiki/MolecularDataUnstructured'
-            dc:description='Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data.html). In block text format.'
-            examples=''
+            dc:description='Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data.html). As free text.'
+            examples='"The main toxins in Digitalis spp. are the two chemically similar cardiac glycosides: digitoxin and digoxin"'
             required='false'/>
         <property name='MigratoryUnstructured'
             group='NaturalHistory'
@@ -269,7 +269,7 @@
             qualName='http://purl.org/plic/terms/MigratoryUnstructured'
             dc:relation='http://purl.org/plic/wiki/MigratoryUnstructured'
             dc:description='The regular, usually seasonal, movement of all or part of an animal population to and from a given area, which can occur in variable periods of time and even involve more than one generation. In block text format.'
-            examples=''
+            examples='Birds from northern and eastern Europe are migratory and move to southern Europe or Africa. Birds from central Europe often stay in the breeding areas, especially the males [Mebs & Schmidt 2006].'
             required='false'/>
         <property name='EcologicalSignificanceUnstructured'
             group='NaturalHistory'
@@ -278,7 +278,7 @@
             qualName='http://purl.org/plic/terms/EcologicalSignificanceUnstructured'
             dc:relation='http://purl.org/plic/wiki/EcologicalSignificanceUnstructured'
             dc:description='Ecological importance of the taxon. (Placeholder). In block text format. '
-            examples=''
+            examples='They are vital within their ecosystem for the production of oxygen and organic material and they support numerous animal species that utilise them as a site for breeding, feeding and shelter. '
             required='false'/>
         <property name='EnvironmentalEnvelopeUnstructured'
             group='NaturalHistory'
