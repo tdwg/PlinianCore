@@ -26,8 +26,8 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/DistributionScope'
                 dc:relation='http://purl.org/plic/wiki/DistributionScope'
-                dc:description='A list of regions where the species occurs, structured.'
-                examples=''
+                dc:description='A list of regions or areas where the species occurs, structured.'
+                examples='"Greece:Epiros", " Greece:Macedonia", "Greece:Peloponnisos",  "Greece:Sterea Ellas", "Greece:Ionian Islands (Kefallinia)".'
                 required='false'/>
         <property name='DistributionScopeType'
                 group='Distribution'
