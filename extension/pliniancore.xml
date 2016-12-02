@@ -7,7 +7,7 @@
         dc:title="Plinian Core Simple Extension"
         name="Plinian Core" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/PlinianCore"
         dc:subject="plic:Plinian Core; dwc:Taxon"
-        dc:issued="2016-11-28"
+        dc:issued="2016-12-02"
         dc:relation="http://purl.org/plic/extension/3.2.1/pliniancore.xml"
         dc:description="Plinian Core is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. This extension is supposed to be used in addition to the taxon core and the simple images, vernacular names and references extension.">
         <property name='TaxonRecordID'
@@ -401,7 +401,7 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/DirectThreatUnstructured'
             dc:relation='http://purl.org/plic/wiki/DirectThreatUnstructured'
-            dc:description='Sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future (IUCN, Threats Classification Scheme - Version 3.2). As a text block.'
+            dc:description='A free text describing sources of stress and proximate pressures that are impacting or may impact the threat status of the taxon. Threats can be past (historical), ongoing, and/or likely to occur in the future.'
             examples='Deforestation.'
             required='false'/>
         <property name='LegislationUnstructured'

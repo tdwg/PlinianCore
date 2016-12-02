@@ -7,7 +7,7 @@
         dc:title="Plinian Legislation Extension"
         name="Legislation" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Legislation"
         dc:subject="plic:Legislation; dwc:Taxon"
-        dc:issued="2016-11-28"
+        dc:issued="2016-12-02"
         dc:relation="http://purl.org/plic/extension/3.2.1/legislation.xml"
         dc:description="National and/or regional proposed law or group of laws.">
 
@@ -53,8 +53,8 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/LegislationType'
                 dc:relation='http://purl.org/plic/wiki/LegislationType'
-                dc:description='Controlled vocabulary is recommended'
-                examples='"included", "not included"'
+                dc:description='Category of the piece of legislation. Controlled vocabulary is recommended'
+                examples='"International treaty"; "EU Directive"; "National Law";  "By-law"'
                 required='false'/>
         <property name='Norm'
                 group='Legislation'

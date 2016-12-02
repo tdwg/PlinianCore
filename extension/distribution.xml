@@ -7,9 +7,10 @@
         dc:title="Plinian Distribution Extension"
         name="Distribution" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Distribution"
         dc:subject="plic:Distribution; dwc:Taxon"
-        dc:issued="2016-11-28"
+        dc:issued="2016-12-02"
         dc:relation="http://purl.org/plic/extension/3.2.1/distribution.xml"
         dc:description="Species geographical distribution.">
+
         <property name='DistributionType'
                 group='Distribution'
                 namespace='http://purl.org/plic/terms/'

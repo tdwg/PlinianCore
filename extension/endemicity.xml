@@ -7,7 +7,7 @@
            dc:title="Plinian Endemicity Extension"
            name="Endemism" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Endemicity"
            dc:subject="plic:Endemicity; dwc:Taxon"
-           dc:issued="2016-11-28"
+           dc:issued="2016-12-02"
            dc:relation="http://purl.org/plic/extension/3.2.1/endemicity.xml"
            dc:description="A marker that indicates that an organism lives exclusively in a particular territory and can not be found anywhere else. List of areas structured and categorized by the degree of safety.">
 

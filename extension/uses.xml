@@ -7,7 +7,7 @@
         dc:title="Plinian Uses Extension"
         name="Uses" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Uses"
         dc:subject="dwc:Taxon; plic:Uses"
-        dc:issued="2016-11-28"
+        dc:issued="2016-12-02"
         dc:relation="http://purl.org/plic/extension/3.2.1/uses.xml"
         dc:description="Ways in which species are utilized by people. Including Folklore. Also applied to Animals and Fungi.">
 
