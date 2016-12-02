@@ -10,7 +10,6 @@
         dc:issued="2016-11-28"
         dc:relation="http://purl.org/plic/extension/3.2.1/distribution.xml"
         dc:description="Species geographical distribution.">
-
         <property name='DistributionType'
                 group='Distribution'
                 namespace='http://purl.org/plic/terms/'
@@ -18,7 +17,7 @@
                 qualName='http://purl.org/plic/terms/DistributionType'
                 dc:relation=''
                 dc:description=" The kind of distribution it is presented.A controlled vocabulary is recommended, e.g.: SD: Species Distribution, THD: ThreatStatus Distribution, LED: Legislation Distribution."
-                examples='"SD"; "THD"; "LED"'
+                examples='"SD", "THD", "LED"'
                 required='true'/>
         <property name='DistributionScope'
                 group='Distribution'
@@ -36,7 +35,7 @@
                 qualName='http://purl.org/plic/terms/DistributionScopeType'
                 dc:relation='http://purl.org/plic/wiki/DistributionScopeType'
                 dc:description='Categorization of scope. A controled vocabulary is recommended.'
-                examples='"Historical";"Current";"Restricted";"Wide"'
+                examples='"Historical", "Current", "Restricted", "Wide"'
                 required='false'/>
         <property name='TemporalCoverage'
                 group='Distribution'
