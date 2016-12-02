@@ -18,7 +18,7 @@
               qualName='http://purl.org/plic/terms/EndemicTo'
               dc:relation='http://purl.org/wiki/terms/EndemicTo'
               dc:description="The concept is applied to one or several countries, in this case it's recommended to separate the values with a vertical bar (';');"
-              examples='"Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China.";"Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama."'
+              examples='"Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China.", F"Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama."'
               required='false'/>
     <property name='EndemicIn'
               group='Endemicity'
