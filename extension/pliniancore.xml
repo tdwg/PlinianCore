@@ -10,8 +10,6 @@
         dc:issued="2016-11-28"
         dc:relation="http://purl.org/plic/extension/3.2.1/pliniancore.xml"
         dc:description="Plinian Core is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. This extension is supposed to be used in addition to the taxon core and the simple images, vernacular names and references extension.">
-
-	
         <property name='TaxonRecordID'
                 group='BaseElements'
                 namespace='http://purl.org/plic/terms/'
@@ -287,7 +285,7 @@
             qualName='http://purl.org/plic/terms/EnvironmentalEnvelopeUnstructured'
             dc:relation='http://purl.org/plic/wiki/EnvironmentalEnvelopeUnstructured'
             dc:description='Set of environmental conditions within which it is believed that the species can persist; that is where its environmental requirements can be satisfied. In block text format.'
-            examples='Environmental range in which the organism lives (e.g. annual precipitation/average/450/mm)'
+            examples='The temperature range for the Mediterranean strain is 7°C - 32.5°C, while the maximum salinity is 38 ppt (NIMPIS, 2002).'
             required='false'/>
         <property name='WhatImpact'
             group='Invasiveness'
@@ -314,7 +312,7 @@
             qualName='http://purl.org/plic/terms/Route'
             dc:relation='http://purl.org/plic/wiki/Route'
             dc:description='This is equivalent and probably replaceable by gisin:route.'
-            examples=''
+            examples='Eggs and larvae, or infested cladodes, were sent from Nevis to Montserrat and Antigua in 1962 and to Grand Cayman in 1970 (Bennett et al. 1985). By 1963 the cactus moth had invaded the Lesser Antilles to Puerto Rico (Garcia-Tuduri et al. 1971)'
             required='false'/>
         <property name='impactTarget'
             group='Invasiveness'
@@ -323,7 +321,7 @@
             qualName='http://purl.org/plic/terms/impactTarget'
             dc:relation='http://purl.org/plic/wiki/impactTarget'
             dc:description='This is equivalent and probably replaceable by gisin:target'
-            examples=''
+            examples='"Environment", "HumanHealth", "Economy",  "Unknown"'
             required='false'/>
         <property name='impactMechanism'
             group='Invasiveness'
@@ -332,7 +330,7 @@
             qualName='http://purl.org/plic/terms/impactMechanism'
             dc:relation='http://purl.org/plic/wiki/impactMechanism'
             dc:description='Mechanism of introduction or impact to a new location. This is equivalent and probably replaceable by gisin:impactMechanism.'
-            examples=''
+            examples='They clog pipes by forming colonies inside of the pipes'
             required='false'/>
         <property name='InvasivenessUnstructured'
             group='Invasiveness'
@@ -340,8 +338,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/InvasivenessUnstructured'
             dc:relation='http://purl.org/plic/wiki/InvasivenessUnstructured'
-            dc:description='Information about invasive exotic species that could threaten to ecosystem, habitats and species. In block text format'
-            examples=''
+            dc:description='Information about invasive exotic species that could threaten to ecosystem, habitats and species. As a text block'
+            examples='In forests it competes with seedling trees and can slow their establishment and growth. Pampas grass creates a fire hazard with excessive build-up of dry leaves, leaf bases, and flowering stalks.'
             required='false'/>
         <property name='HabitatUnstructured'
             group='HabitatAndDistribution'
@@ -350,7 +348,7 @@
             qualName='http://purl.org/plic/terms/HabitatUnstructured'
             dc:relation='http://purl.org/plic/wiki/HabitatUnstructured'
             dc:description='General description of the sites where the species is found (ecosystem, forest, environment or micro-habitat). (Placeholder). In block text format'
-            examples=''
+            examples='This plant grows at altitudes of between 1,500 and 3,400 meters, under high levels of ultraviolet radiation, Iow atmospheric pressure and extreme temperature and humidity '
             required='false'/>
         <property name='DistributionUnstructured'
             group='HabitatAndDistribution'
@@ -358,8 +356,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/DistributionUnstructured'
             dc:relation='http://purl.org/plic/wiki/DistributionUnstructured'
-            dc:description='Comment about the distribution of the species based on information from the collection sites of the studied specimens. In block text format.'
-            examples=''
+            dc:description='Comment about the distribution of the species based on information from the collection sites of the studied specimens. A a text block.'
+            examples='Primarily in Turkey and far E Greece, secondarily in the Crimea, Caucasus coast, Azerbaijan, Iran, Iraq, Syria, Lebanon, Crete and Cyprus; primarily near coasts, in areas with a strongly Mediterranean climate.'
             required='false'/>
         <property name='EndemicUnstructured'
             group='HabitatAndDistribution'
@@ -367,8 +365,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/EndemicUnstructured'
             dc:relation='http://purl.org/plic/wiki/EndemicUnstructured'
-            dc:description='Organism that lives exclusively in a particular territory and not found anywhere else. In block text format.'
-            examples=''
+            dc:description='Organism that lives exclusively in a particular territory and not found anywhere else. As a text block.'
+            examples='It is a South Iberian endemic (Spain),'
             required='false'/>
         <property name='TerritoryUnstructured'
             group='DemographyAndThreat'
@@ -376,8 +374,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/TerritoryUnstructured'
             dc:relation='http://purl.org/plic/wiki/TerritoryUnstructured'
-            dc:description='Information associated mostly to vertebrates, referring to the territorial extension of the individual or group in terms of its activities (feeding, mating, etc.). In block text format.'
-            examples=''
+            dc:description='Information associated mostly to vertebrates, referring to the territorial extension of the individual or group in terms of its activities (feeding, mating, etc.). As a text block.'
+            examples='The species will forage over vast distances (up to 700 km in one day has been recorded).'
             required='false'/>
         <property name='PopulationBiologyUnstructured'
             group='DemographyAndThreat'
@@ -385,8 +383,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/PopulationBiologyUnstructured'
             dc:relation='http://purl.org/plic/wiki/PopulationBiologyUnstructured'
-            dc:description='Study of the variations in time and space as well as size and density of populations, and the factors that cause such variations. In block text format.'
-            examples=''
+            dc:description='Study of the variations in time and space as well as size and density of populations, and the factors that cause such variations. As a text block.'
+            examples='In Europe, the population has grown in the Alps (with the emergence of new breeding pairs due to a reintroduction project, with 19 pairs in 2010), and in the Pyrenees, particularly in its central part (Aragon, Spain), from its population of 39 pairs in 1994 to 72 pairs in 2010. In Spain, two reintroduction projects are under way in Andalusia and the Cantabrian Mountains. The total population in EU countries was estimated at 175 pairs in 2010 (J. A. Gil Gallus in litt. 2011). '
             required='false'/>
         <property name='ThreatStatusUnstructured'
             group='DemographyAndThreat'
@@ -394,8 +392,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/ThreatStatusUnstructured'
             dc:relation='http://purl.org/plic/wiki/ThreatStatusUnstructured'
-            dc:description='Information about the status of the taxon. In block text format.'
-            examples=''
+            dc:description='Information about the status of the taxon.As a text block.'
+            examples='poison and electrical cables considered the biggest threats'
             required='false'/>
         <property name='DirectThreatUnstructured'
             group='DemographyAndThreat'
@@ -403,8 +401,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/DirectThreatUnstructured'
             dc:relation='http://purl.org/plic/wiki/DirectThreatUnstructured'
-            dc:description='VCR. Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future. In block text format.'
-            examples=''
+            dc:description='Sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future (IUCN, Threats Classification Scheme - Version 3.2). As a text block.'
+            examples='Deforestation.'
             required='false'/>
         <property name='LegislationUnstructured'
             group='DemographyAndThreat'
@@ -413,7 +411,7 @@
             qualName='http://purl.org/plic/terms/LegislationUnstructured'
             dc:relation='http://purl.org/plic/wiki/LegislationUnstructured'
             dc:description='A national proposed law or group of laws. A regional proposed law or group of laws. In block text format.'
-            examples=''
+            examples='Spain: Catálogo Español de Especies Exóticas Invasoras Norma: Real Decreto 630/2013, de 2 de agosto. Fecha: (BOE nº 185): 03.08.2013. Orden  de  20  de  marzo  de  1996.'
             required='false'/>
         <property name='UsesUnstructured'
             group='UsesManagementAndConservation'
@@ -421,8 +419,8 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/UsesUnstructured'
             dc:relation='http://purl.org/plic/wiki/UsesUnstructured'
-            dc:description='Ways in which species are utilized by people. Including Folklore. In block text format.'
-            examples=''
+            dc:description='Ways in which species are utilized by people. Including Folklore. As a text block.'
+            examples='The Common Osier has the ability to absorb some heavy metals like cadmium, and is often planted to reclaim industrial sites'
             required='false'/>
         <property name='ManagementAndConservationUnstructured'
             group='UsesManagementAndConservation'
@@ -430,7 +428,7 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/ManagementAndConservationUnstructured'
             dc:relation='http://purl.org/plic/wiki/ManagementAndConservationUnstructured'
-            dc:description='Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve species. In block text format.'
-            examples=''
+            dc:description='Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve species. As a text block.'
+            examples='The eradication work entailed physical and chemical methods, and avoided the use of heavy machinery in order to reduce damage to the environment. It consisted of hand-pulling seedlings (over 590 ha)'
             required='false'/>
 </extension>
