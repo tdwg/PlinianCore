@@ -53,8 +53,8 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/LegislationType'
                 dc:relation='http://purl.org/plic/wiki/LegislationType'
-                dc:description='Controlled vocabulary is recommended'
-                examples='"included", "not included"'
+                dc:description='Category of the piece of legislation. Controlled vocabulary is recommended'
+                examples='"International treaty"; "EU Directive"; "National Law";  "By-law"'
                 required='false'/>
         <property name='Norm'
                 group='Legislation'
