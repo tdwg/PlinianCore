@@ -63,6 +63,6 @@
                 dc:relation='http://purl.org/plic/wiki/HumanAndEnvironmentalRelevance'
                 type='string'
                 dc:description='Impact or value an species has either on the environment or on humans, and that justify management measures.'
-                examples=''
+                examples='Zika virus vector.'
                 required='false'/>
 </extension>        
