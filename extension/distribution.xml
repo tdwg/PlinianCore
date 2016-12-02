@@ -17,7 +17,7 @@
                 type='string'
                 qualName='http://purl.org/plic/terms/DistributionType'
                 dc:relation=''
-                dc:description=" IT's used to identify what kind of Distribution we are talking about. Controlled vocabulary. SD: Species Distribution, THD: ThreatStatus Distribution, LED: Legislation Distribution."
+                dc:description=" The kind of distribution it is presented.A controlled vocabulary is recommended, e.g.: SD: Species Distribution, THD: ThreatStatus Distribution, LED: Legislation Distribution."
                 examples='"SD"; "THD"; "LED"'
                 required='true'/>
         <property name='DistributionScope'
@@ -26,8 +26,8 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/DistributionScope'
                 dc:relation='http://purl.org/plic/wiki/DistributionScope'
-                dc:description='List of regions structured.'
-                examples=''
+                dc:description='A list of regions or areas where the species occurs, structured.'
+                examples='"Greece:Epiros", " Greece:Macedonia", "Greece:Peloponnisos",  "Greece:Sterea Ellas", "Greece:Ionian Islands (Kefallinia)".'
                 required='false'/>
         <property name='DistributionScopeType'
                 group='Distribution'
@@ -35,7 +35,7 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/DistributionScopeType'
                 dc:relation='http://purl.org/plic/wiki/DistributionScopeType'
-                dc:description='Categorized of scope. A controled vocabulary is recommended.'
+                dc:description='Categorization of scope. A controled vocabulary is recommended.'
                 examples='"Historical";"Current";"Restricted";"Wide"'
                 required='false'/>
         <property name='TemporalCoverage'
@@ -44,7 +44,7 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/TemporalCoverage'
                 dc:relation='https://knb.ecoinformatics.org/#external//emlparser/docs/eml-2.1.1/./eml-coverage.html#TemporalCoverage'
-                dc:description='This field specifies temporal coverage, and allows coverages to be a single point in time, multiple points in time, or a range of dates. Dates can be expressed in terms of both calendar dates and geologic dating systems.'
+                dc:description='A period or point in time to which the distribution applies. A single point in time, multiple points in time, or a range of dates are allowed. Time can be expressed as calendar dates or using geologic time systems.'
                 examples='Please see the individual sub fields for specific examples.'
                 required='false'/>
         <property name='GeographicEntity'
@@ -52,7 +52,7 @@
                 namespace='http://purl.org/plic/terms/'
                 qualName='http://purl.org/plic/terms/Distribution'
                 dc:relation='http://purl.org/plic/wiki/Distribution'
-                dc:description='dwc:country,dwc:stateProvince,dwc:county;dwc:numincipality;dwc:locality. This list has to be separated by , and ; for each occurrence.'
+                dc:description= 'A list of places included in a distribution. Each place can be include in a hierachy of places as defined by the following DwC terms:  dwc:country,dwc:stateProvince,dwc:county;dwc:numincipality;dwc:locality. Hierarchical elements of each place iss to be separated by ",",  and each place by ";".'
                 examples='"Denmark,Copenhagen,Glostrup,Copenhagen";"España, Madrid, Alcobendas, Las Tablas"'
                 required='true'/>
 </extension>
