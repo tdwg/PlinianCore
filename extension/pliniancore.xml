@@ -401,7 +401,7 @@
             namespace='http://purl.org/plic/terms/'
             qualName='http://purl.org/plic/terms/DirectThreatUnstructured'
             dc:relation='http://purl.org/plic/wiki/DirectThreatUnstructured'
-            dc:description='Sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future (IUCN, Threats Classification Scheme - Version 3.2). As a text block.'
+            dc:description='A free text describing sources of stress and proximate pressures that are impacting or may impact the threat status of the taxon. Threats can be past (historical), ongoing, and/or likely to occur in the future.'
             examples='Deforestation.'
             required='false'/>
         <property name='LegislationUnstructured'
