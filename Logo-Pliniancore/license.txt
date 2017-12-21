@@ -8,5 +8,5 @@
 Creado a partir de la obra en <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/PlinianCore/Sources/tree/master/Logo-Pliniancore" rel="dct:source">
 https://github.com/PlinianCore/Sources/tree/master/Logo-Pliniancore</a>.
 
-Logo Plinian Core by Humboldt Instituto de Investigación de Recursos Biológicos Alexander von Humboldt is licensed under aCreative Commons Reconocimiento 4.0 Internacional License.
+Plinian Core Logo by Humboldt Instituto de Investigación de Recursos Biológicos Alexander von Humboldt. It is licensed under a Creative Commons Reconocimiento 4.0 Internacional License.
 Creado a partir de la obra en https://github.com/PlinianCore/Sources/tree/master/Logo-Pliniancore
