@@ -11,7 +11,7 @@ Changes to the standard are subject to the [change policy](change_policy.html). 
 
 ### New term
 
-Copy and paste this template into your [new issue](https://github.com/tdwg/PlinianCore/issues/new) if you want to create a term that does not exist yet ([example]()).
+Copy and paste this template into your [new issue](https://github.com/tdwg/PlinianCore/issues/new) if you want to create a term that does not exist yet.
 
 ```
 ## New term
@@ -33,7 +33,7 @@ Proposed definition of the new term:
 
 ### Change term
 
-Copy and paste this template into your [new issue](https://github.com/tdwg/PlinianCore/issues/new) if you want to make a change to a term ([example]()).
+Copy and paste this template into your [new issue](https://github.com/tdwg/PlinianCore/issues/new) if you want to make a change to a term.
 
 ```
 ## Change term
@@ -54,7 +54,7 @@ I suggest the following changes (leave blank whatever would not change):
 
 ### Change documentation
 
-Copy and paste this template into your [new issue](https://github.com/tdwg/PlinianCore/issues/new) if you want to make a change to the documentation ([example]()). Or, [fork the repository](https://github.com/tdwg/PlinianCore/fork), make the changes yourself, and [send a pull request](https://github.com/tdwg/PlinianCore/compare).
+Copy and paste this template into your [new issue](https://github.com/tdwg/PlinianCore/issues/new) if you want to make a change to the documentation. Or, [fork the repository](https://github.com/tdwg/PlinianCore/fork), make the changes yourself, and [send a pull request](https://github.com/tdwg/PlinianCore/compare).
 
 ```
 ## Change documentation
