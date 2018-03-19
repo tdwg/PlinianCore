@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by Francisco Pando (Real Jardín Botánico - CSIC) -->
+<xsd:schema xmlns="http://www.eol.org/transfer/content/0.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" targetNamespace="http://www.eol.org/transfer/content/0.3" elementFormDefault="qualified" version="0.3">
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://services.eol.org/schema/xml.xsd"/>
+	<xsd:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dc.xsd"/>
+	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dcterms.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2003/01/geo/wgs84_pos#" schemaLocation="https://raw.githubusercontent.com/tdwg/tapir/master/schema/w3c_geo.xsd"/>
+	<xsd:import namespace="http://rs.tdwg.org/dwc/dwcore/" schemaLocation="http://rs.tdwg.org/dwc/tdwg_dw_core.xsd"/>
+	<xsd:element name="response" type="responseType"/>
+	<xsd:complexType name="responseType">
+		<xsd:sequence>
+			<xsd:element name="taxon" type="taxonBaseType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="dataObject" type="dataObjectBaseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="taxonBaseType">
+		<xsd:sequence>
+			<xsd:element ref="dc:identifier">
+				<xsd:annotation>
+					<xsd:documentation>Required. Recommended to use a globally unique identifier to unambiguously refer to the taxon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dc:source" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The URL of a web page which describes the taxon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:Kingdom" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the kingdom in which the organism is classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:Phylum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the phylum (or division) in which the organism is classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:Class" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the class in which the organism is classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:Order" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the order in which the organism is classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:Family" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the family in which the organism is classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:Genus" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the family in which the organism is classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dwc:ScientificName">
+				<xsd:annotation>
+					<xsd:documentation>Required. The full name of the lowest level taxon to which the organism has been identified in the most recent accepted determination, specified as precisely as possible, including name-author, year or authorship, sensu or sec. (according to or following) author, and indication of uncertainty. Conceptually equivalent to a full taxonomic identification as given by the identifier (verbatim). Does not include the identifier name or date of identification.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="rank" type="rankTypes" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Strongly recommended. The rank of the ScientificName</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="commonName" type="languageAwareElementType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A common (or vernacular) name by which the taxon is known. Strongly recommended to include a language. Recommended to use ISO 639-2 or ISO 639-1 codes for languages. See http://www.loc.gov/standards/iso639-2/php/code_list.php for more information on these language standards.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="synonym" type="synonymType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A scientific name synonym by which the taxon is known.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="agent" type="agentType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Examples of an agent include a person, organization, and software agent which has contributed to the creation of the resource. Strongly recommended to include the role the agent played in the creation of the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dcterms:created" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Date of creation of the taxon record.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dcterms:modified" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Date on which the taxon record was changed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="reference" type="referenceType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A related resource that references, cites, or otherwise points to the taxon. Recommended to use well-formed bibliographic citations. Strongly recommended to include identifiers which unambiguously refer to the specified resource when available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="additionalInformation" type="wildcardType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>anything can be put in here. Use only when necessary as information in this element may be ignored by consumers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataObject" type="dataObjectBaseType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A text description or multimedia resource which describes the taxon.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="dataObjectBaseType">
+		<xsd:sequence>
+			<xsd:element ref="dc:identifier" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Recommended to use a globally unique identifier to unambiguously refer to the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dataType" type="dataTypes">
+				<xsd:annotation>
+					<xsd:documentation>Required. Describes the nature of the resource using the DCMI Type vocabulary.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mimeType" type="mimeTypes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Describes the file format of the resource. Recommended for use with media resources, but not needed for text descriptions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="agent" type="agentType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Examples of an agent include a person, organization, and software agent which has contributed to the creation of the resource. Strongly recommended to include the role the agent played in the creation of the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dcterms:created" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Date of creation of the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dcterms:modified" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Date on which the resource was changed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dc:title" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A name given to the resource. Recommended for use with all text descriptions as well as sound and video media. Detailed captions for media should be included in the description element below.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dc:language" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Primary language of the resource. Recommended to use ISO 639-2 or ISO 639-1 codes for languages. See http://www.loc.gov/standards/iso639-2/php/code_list.php for more information on these language standards.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="license" type="licenseTypes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>License under which the resource is provided. To the greatest extent possible, the Encyclopedia of Life promotes an open-source, open-access approach.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dc:rights" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Statement of rights associated with the resource. Creative Commons licenses require the resource to be attributed "in the manner specified by the author or licensor", and this is where that should be specified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dcterms:rightsHolder" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A person or organization owning or managing rights over the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dcterms:bibliographicCitation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A bibliographic reference for the resource. Sufficient bibliographic detail should be included to identify the resources as unambiguously as possible.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="audience" type="audienceTypes" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A class of entity for whom the resource is intended or useful.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dc:source" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The URL of a web page which describes the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="subject" type="subjectTypes" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The topic of the resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dc:description" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>An account of the resource. For text descriptions, the entire account should be located here. For media resources, captions should be included here. Recommended to remove all embedded HTML tags and include only plain text.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="mediaURL" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A URL reference directly to the media resource.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="thumbnailURL" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A URL reference directly to a thumbnail image associated with the media resource. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="location" type="languageAwareElementType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Natural language description of the locality where the resource was collected or created. Not recommended for use with text descriptions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="geo:Point" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Location of the entity in decimal WGS84 latitude and longitude (and optional altitude) as defined by the W3C Basic Geo Vocabulary. See http://www.w3.org/2003/01/geo/ for more information on this standard.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="reference" type="referenceType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A related resource that is referenced, cited, or otherwise pointed to by the described resource. Recommended to use well-formed bibliographic citations. Strongly recommended to include identifiers which unambiguously refer to the specified resource when available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="additionalInformation" type="wildcardType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>anything can be put in here. Use only when necessary as information in this element may be ignored by consumers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="referenceType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="bici" type="xsd:string" use="optional"/>
+				<xsd:attribute name="coden" type="xsd:string" use="optional"/>
+				<xsd:attribute name="doi" type="xsd:string" use="optional"/>
+				<xsd:attribute name="eissn" type="xsd:string" use="optional"/>
+				<xsd:attribute name="handle" type="xsd:string" use="optional"/>
+				<xsd:attribute name="isbn" type="xsd:string" use="optional"/>
+				<xsd:attribute name="issn" type="xsd:string" use="optional"/>
+				<xsd:attribute name="lsid" type="xsd:string" use="optional"/>
+				<xsd:attribute name="oclc" type="xsd:string" use="optional"/>
+				<xsd:attribute name="sici" type="xsd:string" use="optional"/>
+				<xsd:attribute name="url" type="xsd:string" use="optional"/>
+				<xsd:attribute name="urn" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="synonymType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="relationship" type="synonymRelationTypes" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="agentType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="homepage" type="xsd:anyURI" use="optional"/>
+				<xsd:attribute name="logoURL" type="xsd:anyURI" use="optional"/>
+				<xsd:attribute name="role" type="contentRoleTypes" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="languageAwareElementType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute ref="xml:lang" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="wildcardType">
+		<xsd:annotation>
+			<xsd:documentation>anything can be put in here. Use only when necessary as information in this element may be ignored by consumers</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:anyAttribute namespace="##any" processContents="lax"/>
+	</xsd:complexType>
+	<xsd:simpleType name="contentRoleTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="animator"/>
+			<xsd:enumeration value="author"/>
+			<xsd:enumeration value="compiler"/>
+			<xsd:enumeration value="composer"/>
+			<xsd:enumeration value="creator"/>
+			<xsd:enumeration value="director"/>
+			<xsd:enumeration value="editor"/>
+			<xsd:enumeration value="illustrator"/>
+			<xsd:enumeration value="photographer"/>
+			<xsd:enumeration value="project"/>
+			<xsd:enumeration value="provider"/>
+			<xsd:enumeration value="publisher"/>
+			<xsd:enumeration value="recorder"/>
+			<xsd:enumeration value="source"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="licenseTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="not applicable|http://creativecommons.org/licenses/(publicdomain|by|by-nc|by-sa|by-nc-sa)(/[0-9]\.[0-9])?/"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="audienceTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Expert users"/>
+			<xsd:enumeration value="General public"/>
+			<xsd:enumeration value="Children"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mimeTypes">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:enumeration value="application/pdf"/>
+			<xsd:enumeration value="audio/mpeg"/>
+			<xsd:enumeration value="audio/x-ms-wma"/>
+			<xsd:enumeration value="audio/x-pn-realaudio"/>
+			<xsd:enumeration value="audio/x-realaudio"/>
+			<xsd:enumeration value="audio/x-wav"/>
+			<xsd:enumeration value="image/bmp"/>
+			<xsd:enumeration value="image/gif"/>
+			<xsd:enumeration value="image/jpeg"/>
+			<xsd:enumeration value="image/png"/>
+			<xsd:enumeration value="image/svg+xml"/>
+			<xsd:enumeration value="image/tiff"/>
+			<xsd:enumeration value="text/html"/>
+			<xsd:enumeration value="text/plain"/>
+			<xsd:enumeration value="text/richtext"/>
+			<xsd:enumeration value="text/rtf"/>
+			<xsd:enumeration value="text/xml"/>
+			<xsd:enumeration value="video/mp4"/>
+			<xsd:enumeration value="video/mpeg"/>
+			<xsd:enumeration value="video/quicktime"/>
+			<xsd:enumeration value="video/x-flv"/>
+			<xsd:enumeration value="video/x-ms-wmv"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="dataTypes">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:enumeration value="http://purl.org/dc/dcmitype/MovingImage"/>
+			<xsd:enumeration value="http://purl.org/dc/dcmitype/Sound"/>
+			<xsd:enumeration value="http://purl.org/dc/dcmitype/StillImage"/>
+			<xsd:enumeration value="http://purl.org/dc/dcmitype/Text"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="subjectTypes">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Associations"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Behaviour"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Biology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Conservation"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#ConservationStatus"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Cyclicity"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Cytology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Description"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#DiagnosticDescription"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Diseases"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Dispersal"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Distribution"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Ecology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Evolution"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#GeneralDescription"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Genetics"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Growth"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Habitat"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Key"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Legislation"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#LifeCycle"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#LifeExpectancy"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#LookAlikes"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Management"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Migration"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#MolecularBiology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Morphology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Physiology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#PopulationBiology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Procedures"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Reproduction"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#RiskStatement"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Size"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#TaxonBiology"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Threats"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Trends"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#TrophicStrategy"/>
+			<xsd:enumeration value="http://rs.tdwg.org/ontology/voc/SPMInfoItems#Uses"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="synonymRelationTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ambiguous synonym"/>
+			<xsd:enumeration value="anamorph"/>
+			<xsd:enumeration value="basionym"/>
+			<xsd:enumeration value="heterotypic synonym"/>
+			<xsd:enumeration value="homotypic synonym"/>
+			<xsd:enumeration value="junior synonym"/>
+			<xsd:enumeration value="misapplied name"/>
+			<xsd:enumeration value="nomenclatural synonym"/>
+			<xsd:enumeration value="objective synonym"/>
+			<xsd:enumeration value="senior synonym"/>
+			<xsd:enumeration value="subjective synonym"/>
+			<xsd:enumeration value="synonym"/>
+			<xsd:enumeration value="teleomorph"/>
+			<xsd:enumeration value="unavailable name"/>
+			<xsd:enumeration value="valid name"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="rankTypes">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="kingdom"/>
+			<xsd:enumeration value="subkingdom"/>
+			<xsd:enumeration value="division"/>
+			<xsd:enumeration value="phylum"/>
+			<xsd:enumeration value="subdivision"/>
+			<xsd:enumeration value="subphylum"/>
+			<xsd:enumeration value="class"/>
+			<xsd:enumeration value="subclass"/>
+			<xsd:enumeration value="order"/>
+			<xsd:enumeration value="suborder"/>
+			<xsd:enumeration value="family"/>
+			<xsd:enumeration value="subfamily"/>
+			<xsd:enumeration value="tribe"/>
+			<xsd:enumeration value="subtribe"/>
+			<xsd:enumeration value="genus"/>
+			<xsd:enumeration value="subgenus"/>
+			<xsd:enumeration value="section"/>
+			<xsd:enumeration value="subsection"/>
+			<xsd:enumeration value="series"/>
+			<xsd:enumeration value="subseries"/>
+			<xsd:enumeration value="species"/>
+			<xsd:enumeration value="infraspecies"/>
+			<xsd:enumeration value="subspecies"/>
+			<xsd:enumeration value="variety"/>
+			<xsd:enumeration value="subvariety"/>
+			<xsd:enumeration value="form"/>
+			<xsd:enumeration value="subform"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
