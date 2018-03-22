@@ -20,7 +20,7 @@ xmlns:ns1="https://github.com/tdwg/dwc/tree/master/xsd">
 	<xs:import namespace="http://www.tdwg.org/schemas/tcs/1.01" schemaLocation="https://raw.githubusercontent.com/tdwg/tcs/master/TCS101/v101.xsd"/>
 	<xs:import namespace="http://www.gisin.org/gisin/SpeciesStatus" schemaLocation="http://www.gisin.org/GISIN/SpeciesStatus_4_0_0.xsd"/>
 	<xs:import namespace="http://rs.tdwg.org/dwc/terms/" schemaLocation="https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/tdwg_dwc_extensions.xsd"/>
-	<xs:import namespace="http://rs.tdwg.org/dwc/terms/simple/" schemaLocation="http://tdwg.github.io/dwc/xsd/tdwg_dwc_simple.xsd"/>
+	<xs:import namespace="http://rs.tdwg.org/dwc/xsd/simpledarwincore/" schemaLocation="https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/tdwg_dwc_simple.xsd"/>
 	<xs:import namespace="http://www.eol.org/transfer/content/0.3" schemaLocation="http://services.eol.org/schema/content_0_3.xsd"/>
 	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dcterms.xsd"/>
 	<xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dc.xsd"/>
