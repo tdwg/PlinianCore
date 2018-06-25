@@ -1,6 +1,3 @@
-## Sources
+An implementation of Plinian Core as the oficial repository for species information in Spain: the EIDOS system at the Direction General of Biodiversity and Environmental Quality. The folowing link does not contain and xsd file but documentation on the database developed to support Plinian Core elements and  to be compliant with it
 
-
-https://github.com/BancoDatosNaturaleza/EIDOS
-About Plinian Core:
-* https://github.com/tdwg/PlinianCore/wiki/About
+* https://github.com/BancoDatosNaturaleza/EIDOS
