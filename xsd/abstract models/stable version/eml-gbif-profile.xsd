@@ -2,6 +2,7 @@
 <!-- edited with XMLSpy v2013 (http://www.altova.com) by Francisco Pando (Real Jardín Botánico - CSIC) -->
 <!-- The element annotations in this document are drawn from the appropriate standard.  -->
 <!-- For EML - see http://knb.ecoinformatics.org/software/eml/eml-2.1.1/index.html -->
+<!-- individualName modified to make it similar to organizationalName 3 jul 2018-->
 <!-- For NCD - see Natural Collections Descriptions (NCD) v0.9 2008  http://wiki.tdwg.org/twiki/bin/viewfile/NCD/WebHome?rev=1;filename=NCD-v090_TDWG.doc -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:dc="http://purl.org/dc/terms/" elementFormDefault="qualified" version="1.0.1">
 	<xs:import namespace="eml://ecoinformatics.org/eml-2.1.1" schemaLocation="eml.xsd"/>
@@ -60,7 +61,7 @@
 						<xs:documentation>The full name of the organization that is associated with the resource. This field is intended to describe which institution or overall organization is associated with the resource being described.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element ref="individualName"/>
+				<xs:element name="individualName" type="NonEmptyStringType"/>
 				<xs:element name="positionName" type="NonEmptyStringType">
 					<xs:annotation>
 						<xs:documentation>This field is intended to be used instead of a particular person or full organization name. If the associated person who holds the role changes frequently, then Position Name would be used for consistency. E.g., GBIF Data Manager.</xs:documentation>
