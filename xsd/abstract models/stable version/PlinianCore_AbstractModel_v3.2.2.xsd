@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- editado con XMLSpy v2013 sp1 (x64) (http://www.altova.com) por Santiago Martínez de la Riva/Francisco Pando (Real Jardín Botánico - CSIC) -->
 <!-- edited with XMLSpy v2013 (x64) (http://www.altova.com) by Francisco Pando (Real Jardín Botánico - CSIC) -->
-<!--  publisher: Plinian Core Initiative  -->
-<!--description: The Plinian Core v3.0 is a set of concepts that defines the necessary basic attributes to integrate and recover the information about species of organisms required by users specialized in biodiversity as well as users of other areas. The current version compiles a list of high-priority concepts selected by different groups of people interested in having apt mechanisms to access integrated information of species using Internet. -->
-<!--modified:2013-02-10-->
+<!--  publisher: Plinian Core TDWG Task Group; modified to point to __GISIN___ XSDs  in GitHub/TDWG  29 jun 2018 -->
+<!--description: The Plinian Core  is structured set of concepts  that can be used to describe different aspects of biological species information. Under "biological species Information" all kinds of properties or traits related to taxa—biological and non-biological—are included. Thus, for instance, terms pertaining descriptions, legal aspects, conservation, management, demographics, nomenclature, or related resources are incorporated. -->
+<!--  publisher: Plinian Core TDWG Task Group; modified to point to __GISIN___ XSDs  in GitHub/TDWG  29 jun 2018 -->
+<!--modified:2018-07-10: -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:plic="http://www.gbif.es/PliC/" xmlns:dc="http://purl.org/dc/terms/" xmlns:dcelem="http://purl.org/dc/elements/1.1/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:abcd="http://www.tdwg.org/schemas/abcd/2.06" xmlns:tcs="http://www.tdwg.org/schemas/tcs/1.01" xmlns:simple="http://rs.tdwg.org/dwc/xsd/simpledarwincore/" xmlns:gisin="http://www.gisin.org/gisin/SpeciesStatus" xmlns:eol="http://www.eol.org/transfer/content/0.3" xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" xmlns:ns1="https://github.com/tdwg/dwc/tree/master/xsd">
 	<xs:import namespace="http://www.tdwg.org/schemas/abcd/2.06" schemaLocation="http://rs.tdwg.org/abcd/2.06/ABCD_2.06.xsd"/>
 	<xs:import namespace="http://www.tdwg.org/schemas/tcs/1.01" schemaLocation="https://raw.githubusercontent.com/tdwg/tcs/master/TCS101/v101.xsd"/>
-	<xs:import namespace="http://www.gisin.org/gisin/SpeciesStatus" schemaLocation="http://www.gisin.org/GISIN/SpeciesStatus_4_0_0.xsd"/>
+	<xs:import namespace="http://www.gisin.org/gisin/SpeciesStatus" schemaLocation="https://raw.githubusercontent.com/tdwg/gisin/master/xsd/SpeciesStatus.xsd"/>
 	<xs:import namespace="http://rs.tdwg.org/dwc/terms/" schemaLocation="https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/tdwg_dwc_extensions.xsd"/>
 	<xs:import namespace="eml://ecoinformatics.org/eml-2.1.1" schemaLocation="https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/eml.xsd"/>
 	<xs:import namespace="http://www.eol.org/transfer/content/0.3" schemaLocation="https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/content_0_3.xsd"/>
