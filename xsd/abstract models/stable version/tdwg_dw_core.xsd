@@ -11,6 +11,8 @@
 <!-- Status:                                                               -->
 <!--   Ready for testing                                                   -->
 <!--   See http://wiki.tdwg.org for current status of this standard.       -->
+<!-- schema locations of  tdwg_basetypes.xsd and tdwg_dw_element.xsd       -->
+<!--   changed to keep this .xsd valid. 2020-09-01. F. Pando               -->
 <!-- ===================================================================== -->
 <!-- Schema                                                                -->
 <!-- ===================================================================== -->
@@ -31,14 +33,14 @@
 	<!--   the xs:schema element. Inclusion is restricted to the       -->
 	<!--   definition of a single namespace.                            -->
 	<!-- ============================================================== -->
-	<xs:include schemaLocation="https://raw.githubusercontent.com/tdwg/infrastructure/master/rs.tdwg.org/dwc/tdwg_basetypes.xsd"/>
+	<xs:include schemaLocation="https://raw.githubusercontent.com/tdwg/dwc/master/docs/xml/tdwg_basetypes.xsd"/>
 	<!-- ============================================================== -->
 	<!-- Imports                                                        -->
 	<!-- ============================================================== -->
 	<!-- import - must be used to import definitions from other         -->
 	<!--   namespaces.                                                  -->
 	<!-- ============================================================== -->
-	<xs:import namespace="http://rs.tdwg.org/dwc/dwelement" schemaLocation="https://raw.githubusercontent.com/tdwg/infrastructure/master/rs.tdwg.org/dwc/tdwg_dw_element.xsd"/>
+	<xs:import namespace="http://rs.tdwg.org/dwc/dwelement" schemaLocation="https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/tdwg_dw_element.xsd"/>
 	<!-- ============================================================== -->
 	<!-- Elements                                                       -->
 	<!-- ============================================================== -->
