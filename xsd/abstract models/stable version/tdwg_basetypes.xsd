@@ -74,7 +74,7 @@
 	  </xs:union>
 	</xs:simpleType>
 
-        <xs:simpleType name="DateTimeISO">
+        <xs:simpleType name="dateTimeISO">
           <xs:annotation>
             <xs:documentation xml:lang="en">
               The date and time expressed in a way conforming to a subset of ISO 8601. Meant to be exactly the same as DateTimeISO defined in ABCD.
