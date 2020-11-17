@@ -229,12 +229,12 @@
 			<xs:documentation source="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/ValidDistributionFlag" xml:lang="en"/>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="EarliestDateCollected" type="dwc:DateTimeISO" substitutionGroup="dwe:dwElement" nillable="true">
+	<xs:element name="EarliestDateCollected" type="dwc:dateTimeISO" substitutionGroup="dwe:dwElement" nillable="true">
 		<xs:annotation>
 			<xs:documentation source="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/EarliestDateCollected" xml:lang="en"/>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LatestDateCollected" type="dwc:DateTimeISO" substitutionGroup="dwe:dwElement" nillable="true">
+	<xs:element name="LatestDateCollected" type="dwc:dateTimeISO" substitutionGroup="dwe:dwElement" nillable="true">
 		<xs:annotation>
 			<xs:documentation source="http://wiki.tdwg.org/twiki/bin/view/DarwinCore/LatestDateCollected" xml:lang="en"/>
 		</xs:annotation>
