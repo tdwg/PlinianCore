@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/human.xsl"?>
+<extension xmlns="http://rs.gbif.org/extension/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dc="http://purl.org/dc/terms/"
+        xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
+        dc:title="Plinian ThreatStatus Extension "
+        name="ThreatStatus" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/ThreatStatus"
+        dc:subject="plic:threatStatus; dwc:Taxon"
+        dc:issued="2016-12-02"
+        dc:relation="http://purl.org/plic/extension/3.2.1/threatStatus.xml"
+        dc:description="Information about the conservation status of the taxon.">
+
+        <property name='ThreatCategory'
+                group='DemographyAndThreat'
+                type='string'
+                namespace='http://purl.org/plic/terms/'
+                qualName='http://purl.org/plic/terms/ThreatCategory'
+                dc:relation='http://purl.org/plic/wiki/ThreatCategory'
+                dc:description='Description of the threat status. A controlled vocabulary is recommended. e.g.: IUCN Red List Categories.'
+                examples='"EX", "EW", "CR", "EN", "VU", "NT", "LC", "DD", "NE"'
+                required='false'/>
+        <property name='Authority'
+                group='DemographyAndThreat'
+                type='string'
+                namespace='http://purl.org/plic/terms/'
+                qualName='http://purl.org/plic/terms/Authority'
+                dc:relation='http://purl.org/plic/wiki/Authority'
+                dc:description='List of organism or institution that assess the threat status separated by comma.'
+                examples='The International Union for Conservation of Nature (IUCN).'
+                required='false'/>
+</extension>

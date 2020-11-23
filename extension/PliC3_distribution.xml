@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/human.xsl"?>
+<extension xmlns="http://rs.gbif.org/extension/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:dc="http://purl.org/dc/terms/"
+        xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
+        dc:title="Plinian Distribution Extension"
+        name="Distribution" namespace="http://purl.org/plic/terms/3.2.1/" rowType="http://purl.org/plic/terms/3.2.1/Distribution"
+        dc:subject="plic:Distribution; dwc:Taxon"
+        dc:issued="2016-12-02"
+        dc:relation="http://purl.org/plic/extension/3.2.1/distribution.xml"
+        dc:description="Species geographical distribution.">
+
+        <property name='DistributionType'
+                group='Distribution'
+                namespace='http://purl.org/plic/terms/'
+                type='string'
+                qualName='http://purl.org/plic/terms/DistributionType'
+                dc:relation=''
+                dc:description=" The kind of distribution it is presented.A controlled vocabulary is recommended, e.g.: SD: Species Distribution, THD: ThreatStatus Distribution, LED: Legislation Distribution."
+                examples='"SD", "THD", "LED"'
+                required='true'/>
+        <property name='DistributionScope'
+                group='Distribution'
+                type='string'
+                namespace='http://purl.org/plic/terms/'
+                qualName='http://purl.org/plic/terms/DistributionScope'
+                dc:relation='http://purl.org/plic/wiki/DistributionScope'
+                dc:description='A list of regions or areas where the species occurs, structured.'
+                examples='"Greece:Epiros", " Greece:Macedonia", "Greece:Peloponnisos",  "Greece:Sterea Ellas", "Greece:Ionian Islands (Kefallinia)".'
+                required='false'/>
+        <property name='DistributionScopeType'
+                group='Distribution'
+                type='string'
+                namespace='http://purl.org/plic/terms/'
+                qualName='http://purl.org/plic/terms/DistributionScopeType'
+                dc:relation='http://purl.org/plic/wiki/DistributionScopeType'
+                dc:description='Categorization of scope. A controled vocabulary is recommended.'
+                examples='"Historical", "Current", "Restricted", "Wide"'
+                required='false'/>
+        <property name='TemporalCoverage'
+                group='Distribution'
+                type='string'
+                namespace='http://purl.org/plic/terms/'
+                qualName='http://purl.org/plic/terms/TemporalCoverage'
+                dc:relation='https://knb.ecoinformatics.org/#external//emlparser/docs/eml-2.1.1/./eml-coverage.html#TemporalCoverage'
+                dc:description='A period or point in time to which the distribution applies. A single point in time, multiple points in time, or a range of dates are allowed. Time can be expressed as calendar dates or using geologic time systems.'
+                examples='Please see the individual sub fields for specific examples.'
+                required='false'/>
+        <property name='GeographicEntity'
+                group='Distribution'
+                namespace='http://purl.org/plic/terms/'
+                qualName='http://purl.org/plic/terms/Distribution'
+                dc:relation='http://purl.org/plic/wiki/Distribution'
+                dc:description= 'A list of places included in a distribution. Each place can be include in a hierachy of places as defined by the following DwC terms:  dwc:country,dwc:stateProvince,dwc:county;dwc:numincipality;dwc:locality. Hierarchical elements of each place iss to be separated by ",",  and each place by ";".'
+                examples='"Denmark,Copenhagen,Glostrup,Copenhagen";"España, Madrid, Alcobendas, Las Tablas"'
+                required='true'/>
+</extension>
