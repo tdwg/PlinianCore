@@ -19,23 +19,23 @@ This group works forward to develop a data specification -the Plinian Core-  tha
  
 The Plinian Core’s aim is to facilitate the exchange of information about species and higher taxa, covering biological and non biological aspects pertaining to all taxonomic groups.
 
-## What is in scope?
+### What is in scope?
 *  Species level catalogs of any kind of biological objects or data.
 *  Terminology associated with biological collection data.
 *  Striving for compatibility with other biodiversity-related standards.
 *  Facilitating the addition of components and attributes of biological data.
 
-## Motivation
+### Motivation
 Species level information is one of the most demanded services or products from the taxonomic experts. We see species pages everywhere: from on-line floras and faunas to CITES manuals for custom agents, to guides for naturalists. As such, aiming to produce a data specification to facilitate data integration and interoperability among species pages is a mean with great potential to increase efficiency and cooperative work
 
-## Goals outputs and outcomes (current status and plans)
+### Goals outputs and outcomes (current status and plans)
 * An assessment on how Plinian Core relates to other TDWG standards. Done: https://doi.org/10.3897/biss.2.25869 
 * A detailed documentation on the different terms included in Plinian Core. Done: https://github.com/tdwg/PlinianCore/wiki 
 * At least three implementations of species information systems based on Plinian Core. Done : See below, section “Relevant projects and initiatives”
 * A SPARQL Endpoint and underlying ontology implemented and working. Done: https://crossnature.eu/visor/ 
 * A standard specification complying with the TDWG SDS. The TG plans to make a formal submission of the documentation to the TDWG Executive by November 27th, 2020. In progress
 
-## History/context 
+### History/context 
 * Plinian Core started in 2004 as a dialog between Maria Mora (INBio, Costa Rica) and Francisco Pando (GBIF-Spain) around the idea of developing a common system to gather, manage and publish "species-level information. The basis and use cases for these ideas were INBIO's "species pages" (UBIS) and the “CD-ROM of Flora Iberica".
 * More concrete ideas were developed during the GBIF-organized meeting "Building SpeciesBanks: How Shall We Shape the Future?” (Amsterdam, 2005).
 * In 2005-2006, an intense collaboration between INBio and GBIF.ES was maintained, from which the first version of the standard expressed as xsd is created, and receives its current name: Plinian Core.
@@ -50,10 +50,10 @@ Species level information is one of the most demanded services or products from 
 * 2014-2018 First full implementations of Plinian core are put in Production (see section “Relevant projects and initiatives”)
 * 2017 -2019 Advancing implementation of Plinian Core in the Living Atlases in coordination with the LA community for the BIE module of Living Atlases.  (see: Vargas & al., 2018)
 
-## Convenor
+### Convenor
 Francisco Pando - Real Jardín Botánico -CSIC. Madrid (pando@rjb.csic.es)
 
-## Core Members
+### Core Members
 | Name | Role  |
 |------------------|:-----------------------------------|
 | María Mora | Biodiversity informatics expertise  | 
@@ -62,12 +62,12 @@ Francisco Pando - Real Jardín Botánico -CSIC. Madrid (pando@rjb.csic.es)
 | Camila Plata | Biodiversity informatics expertise |
 | José Cuadra| Biodiversity informatics expertise |
 
-## Becoming involved
+### Becoming involved
 This group welcomes participation from all interested parties on implementing species catalogs, species pages or other usages or profiles of the standard. Also individuals who have a vested interest in maintaining the stability and interoperability of Plinian Core. 
 
  If you are interested in participating in the group, please contact the convenor or a core member.
  
-## Relevant projects and initiatives
+### Relevant projects and initiatives
  
 Atlas de la Biodiversidad de Costa Rica – CRBio:
 
@@ -118,7 +118,7 @@ Enciclovida, Mexican species catalog:
 
 	https://enciclovida.mx/
 
-## References and resources
+### References and resources
 Gerbracht J (2018) A Content Management System and underlying models for avian taxonomic monographs. Biodiversity Information Science and Standards 2: e25693. https://doi.org/10.3897/biss.2.25693 
 
 Pando F (2017) How species interactions are managed in Plinian Core: Status and questions. Proceedings of TDWG 1: e20556. https://doi.org/10.3897/tdwgproceedings.1.20556
