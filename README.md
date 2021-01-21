@@ -121,7 +121,7 @@ Enciclovida, Mexican species catalog:
 ### References and resources
 Gerbracht J (2018) A Content Management System and underlying models for avian taxonomic monographs. Biodiversity Information Science and Standards 2: e25693. https://doi.org/10.3897/biss.2.25693 
 
-Pando F (2017) How species interactions are managed in Plinian Core: Status and questions. Proceedings of TDWG 1: e20556. https://doi.org/10.3897/tdwgproceedings.1.20556; https://api.zotero.org/users/7403307/publications/items/YNS4J57J/file/view (full presentation)
+Pando F (2017) How species interactions are managed in Plinian Core: Status and questions. Proceedings of TDWG 1: e20556. https://doi.org/10.3897/tdwgproceedings.1.20556 ;  https://api.zotero.org/users/7403307/publications/items/YNS4J57J/file/view (full presentation)
 
 Pando F (2018) Comparison of species information TDWG standards from the point of view of the Plinian Core specification. Biodiversity Information Science and Standards 2: e25869. 
 https://doi.org/10.3897/biss.2.25869
