@@ -11,7 +11,7 @@ Plinian Core terms and structure documentation:
 
 ## Recommended citation
 
-Plinian Core Task Group. 2018. Plinian Core. Biodiversity Information Standards (TDWG).
+Plinian Core Task Group. 2021. Plinian Core. Biodiversity Information Standards (TDWG).
 https://github.com/tdwg/PlinianCore
 
 ## Plinian Core Task Group Charter
