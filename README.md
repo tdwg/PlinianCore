@@ -69,54 +69,56 @@ This group welcomes participation from all interested parties on implementing sp
  
 ### Relevant projects and initiatives
  
-Atlas de la Biodiversidad de Costa Rica – CRBio:
+#### Atlas de la Biodiversidad de Costa Rica – CRBio:
 
-	See species pages
-	
-		http://www.crbio.cr/crbio/?page_id=61&lang=en 
+   See species pages
 
-Spanish Ministry for the Ecological transition
+http://www.crbio.cr/crbio/?page_id=61&lang=en 
 
-	Species Information System:
-	
-		https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/Eidos_acceso.aspx 
-	SPARQL Endpoint
-	
-		https://crossnature.eu/visor/
-		
-	Underlying ontology
-	
-		https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/
-		
-		...which may be visualized here:
-		
-			http://www.visualdataweb.de/webvowl/#iri=https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/3.0.0 
+#### Spanish Ministry for the Ecological transition
 
-Vasque Country (Spain) Official Nature Information System:
+##### Species Information System:
+	
+https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/Eidos_acceso.aspx 
+	
+##### SPARQL Endpoint
+	
+https://crossnature.eu/visor/
+		
+Underlying ontology
+	
+https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/
+		
+...which may be visualized here:
+		
+http://www.visualdataweb.de/webvowl/#iri=https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/3.0.0 
 
-	https://www.ivap.euskadi.eus/contenidos/ds_informes_estudios/plinian_core/eu_def/adjuntos/plinian.pdf 
+#### Vasque Country (Spain) Official Nature Information System:
+
+https://www.ivap.euskadi.eus/contenidos/ds_informes_estudios/plinian_core/eu_def/adjuntos/plinian.pdf 
 	
-	Specification for creating DwC-Archives based on Plinian Core 
+Specification for creating DwC-Archives based on Plinian Core 
 	
-	https://opendata.euskadi.eus/catalogo/-/txostenak-ikerketak/euskadiko-naturari-buruzko-informazio-sisteman-jasota-dauden-espezieak-deskribatzen-dituen-informazioa/
+https://opendata.euskadi.eus/catalogo/-/txostenak-ikerketak/euskadiko-naturari-buruzko-informazio-sisteman-jasota-dauden-espezieak-deskribatzen-dituen-informazioa/
 	
-Colombian Biodiversity Catalog
-	Catalog:
+#### Colombian Biodiversity Catalog
+
+Catalog:
 	
-		https://catalogo.biodiversidad.co/
+https://catalogo.biodiversidad.co/
 		
-	Documentación for exotic and threatened species:
+Documentación for exotic and threatened species:
 	
-		http://repository.humboldt.org.co/handle/20.500.11761/9691
+http://repository.humboldt.org.co/handle/20.500.11761/9691
 		
-		http://repository.humboldt.org.co/handle/20.500.11761/9690
+http://repository.humboldt.org.co/handle/20.500.11761/9690
 		
-	Documentation about species pages editor:
+Documentation about species pages editor:
 		http://repository.humboldt.org.co/handle/20.500.11761/9689
 
-Enciclovida, Mexican species catalog:
+#### Enciclovida, Mexican species catalog:
 
-	https://enciclovida.mx/
+https://enciclovida.mx/
 
 ### References and resources
 Gerbracht J (2018) A Content Management System and underlying models for avian taxonomic monographs. Biodiversity Information Science and Standards 2: e25693. https://doi.org/10.3897/biss.2.25693 
