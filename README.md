@@ -35,6 +35,8 @@ Species level information is one of the most demanded services or products from 
 * A SPARQL Endpoint and underlying ontology implemented and working. Done: https://datos.iepnb.es/visor/
 * A standard specification complying with the TDWG SDS. The TG plans to make a formal submission of the documentation to the TDWG Executive by November 27th, 2020. In progress
 
+(See current status below)
+
 ### History/context 
 * Plinian Core started in 2004 as a dialog between Maria Mora (INBio, Costa Rica) and Francisco Pando (GBIF-Spain) around the idea of developing a common system to gather, manage and publish "species-level information. The basis and use cases for these ideas were INBIO's "species pages" (UBIS) and the “CD-ROM of Flora Iberica".
 * More concrete ideas were developed during the GBIF-organized meeting "Building SpeciesBanks: How Shall We Shape the Future?” (Amsterdam, 2005).
@@ -67,6 +69,20 @@ This group welcomes participation from all interested parties on implementing sp
 
  If you are interested in participating in the group, please contact the convenor or a core member.
  
+### Latest developments and current status (2021)
+During this year the Plinian Core “core members” has been meeting and working on a weekly basis. We can articulate the work done in  three areas:
+ 
+Improving the coherence and detail of PliC terms' definitions
+Improving the documentation available in the PliC GitHub repository
+Presenting the documentation standard in a format compliant with TDWG's SDS 
+ 
+In this latest area, we have counted with the invaluable help of Steve Baskauf , who has provided us  with constant advice on how to do things (e.g. dealing with terms borrowed from other standards, treatment of controlled vocabularies, etc.) and also with scripts to produce the normative documentation for Plinian Core. Draft documentation in SDS compliant form has been already produced.
+
+	
+https://github.com/mfvargas/rs.tdwg.org/blob/master/process/page_build_scripts/pc.md
+
+We are now (Oct. 2021) in the final stages prior to submit Plinian Core for evaluation and eventual approval by the TDWG executive and the community at large.
+
 ### Relevant projects and initiatives
  
 #### Atlas de la Biodiversidad de Costa Rica – CRBio:
