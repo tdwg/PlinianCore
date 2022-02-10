@@ -61,7 +61,8 @@ Francisco Pando - Real Jardín Botánico -CSIC. Madrid (pando@rjb.csic.es)
 | María Mora | Biodiversity informatics expertise  | 
 | William Ulate| Biodiversity informatics expertise |
 | Manuel Vargas | Biodiversity informatics expertise |
-| Camila Plata | Biodiversity informatics expertise |
+| Camila Plata | Biodiversity informatics expertise  |
+| Gloria Martínez Sagarra  |  Biodiversity expertise |
 | José Cuadra| Biodiversity informatics expertise |
 
 ### Becoming involved
