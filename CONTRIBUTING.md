@@ -1,7 +1,7 @@
 TITLE: Guidelines for contributing
 DESCRIPTION: This document describes how you can contribute to Plinian Core.
 
-Changes to the standard are subject to the [change policy](change_policy.html). Here's how you can contribute:
+Here's how you can contribute:
 
 * Want to make a change to the standard? Copy and paste one of the **issue templates** below and [submit a new issue](https://github.com/tdwg/PlinianCore/issues/new).
 * Want to contribute to this repository? [Fork the repository](https://github.com/tdwg/PlinianCore/fork), make the changes, and [send a pull request](https://github.com/tdwg/PlinianCore/compare).
