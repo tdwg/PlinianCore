@@ -109,7 +109,7 @@ https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/
 		
 ...which may be visualized here:
 		
-http://www.visualdataweb.de/webvowl/#iri=https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/3.0.0 
+https://service.tib.eu/webvowl/#iri=https://datos.iepnb.es/def/sector-publico/medio-ambiente/pliniancore/3.0.0
 
 #### Vasque Country (Spain) Official Nature Information System:
 
