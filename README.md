@@ -50,7 +50,8 @@ Species level information is one of the most demanded services or products from 
 * As a result of the process started in 2012, a new version, Plinian Core v3.1 was defined. This provides more flexibility to fully represent the information of a species in a variety of scenarios. New elements to deal with aspects such as IPR, related resources, references, etc. were introduced, and elements already included were better-defined and documented.
 * The “Species Information Interest Group”was approved by the TDWG Executive in 2013. Plinian Core is identified as a priority task within that IG.
 * 2014-2018 First full implementations of Plinian core are put in Production (see section “Relevant projects and initiatives”)
-* 2017 -2019 Advancing implementation of Plinian Core in the Living Atlases in coordination with the LA community for the BIE module of Living Atlases.  (see: Vargas & al., 2018)
+* 2017 -2019 Advancing implementation of Plinian Core in the Living Atlases in coordination with the LA community for the BIE module of Living Atlases.  (see: Vargas & al., 2018).
+* 2020-2022 Work is focused on adapting the Plinian Core Data specification expresed as an XML Schema Definition (XSD) to the TDWG Standards Documentation Standard (SDS). 
 
 ### Convenor
 Francisco Pando - Real Jardín Botánico -CSIC. Madrid (pando@rjb.csic.es)
@@ -70,7 +71,7 @@ This group welcomes participation from all interested parties on implementing sp
 
  If you are interested in participating in the group, please contact the convenor or a core member.
  
-### Latest developments and current status (2021)
+### Latest developments and current status (2022)
 During this year the Plinian Core “core members” has been meeting and working on a weekly basis. We can articulate the work done in  three areas:
  
 Improving the coherence and detail of PliC terms' definitions
