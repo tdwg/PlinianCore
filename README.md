@@ -113,11 +113,11 @@ https://service.tib.eu/webvowl/#iri=https://datos.iepnb.es/def/sector-publico/me
 
 #### Vasque Country (Spain) Official Nature Information System:
 
-https://www.ivap.euskadi.eus/contenidos/ds_informes_estudios/plinian_core/eu_def/adjuntos/plinian.pdf 
+https://www.opendata.euskadi.eus/contenidos/ds_informes_estudios/plinian_core/es_def/adjuntos/plinian.pdf
 	
 Specification for creating DwC-Archives based on Plinian Core 
 	
-https://opendata.euskadi.eus/catalogo/-/txostenak-ikerketak/euskadiko-naturari-buruzko-informazio-sisteman-jasota-dauden-espezieak-deskribatzen-dituen-informazioa/
+https://www.opendata.euskadi.eus/catalogo//contenidos/ds_informes_estudios/plinian_core/es_def/index.shtml
 	
 #### Colombian Biodiversity Catalog
 
