@@ -83,7 +83,6 @@ In this latest area, we have counted with the invaluable help of Steve Baskauf ,
 	
 https://github.com/mfvargas/rs.tdwg.org/blob/master/process/page_build_scripts/pc.md
 
-We are now (Oct. 2021) in the final stages prior to submit Plinian Core for evaluation and eventual approval by the TDWG executive and the community at large.
 
 ### Relevant projects and initiatives
  
