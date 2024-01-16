@@ -1,5 +1,5 @@
-## Relevant projects and initiatives
- 
+## USE CASES
+### Projects and initiatives 
 #### Atlas de la Biodiversidad de Costa Rica – CRBio:
 
    See species pages
@@ -34,7 +34,7 @@ https://www.opendata.euskadi.eus/catalogo//contenidos/ds_informes_estudios/plini
 	
 #### Colombian Biodiversity Catalog
 
-Catalog:
+Catalog 
 	
 https://catalogo.biodiversidad.co/
 		
@@ -51,7 +51,7 @@ Documentation about species pages editor:
 
 https://enciclovida.mx/
 
-### References and resources
+### Publications
 Gerbracht J (2018) A Content Management System and underlying models for avian taxonomic monographs. Biodiversity Information Science and Standards 2: e25693. https://doi.org/10.3897/biss.2.25693 
 
 Pando F (2017) How species interactions are managed in Plinian Core: Status and questions. Proceedings of TDWG 1: e20556. https://doi.org/10.3897/tdwgproceedings.1.20556 ;  https://api.zotero.org/users/7403307/publications/items/YNS4J57J/file/view (full presentation)
