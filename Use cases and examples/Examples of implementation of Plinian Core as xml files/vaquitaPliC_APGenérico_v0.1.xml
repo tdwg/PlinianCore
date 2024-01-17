@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dataset
+    xmlns="http://www.eol.org/transfer/content/0.3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/"
+    xmlns:adw="http://animaldiversity.ummz.umich.edu/morphology/"
+    xmlns:eol="http://www.eol.org/transfer/content/0.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	
+    xsi:schemaLocation=" PliC_3.0-AbstractModel.xsd">
+    <taxonRecord type="Structured">
+		<TaxonRecodId>Phocoena sinus Norris &amp; McFarland, 1958</TaxonRecodId>
+		<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+		<abstract></abstract>
+		<dc:language>es</dc:language>
+		<audience></audience>
+		<audience></audience>
+		<Major></Major>
+		<Minor></Minor>
+		<dc:modified>2000-01-01T00:00:00</dc:modified>
+		<dateIssued></dateIssued>
+		<PreferredFlag></PreferredFlag>
+		<pubDate></pubDate>
+		<dc:created>2000-01-01T00:00:00</dc:created>
+		<dwc:ScientificName>Phocoena sinus Norris &amp; McFarland, 1958</dwc:ScientificName>
+		<NameUnstructured xml:lang="es">vaquita</NameUnstructured>
+		<NameUnstructured xml:lang="es">vaquita marina</NameUnstructured>
+		<NameUnstructured xml:lang="es">cochito</NameUnstructured>
+		<NameUnstructured xml:lang="es">duende</NameUnstructured>
+		<NameUnstructured xml:lang="es">marsopa del Golfo de California</NameUnstructured>
+		<dwc:Kingdom>Animalia</dwc:Kingdom>
+        <dwc:Phylum>Chordata</dwc:Phylum>
+        <dwc:Class>Mammalia</dwc:Class>
+        <dwc:Order>Cetacea</dwc:Order>
+        <dwc:Family>Phocoenidae</dwc:Family>
+        <dwc:Genus>Phocoena</dwc:Genus>
+        <BriefDescription>
+			<description>
+				<para>La vaquita es el único mamífero marino endémico de México, el más pequeño de los cetáceos y la especie de mamífero más amenazada del mundo. Las hembras son ligeramente más grandes que los machos, alcanzando 55 kg de peso y 1.5 m de longitud. Su cuerpo es robusto, su cabeza es redondeada y el hocico es corto. Su coloración es característica, la vaquita puede distinguirse por los parches negros alrededor de los ojos y labios; dorso gris oscuro, laterales gris claro y vientre blanco. Sus aletas pectorales son largas y cóncavas, la aleta dorsal es alta, triangular y ligeramente curvada hacia atrás. Esta especie es endémica de la porción occidental del Alto Golfo de California, donde habita en zonas someras de fondos blandos. Este mamífero se alimenta de peces, calamares y crustáceos. Las hembras tienen una cría cada dos años, la cual nace en la primavera tras once meses de gestación. La vaquita se encuentra en peligro debido a que es capturada incidentalmente por las redes de pesca. Aunque se han hecho esfuerzos importantes por protegerla, su población continúa en estado crítico y se estima que al año de 2008, sobrevivían aproximadamente 245 vaquitas (Gerrodette et al. 2011). Modificado de CONABIO (2011) y Semarnat et al. (-). 
+				</para>
+			</description>
+			<AncillaryData>
+				<dc:identifier>1</dc:identifier>
+				<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<reference id="21">Gerrodette, T., B. L. Taylor, R. Swift, S. Rankin, A. M. Jaramillo-Legoretta, and L. Rojas-Bracho. 2011. A combined visual and acoustic estimate of 2008 abundance, and change in abundance since 1997, for the vaquita, Phocoena sinus. Marine Mammal Science 27:E79-E100.</reference>
+			</AncillaryData>
+        </BriefDescription>
+        <FullDescription>
+			<description>
+				<para>Físicamente es semejante a la marsopa común (Phocoena phocoena), pero los apéndices de la vaquita son mayores. Las aletas pectorales son proporcionalmente más largas y cóncavas (margen anterior); la aleta dorsal es más alta, menos triangular, con el margen anterior ligeramente convexo y más largo que el anterior. Este último es casi recto o ligeramente cóncavo. Esta marsopa es robusta; vista de perfil, la cabeza aparenta un cono truncado, con la parte posterior del melón inclinándose hacia adentro, en dirección a las fosas nasales. La pendiente del extremo anterior del melón se inclina abruptamente hacia el extremo anterior del rostro. El patrón de pigmentación es gris oscuro dorsalmente, con campos laterales gris claro y blanco ventralmente. Las características más conspicuas son los parches negros alrededor de los ojos y los labios (Brownell Jr. et al. 1987).
+La vaquita es probablemente el cetáceo más pequeño. Las hembras alcanzan 140.6 cm y los machos 134.9 de largo (Hohn et al. 1996). Vidal et al. (1999), basados en una muestra de 12 individuos reportados por Brownell Jr. et al. (1987), obtuvieron la media de las siguientes medidas en centímetros. Del extremo anterior de la mandíbula a: ángulo de la comisura 6.9; centro del espiráculo 10.3; centro del ojo 10.6; meato auditivo 15.5; inserción anterior de aleta pectoral 21.9; punta de la aleta dorsal 68.8; centro del ano 79.1. Otras medidas fueron: la longitud anterior de la aleta pectoral 23.5; longitud axilar de la pectoral 17.7; altura de la aleta dorsal 12.3; longitud de la base de la aleta dorsal 16.3; anchura de la aleta caudal 34.6 anchura del lóbulo de la caudal (muesca a extremo más cercano) 9.3; profundidad de muesca 1.9; circunferencia la altura de la axila 65.7; circunferencia máxima 77. Tomado de Urbán-R. and Guerrero-Ruiz (2008). La dentición varía de 18 a 22 dientes (n=5) en cada lado de la mandíbula superior y de 17 a 20 (n=5) en cada lado de la mandíbula inferior. Los dientes tienen las coronas en forma de espátula y son esencialmente uniformes como en las otras especies del género. El conteo de vértebras es menor que en otras especies de Phocoena: 7 cervicales, 12-13 torácicas, 13-15 lumbares y 29-30 caudales con 19 o 20  huesos chevron. Las tres vértebras cervicales anteriores están fusionadas. Las seis costillas anteriores tienen procesos capitular y tubercular. Seis o siete pares de costillas externas están presentes; las tres anteriores están directamente unidas al esternón (Brownell Jr. 1983).
+				</para>
+			</description>
+			<AncillaryData>
+				<dc:identifier>2</dc:identifier>
+				<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<reference id="1">Brownell Jr., R. L., L. T. Findley, O. Vidal, A. Robles, and S. N. Manzanilla. 1987. External morphology and pigmentation of the vaquita Phocoena sinus (Cetacea: Mammalia). Marine Mammal Science 3:22-30.</reference>
+				<reference id="2">Hohn, A. A., A. J. Read, S. Fernández, O. Vidal, and T. L. Findley. 1996. Life history of the vaquita Phocoena sinus (Phocoenidae, Cetacea). J. Zool. 239:235-251.</reference>
+				<reference id="3">Vidal, O., R. L. Brownell Jr., and L. T. Findley. 1999. Vaquita Phocoena sinus Norris and McFarland 1958 in S. H. Ridgway, and S. R. Harrison, editors. Handbook of Marine Mammals. Academic Press, San Diego, CA.</reference>
+				<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+				<reference id="5">Brownell Jr., R. L. 1983. Phocoena sinus. Mammalian Species 198:1-3.</reference>																			
+			</AncillaryData>
+        </FullDescription>
+        <NaturalHistory>
+			<Reproduction>
+				<ReproductionUnit>
+				   <Detail>
+						<ItemAttribute>Rango</ItemAttribute>
+						<ItemValue>Animal</ItemValue>
+					</Detail>
+				</ReproductionUnit>
+				<ReproductionUnit>
+					<ItemAttribute>Descripcion</ItemAttribute>
+					<ItemValue>Aparentemente, el ciclo reproductivo completo de la vaquita dura casi 2 años. Estos mamíferos se reproducen por primera vez entre los tres y seis años de edad (Hohn et al. 1996). Su reproducción es estacional. La temporada reproductiva ocurre entre abril a junio, tras un período de gestación de 11 meses (Gaskin et al. 1984), nace una cría de 60-80 cm de longitud aproximada a finales de febrero y principios de abril, con un posible pico a finales de marzo y principios de abril (Hohn et al. 1996; Silber 1990; Vidal 1995).</ItemValue>
+				</ReproductionUnit>
+				<ReproductionUnit>
+					<ItemAttribute>Dimorfismo Sexual</ItemAttribute>
+					<ItemValue>Si</ItemValue>
+				</ReproductionUnit>								
+				<ReproductionUnit>
+					<ItemAttribute>Tipo de Reproducción</ItemAttribute>
+					<ItemValue>Iteróparos</ItemValue>
+				</ReproductionUnit>
+				<ReproductionUnit>
+					<dwc:meassurementOrFact>
+						<dwc:meassurementID>1</dwc:meassurementID>
+						<dwc:meassurementType>Edad de la primera reproducción</dwc:meassurementType>
+						<dwc:meassurementValue>entre los 3 y 6 años de edad </dwc:meassurementValue>
+						<dwc:meassurementUnit>años</dwc:meassurementUnit>
+					</dwc:meassurementOrFact>
+				</ReproductionUnit>
+				<ReproductionUnit>
+					<dwc:meassurementOrFact>
+						<dwc:meassurementID>2</dwc:meassurementID>
+						<dwc:meassurementType>Duración de la vida reproductiva</dwc:meassurementType>
+						<dwc:meassurementValue>ND</dwc:meassurementValue>
+					</dwc:meassurementOrFact>		
+				</ReproductionUnit>
+				<ReproductionUnit>					
+				<dwc:meassurementOrFact>
+					<dwc:meassurementID>3</dwc:meassurementID>		
+					<dwc:meassurementType>Gestación estimada</dwc:meassurementType>
+					<dwc:meassurementValue>11</dwc:meassurementValue>
+					<dwc:meassurementUnit>meses</dwc:meassurementUnit>
+				</dwc:meassurementOrFact>
+				</ReproductionUnit>
+				<ReproductionUnit>				
+				<dwc:meassurementOrFact>
+					<dwc:meassurementID>4</dwc:meassurementID>		
+					<dwc:meassurementType>Número de huevos o crias</dwc:meassurementType>
+					<dwc:meassurementValue>1</dwc:meassurementValue>
+				</dwc:meassurementOrFact>														
+				</ReproductionUnit>				
+				<AncillaryData>
+					<dc:identifier>3</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="2">Hohn, A. A., A. J. Read, S. Fernández, O. Vidal, and T. L. Findley. 1996. Life history of the vaquita Phocoena sinus (Phocoenidae, Cetacea). J. Zool. 239:235-251.</reference>
+					<reference id="6">Gaskin, D., G. Smith, A. Watson, W. Yasui, and D. Yurick. 1984. Reproduction in the porpoises (Phocoenidae): implications for management. Rep. Int. Whaling Comm. Spec. Issue 6:135-148.</reference>					
+				</AncillaryData>								
+			</Reproduction>        
+			<Feeding type="Piscívoro">
+				<FeedingUnstructured>
+						<para>La vaquita se alimenta principalmente de peces demersales, calamares y crustáceos. Se han registrado más de 20 especies de presas. Fitch and Brownell (1968) reportaron restos de dos especies de peces demersales, correspondientes a la familia Haemulidae (Orthopristis reddingi) y Sciaenidae (Bairdiella icistia) del estómago de una vaquita varada en 1965 cerca de San Felipe. Silber (1990) reportó restos de Anchoa nasus o Sardinops spp en dos vaquitas capturadas en 1988, así como diversos otolitos no identificados y picos de calamares. Más restos de calamares (Lolliguncula panamensis) fueron encontrados en el estómago de vaquitas colectadas en 1965 y 1984. Otras necropsias realizadas a seis vaquitas en 1985 reportaron un total de 103 picos de calamar L. panamensis y 25 de Loliolopsis diomedae, esta última encontrándose en los 6 ejemplares (Vidal et al. 1999). Un par de trabajos sobre la dieta de la vaquita fueron presentados por Findley et al. (1995) y Pérez-Cortés Moreno et al. (1996) concluyendo ambos trabajos que la especie se alimenta principalmente de peces y de acuerdo al número de presas registradas en los contenidos estomacales, la vaquita es una especie no selectiva. Modificado de Urbán-R. and Guerrero-Ruiz (2008).</para>
+				</FeedingUnstructured>
+				<AncillaryData>
+					<dc:identifier>7</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="7">Fitch, J. E., and R. L. Brownell. 1968. Fish otoliths in cetacean stomachs and their importance in interpreting feeding habits. Journal of the Fisheries Research Board in Canada 25:2561-2574.</reference>
+					<reference id="8">Silber, G. K. 1990. Occurrence and distribution of the vaquita, Phocoena sinus, in the northern Gulf of California. US Fish Bulletin 88.</reference>
+					<reference id="3">Vidal, O., R. L. Brownell Jr., and L. T. Findley. 1999. Vaquita Phocoena sinus Norris and McFarland 1958 in S. H. Ridgway, and S. R. Harrison, editors. Handbook of Marine Mammals. Academic Press, San Diego, CA.</reference>
+					<reference id="9">Pérez-Cortés Moreno, H., G. K. Silber, and B. Villa-R. 1996. Contribución al conocimiento de la alimentación de la vaquita Phocoena sinus. Ciencia Pesquera 13:66-72.</reference>
+					<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+				</AncillaryData>
+			</Feeding>
+			<Behavior>
+				<para>Las vaquitas viajan solas o en grupos pequeños, la mayoría conformados por 2-3 animales, con un promedio de 1.9 y un rango de 1-7 animales (Silber 1990).  Jaramillo-Legorreta et al. (1999) mencionan que por lo general las vaquitas viajan en grupos de 1-2 individuos. Grandes agregaciones de la especie se han visto dispersados como individuos solitarios o en subgrupos pequeños de entre 2 y 4 miembros, hasta 8 y 10 (Silber et al. 1988). Las vaquitas salen a la superficie a respirar inconspicuamente (Jaramillo-Legorreta et al. 1999). Silber et al. (1988) observaron dos parejas de hembras con cría por espacio de 3 horas, en las cuales se concluye que las características y patrones de buceo son similares a las reportadas para la marsopa común, sin embargo el promedio de buceo reportado por Watson and Gaskin (1983) para la marsopa común, así como tiempo en que permanecen en la superficie es mayor que el de la vaquita (Vidal et al. 1999).
+				
+				De acuerdo a Wells et al. (1981), las vaquitas tienden a evadir a las embarcaciones, sin embargo Silber et al. (1988) notó que no existe una aparente respuesta a embarcaciones menores, a distancias de entre 40 y 200 m, así como a embarcaciones de pescadores. Jaramillo-Legorreta et al. (1999) señalan que las vaquitas tendieron a evadir la trayectoria del buque de muestreo a una distancia cercana a los 900 m.
+				
+				No se ha observado a las vaquitas asociadas con otras especies formando agregaciones mixtas, sin embargo Silber (1990) reportó a dos rorcuales tropicales (Balaenoptera edeni) junto con tres delfines comunes de rostro corto (Delphinus delphis) a una distancia de 1-1.5 km de grupos de vaquitas.
+
+Varios petreles negros de tormenta (Oceanodroma melania), así como la gaviota de Bonaparte (Larus philadelphia) se han observado bañándose en las olas formadas por las vaquitas (Silber 1990).
+
+En 1986 y 1987 se grabaron sonidos de alta frecuencia cerca de vaquitas (Silber &amp; Norris 1991). Los clicks fueron definidos, intensos y señales de banda corta (media: 17.1+/- d.e. 5.38 kHz) en una frecuencia de entre 122.2 y 146.9 kHz. La duración de los sonidos fue de 79-193 msec.
+
+Las señales acústicas producidas por la vaquita son similares a las reportadas para otras marsopas y para los delfines pertenecientes al género Cephalorhynchus (Evans et al. 1988).
+</para>
+				<AncillaryData>
+					<dc:identifier>8</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="8">Silber, G. K. 1990. Occurrence and distribution of the vaquita, Phocoena sinus, in the northern Gulf of California. US Fish Bulletin 88.</reference>
+					<reference id="10">Jaramillo-Legorreta, A. M., L. Rojas-Bracho, and T. Gerrodette. 1999. A new abundance estimate for vaquitas: fist step for recovey. Marine Mammal Science 15:957-973.</reference>
+					<reference id="11">Silber, G. K., M. Newcomber, and G. J. Barros. 1988. Observations on the behavior and ventilation cycles of the vaquita, Phocoena sinus. Marine Mammal Science 4:62-67.</reference>
+					<reference id="12">Watson, A., and D. Gaskin. 1983. Observations on the ventilation cycle of the harbour porpoise Phocoena phocoena (L.) in the coastal waters of the Bay of Fundy. Can. J. Zool. 61:126-132.</reference>
+					<reference id="3">Vidal, O., R. L. Brownell Jr., and L. T. Findley. 1999. Vaquita Phocoena sinus Norris and McFarland 1958 in S. H. Ridgway, and S. R. Harrison, editors. Handbook of Marine Mammals. Academic Press, San Diego, CA.</reference>
+					<reference id="13">Wells, R. S., B. Wursig, and K. S. Norris. 1981. A survey of the marine mammals of the upper Gulf of California, México, with an assessment of the status of Phocoena sinus. National Tecnical Information Service Report, PB 81-168791.</reference>					
+					<reference id="14">Silber, G. K., and K. S. Norris. 1991. Geographic and seasonal distribution of the vaquita, Phocoena sinus. Anales del Instituto de Biologia Universidad Nacional Autonoma de Mexico Serie Zoologia 62:263-268.</reference>
+					<reference id="15">Evans, W. E., F. T. Awbrey, and H. Hackbarth. 1988. High frequency pulses produced by free-ranging commerson's dolphin (Cephalorhynchus commersonii) compared to those of phocoenids. . Rep. int. Whal. Commn. 9.</reference>															
+				</AncillaryData>				
+			</Behavior>
+			<Interactions>
+				<Interaction>
+					<InteractionSpecies>
+						<ResourceRelationship>
+							<relatedResourceID>ND</relatedResourceID>
+							<relationshipOfResource>ND</relationshipOfResource>
+						</ResourceRelationship>
+					</InteractionSpecies>
+					<type>Comensales</type>
+					<type>Parásitos</type>
+					<comments>Se ha reportado la presencia del balano foronte Xenobalanus globicipitis adherido en los bordes exteriores de las aletas dorsal, pectorales y caudal (Brownell Jr. et al. 1987; Vidal 1995). Tres parásitos tremátodos Synthesium tursionis se encontraron en el intestino de una vaquita macho (Lamothe 1987), así como 2 especímenes del nemátodo Crassicauda sp., uno en el tejido conectivo del área de la glándula mamaria de una vaquita y el otro en la grasa cercana al ano (Vidal 1995).</comments>
+					<AncillaryData>
+						<dc:identifier>9</dc:identifier>
+						<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+						<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+						<mimeType>text/html</mimeType>
+						<reference id="1">Brownell Jr., R. L., L. T. Findley, O. Vidal, A. Robles, and S. N. Manzanilla. 1987. External morphology and pigmentation of the vaquita Phocoena sinus (Cetacea: Mammalia). Marine Mammal Science 3:22-30.</reference>
+						<reference id="16">Lamothe, R. 1987. Tremátodos de mamíferos III. Hallazgo de Synthesium tursionis (Marchi, 1873) Stunkard y Alvey, 1930 en Phocoena sinus (Phocoenidae), en el Golfo de California, México. Anales del Instituto de Biología Serie Zoológica 58:11-20.</reference>
+						<reference id="17">Vidal, O. 1995. Population biology and incidental mortality of the Vaquita, Phocoena sinus. Report of the International Whaling Commission 16:247-272.</reference>												
+					</AncillaryData>					
+				</Interaction>
+				<Interaction>
+					<type>Depredadores</type>
+					<comments>Los tiburones grandes como el tiburón blanco (Carcharadon carcharias), el tiburón mako (Isurus oxyrinchus), tiburón limón (Negaprion brevirostris), tiburón macuira (Carcarhinus limbatus), el tiburón zorro de anteojos (Alopias superciliosus), el tiburón cañabota gata (Notorynchus cepedianus) y las orcas (Orcinus orca) son depredadores potenciales de las vaquitas. Existen reportes de pescadores que han descrito encontrar vaquitas completas o partes de vaquitas en los estómagos de tiburones; sin embargo no es posible determinar si fueron depredadas o consumidas directamente de las redes (Vidal 1995; Vidal et al. 1999).</comments>
+					<AncillaryData>
+						<dc:identifier>10</dc:identifier>
+						<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+						<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+						<mimeType>text/html</mimeType>
+						<reference id="17">Vidal, O. 1995. Population biology and incidental mortality of the Vaquita, Phocoena sinus. Report of the International Whaling Commission 16:247-272.</reference>												
+					</AncillaryData>					
+				</Interaction>				
+			</Interactions>
+			<Migrations>
+				<MigratoryUnstructured>Se considera que las vaquitas permanecen en el área principal de concentración frente a la costa de San Felipe todo el año (Rojas-Bracho et al. 2006; Silber &amp; Norris 1991).</MigratoryUnstructured>
+				<AncillaryData>
+					<dc:identifier>11</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="18">Rojas-Bracho, L., R. R. Reeves, and A. Jaramillo-Legorreta. 2006. Conservation of the vaquita Phocoena sinus. Mammal Review 36:179-216.</reference>
+				</AncillaryData>				
+			</Migrations>
+			<EcologicalSignificance type="Importancia biológica">			
+			<EcologicalSignificance type="Importancia biológica">
+				<para>La importancia de la especie radica en que es una especie endémica del Golfo de California, con una distribución confinada a la porción occidental de éste. Es una especie en peligro de extinción y con alto valor científico, y que ha sido poco estudiada debido a la dificultad de ser observada y aproximada. Modificado de  Urbán-R. and Guerrero-Ruiz (2008). </para>
+				<AncillaryData>
+					<dc:identifier>12</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+				</AncillaryData>
+			</EcologicalSignificance>
+			<EcologicalSignificance type="Importancia económica">
+				<para>NA</para>
+			</EcologicalSignificance> 			
+			<EnvironmetalEnvelope>
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>5</dwc:meassurementID>
+							<dwc:measurementType>Altitud</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>6</dwc:meassurementID>
+							<dwc:measurementType>Temperatura</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>7</dwc:meassurementID>
+							<dwc:measurementType>Precipitacion</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>8</dwc:meassurementID>
+							<dwc:measurementType>Humedad relativa</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>	
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>9</dwc:meassurementID>
+							<dwc:measurementType>Salinidad</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>		
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>10</dwc:meassurementID>
+							<dwc:measurementType>Oxígeno Disuelto</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>		
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>11</dwc:meassurementID>
+							<dwc:measurementType>Corrientes</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>	
+						<dwc:meassurementOrFact>
+							<dwc:meassurementID>12</dwc:meassurementID>
+							<dwc:measurementType>Amplitud de mareas</dwc:measurementType>
+							<dwc:meassurementValue>N/A</dwc:meassurementValue>
+						</dwc:meassurementOrFact>																									
+			</EnvironmetalEnvelope>
+        </EcologicalSignificance></NaturalHistory>
+        <Habitats>
+				<Habitat>
+					<type>Marino</type>
+					<VolcabularyUsed>La vaquita se distribuye en la porción occidental del Golfo de California (Brownell Jr. 1986; Gerrodette et al. 1995; Gerrodette et al. 2011; Jaramillo-Legorreta et al. 1999; Silber 1990) y no en los límites de la Reserva del Alto Golfo de California y Delta del Río Colorado. La distribución de vaquita está relacionada con la profundidad y, aparentemente, con el tipo de fondo.  Al parecer, el hábitat importante de vaquitas abarca aguas someras, de entre 5 y 20 m de profundidad, al norte de San Felipe, por lo menos durante agosto y septiembre (Jaramillo-Legorreta et al. 1999). Sin embargo, Vidal et al. (1999) reportan que la profundidad a la que se pueden encontrar está entre los 13.5-37 m, la mayoría entre los 11 y 25 km de la costa. Se han registrado algunos avistamientos a un poco menos de los 40 km de la costa. La visibilidad de las aguas donde se distribuyen fluctúa entre los 0.9 m y los 12 m. Se sabe que las capturas incidentales de la especie en redes agalleras han ocurrido en profundidades que van de los 4 a los 36 m y entre los 3 y 33 km de la costa. Gallo and Torre (1998) analizaron los datos publicados en la literatura y concluyeron que estas marsopas prefieren los fondos compuestos de arcilla-limo, a los arenosos en el 79% de los casos. Modificado de Urbán-R. and Guerrero-Ruiz (2008).</VolcabularyUsed>
+					<AncillaryData>
+						<dc:identifier>15</dc:identifier>
+						<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+						<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+						<mimeType>text/html</mimeType>
+						<reference id="19">Brownell Jr., R. L. 1986. Distribution of the vaquita, Phocoena sinus, in Mexican waters. Marine Mammal Science 2:299-305.</reference>
+						<reference id="20">Gerrodette, T., L. A. Fleischer, H. Pérez-Cortés Moreno, and B. Villa-R. 1995. Distribution of the vaquita, Phocoena sinus, based on sightings from systematic surveys. Report of the International Whaling Commission Special Issue 16:273-281.</reference>
+						<reference id="21">Gerrodette, T., B. L. Taylor, R. Swift, S. Rankin, A. M. Jaramillo-Legoretta, and L. Rojas-Bracho. 2011. A combined visual and acoustic estimate of 2008 abundance, and change in abundance since 1997, for the vaquita, Phocoena sinus. Marine Mammal Science 27:E79-E100.</reference>
+						<reference id="10">Jaramillo-Legorreta, A. M., L. Rojas-Bracho, and T. Gerrodette. 1999. A new abundance estimate for vaquitas: fist step for recovey. Marine Mammal Science 15:957-973.</reference>
+						<reference id="8">Silber, G. K. 1990. Occurrence and distribution of the vaquita, Phocoena sinus, in the northern Gulf of California. US Fish Bulletin 88.</reference>
+						<reference id="3">Vidal, O., R. L. Brownell Jr., and L. T. Findley. 1999. Vaquita Phocoena sinus Norris and McFarland 1958 in S. H. Ridgway, and S. R. Harrison, editors. Handbook of Marine Mammals. Academic Press, San Diego, CA.</reference>
+						<reference id="22">Gallo, R. J. P., and J. Torre. 1998. The critical habitat of the vaquita (Phocoena sinus) in the Upper Gulf of California. . Twelfth Biennial Conference on the Biology of Marine Mammals, Monte Carlo, Monaco.</reference>			
+						<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>												
+				</AncillaryData>
+			</Habitat>			
+        </Habitats>      
+        <Distribution>
+			<AtomizedDistribution>
+				<catalogue type="Distribución histórica">Se estima que la distribución histórica de la vaquita marina es similar a la actual, debido a que no  hay ningún indicio de la presencia de vaquitas al sur de los 29° N, en el Golfo de California Modificado de Urbán-R. and Guerrero-Ruiz (2008). </catalogue>
+				<GeographicEntity>
+					<Estado>N/A</Estado>
+					<Region>N/A</Region>
+					<Municipio>N/A</Municipio>					
+				</GeographicEntity>
+				<AncillaryData>
+					<dc:identifier>14</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>													
+				</AncillaryData>
+			</AtomizedDistribution>
+			<AtomizedDistribution type="restringida">
+				<catalogue type="Distribución actual">Las poblaciones de  vaquita están confinadas a la región conocida como Alto Golfo de California. Esta zona está definida como la parte norte de una línea que conecta Puertecitos en Baja California norte y Puerto Peñasco en Sonora. La distribución actual de la vaquita está limitada a un área aproximada de 4,000 km2 (Gerrodette et al. 1995; Jaramillo-Legorreta et al. 1999; Rojas-Bracho et al. 2006). Modificado de Semarnat et al. (-) y Urbán-R. and Guerrero-Ruiz (2008).
+Los avistamientos de vaquitas se han hecho en la misma área en diferentes épocas del año y en años diferentes. Varias observaciones y reportes de organismos enmallados en redes agalleras en el Alto Golfo de California, los ubican entre los 30°45' y 31°30' de latitud norte y entre los 114°20' y 114°50' de longitud oeste. Se tiene reportes de organismos atrapados en redes agalleras en las aguas frente a la costa de Sonora, desde El Golfo de Santa Clara hasta Punta Borrascosas y en aguas al sur de la Isla Montague (D'Agrosa et al. 1995; Gerrodette et al. 1995; Jaramillo-Legorreta et al. 1999; Silber et al. 1994; Vidal 1995). Tomado de Urbán-R. and Guerrero-Ruiz (2008).
+</catalogue>
+				<GeographicEntity>
+					<Estado>N/A</Estado>
+					<Region>N/A</Region>
+					<Municipio>N/A</Municipio>					
+				</GeographicEntity>
+				<AncillaryData>
+					<dc:identifier>16</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="20">Gerrodette, T., L. A. Fleischer, H. Pérez-Cortés Moreno, and B. Villa-R. 1995. Distribution of the vaquita, Phocoena sinus, based on sightings from systematic surveys. Report of the International Whaling Commission Special Issue 16:273-281.</reference>
+					<reference id="10">Jaramillo-Legorreta, A. M., L. Rojas-Bracho, and T. Gerrodette. 1999. A new abundance estimate for vaquitas: fist step for recovey. Marine Mammal Science 15:957-973.</reference>
+					<reference id="18">Rojas-Bracho, L., R. R. Reeves, and A. Jaramillo-Legorreta. 2006. Conservation of the vaquita Phocoena sinus. Mammal Review 36:179-216.</reference>
+					<reference id="25">Semarnat, CONANP, and Comisión Asesora de la Presidencia de México para la Recuperación de la Vaquita. -. Resumen del estado del conocimiento y conservación de la vaquita (Phocoena sinus).</reference>
+					<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+					<reference id="23">D'Agrosa, C., O. Vidal, and W. C. Graham. 1995. Mortality of the vaquita (Phocoena sinus) in gillnet fisheries during 1993-94. Rep. int. Whal. Commn.</reference>
+					<reference id="24">Silber, G. K., M. Newcomber, H. Pérez-Cortés Moreno, and G. M. Ellis. 1994. Cetaceans of the Northern Gulf of California. Distribution occurrence and relative abundance. Marine Mammal Science 10:283-298.</reference>			
+				</AncillaryData>
+			</AtomizedDistribution>			
+        </Distribution>     
+        <Endemic>
+			<AtomizedEndemsm>
+				<EdemicTo>Endémica</EdemicTo>
+				<EndemicIn></EndemicIn>
+			</AtomizedEndemsm>
+        </Endemic>
+        <PopulationBiology>
+			<Size>
+				<para>ND</para>
+			</Size>
+			<AbundanceData>
+				<para>De acuerdo a Barlow et al. (1997) el tamaño de la población en 1993 era de 224 individuos, con un intervalo de confianza (IC) al 95% entre 106 y 470 vaquitas. En 1997 Jaramillo et al. (1999) estimaron el tamaño poblacional en 567 vaquitas (IC 95% = 177–1073 vaquitas). Tomado de Urbán-R. and Guerrero-Ruiz (2008). Una estimación reciente basada en un modelo que incorpora la mortalidad por captura incidental, estimó que el tamaño poblacional de la vaquita en el año 2007 era de 150 individuos (Jaramillo-Legorreta et al. 2007). La última estimación de tamaño poblacional se hizo en base a un muestreo visual-acústico realizado en 2008; Gerrodette et al. (2011) reportan que la abundancia de la especie es de 245 animales (IC 95% = 68-884 vaquitas).</para>
+				<AncillaryData>
+					<dc:identifier>16</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>
+					<reference id="26">Barlow, J. T., T. Gerrodette, and G. K. Silber. 1997. First estimates of vaquita abundance. Marine Mammal Science 13:44-58.</reference>
+					<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+					<reference id="27">Jaramillo-Legorreta, A. M., L. Rojas-Bracho, R. L. Brownell, Jr., A. J. Read, R. R. Reeves, K. Ralls, and B. L. Taylor. 2007. Saving the vaquita: Immediate action, not more data. Conservation Biology 21:1653-1655.</reference>
+				<reference id="21">Gerrodette, T., B. L. Taylor, R. Swift, S. Rankin, A. M. Jaramillo-Legoretta, and L. Rojas-Bracho. 2011. A combined visual and acoustic estimate of 2008 abundance, and change in abundance since 1997, for the vaquita, Phocoena sinus. Marine Mammal Science 27:E79-E100.</reference>			
+				</AncillaryData>				
+			</AbundanceData>
+			<DensityData>ND</DensityData>
+			<PatternDistribution>ND</PatternDistribution>
+			<SexRatio>ND</SexRatio>
+			<ProportionIndividualsPerStageLife>
+				<para>Del análisis de 56 ejemplares, el 62% fueron individuos de entre 0-2 años de edad y el 31% de entre 11-16 años de edad. No reporta individuos de entre 3-6 años (Hohn et al. 1996).</para>
+				<AncillaryData>
+					<dc:identifier>17</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>									
+					<reference id="2">Hohn, A. A., A. J. Read, S. Fernández, O. Vidal, and T. L. Findley. 1996. Life history of the vaquita Phocoena sinus (Phocoenidae, Cetacea). J. Zool. 239:235-251.</reference>								
+				</AncillaryData>
+			</ProportionIndividualsPerStageLife>
+			<MortalityRate>
+				<para>Se estima que la mortalidad por captura incidental en El Golfo de Santa Clara es de 39 vaquitas por año, y que esta cifra podría ser similar en San Felipe, BC (D'Agrosa et al. 2000), por lo que por lo menos 78 vaquitas estarían muriendo anualmente (Jaramillo-Legorreta et al. 2007), resultando una tasa de mortalidad del 14% (Gerrodette et al. 2011).</para>
+				<AncillaryData>
+					<dc:identifier>18</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>									
+					<reference id="28">D'Agrosa, C., C. E. Lennert-Cody, and l. O. Vida. 2000. Vaquita bycatch in Mexico's artisanal gillnet fisheries: driving a small population to extinction. Conservation Biology 14:1110-1119.</reference>
+					<reference id="27">Jaramillo-Legorreta, A. M., L. Rojas-Bracho, R. L. Brownell, Jr., A. J. Read, R. R. Reeves, K. Ralls, and B. L. Taylor. 2007. Saving the vaquita: Immediate action, not more data. Conservation Biology 21:1653-1655.</reference>
+					<reference id="21">Gerrodette, T., B. L. Taylor, R. Swift, S. Rankin, A. M. Jaramillo-Legoretta, and L. Rojas-Bracho. 2011. A combined visual and acoustic estimate of 2008 abundance, and change in abundance since 1997, for the vaquita, Phocoena sinus. Marine Mammal Science 27:E79-E100.</reference>
+				</AncillaryData>				
+			</MortalityRate>
+			<BirthDate>
+				<para>Se estima que la tasa máxima de natalidad de la población de la vaquita es de 4% por año (Rojas-Bracho et al. 2006).</para>
+				<AncillaryData>
+					<dc:identifier>19</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>									
+					<reference id="18">Rojas-Bracho, L., R. R. Reeves, and A. Jaramillo-Legorreta. 2006. Conservation of the vaquita Phocoena sinus. Mammal Review 36:179-216.</reference>
+				</AncillaryData>				
+			</BirthDate>
+			<PopulationTendency>
+				<para>Decreciendo. En 1997, la población de vaquitas fue estimada en 567 individuos (Jaramillo-Legorreta et al. 1999). Para el 2008, la población estimada de vaquitas se había reducido más de la mitad (57%), estimándose que solo permanecían 245 organismos, dando una tasa de disminución de anual de 7.6% (Gerrodette et al. 2011). </para>
+				<AncillaryData>
+					<dc:identifier>20</dc:identifier>
+					<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+					<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+					<mimeType>text/html</mimeType>									
+					<reference id="10">Jaramillo-Legorreta, A. M., L. Rojas-Bracho, and T. Gerrodette. 1999. A new abundance estimate for vaquitas: fist step for recovey. Marine Mammal Science 15:957-973.</reference>
+					<reference id="21">Gerrodette, T., B. L. Taylor, R. Swift, S. Rankin, A. M. Jaramillo-Legoretta, and L. Rojas-Bracho. 2011. A combined visual and acoustic estimate of 2008 abundance, and change in abundance since 1997, for the vaquita, Phocoena sinus. Marine Mammal Science 27:E79-E100.</reference>													
+				</AncillaryData>
+			</PopulationTendency>
+			<AncillaryData>
+				<dc:identifier>21</dc:identifier>
+				<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<reference id="2">Hohn, A. A., A. J. Read, S. Fernández, O. Vidal, and T. L. Findley. 1996. Life history of the vaquita Phocoena sinus (Phocoenidae, Cetacea). J. Zool. 239:235-251.</reference>								
+			</AncillaryData>
+			<AncillaryData>
+				<dc:identifier>22</dc:identifier>
+				<dwc:taxonConceptID>20676727</dwc:taxonConceptID>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<dc:description>Vidal (1995) reportó neonatos y un feto de vaquita que murieron durante operaciones pesqueras. Los organismos registraron longitudes pequeñas y bajo peso. El feto midió aproximadamente 64 cm y pesó 4.3 kg. Las dimensiones de los neonatos variaron entre los 67 y 78.2 cm, pesando entre los 5 y 12.5 kg. 
+El organismo más viejo estimado fue aquel que llegó a los 21 años de edad (Hohn et al., 1996).</dc:description>								
+<reference id="17">Vidal, O. 1995. Population biology and incidental mortality of the Vaquita, Phocoena sinus. Report of the International Whaling Commission 16:247-272.</reference>
+				<reference id="2">Hohn, A. A., A. J. Read, S. Fernández, O. Vidal, and T. L. Findley. 1996. Life history of the vaquita Phocoena sinus (Phocoenidae, Cetacea). J. Zool. 239:235-251.</reference>														
+			</AncillaryData>
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>13</dwc:meassurementID>		
+				<dwc:meassurementType>Tamaño de la hembra</dwc:meassurementType>
+				<dwc:meassurementValue>140.6</dwc:meassurementValue>
+			</dwc:meassurementOrFact>
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>14</dwc:meassurementID>		
+				<dwc:meassurementType>Tamaño del macho</dwc:meassurementType>
+				<dwc:meassurementValue>134.9</dwc:meassurementValue>
+			</dwc:meassurementOrFact>			
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>15</dwc:meassurementID>		
+				<dwc:meassurementType>Tamaño feto</dwc:meassurementType>
+				<dwc:meassurementValue>64</dwc:meassurementValue>
+				<dwc:meassurementUnit>cm</dwc:meassurementUnit>
+			</dwc:meassurementOrFact>
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>16</dwc:meassurementID>		
+				<dwc:meassurementType>Peso feto</dwc:meassurementType>
+				<dwc:meassurementValue>4.3</dwc:meassurementValue>
+				<dwc:meassurementUnit>Kg</dwc:meassurementUnit>
+			</dwc:meassurementOrFact>	
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>17</dwc:meassurementID>		
+				<dwc:meassurementType>Dimensiones neonatos</dwc:meassurementType>
+				<dwc:meassurementValue>Entre los 67 y 78.2</dwc:meassurementValue>
+				<dwc:meassurementUnit>cm</dwc:meassurementUnit>
+			</dwc:meassurementOrFact>						
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>18</dwc:meassurementID>		
+				<dwc:meassurementType>Peso neonatos</dwc:meassurementType>
+				<dwc:meassurementValue>Entre los 5 y 12.5</dwc:meassurementValue>
+				<dwc:meassurementUnit>cm</dwc:meassurementUnit>
+			</dwc:meassurementOrFact>
+			<dwc:meassurementOrFact>
+				<dwc:meassurementID>19</dwc:meassurementID>		
+				<dwc:meassurementType>Mayor edad</dwc:meassurementType>
+				<dwc:meassurementValue>21</dwc:meassurementValue>
+				<dwc:meassurementUnit>años</dwc:meassurementUnit>
+			</dwc:meassurementOrFact>						
+        </PopulationBiology>
+        <ThreatStatus>
+			<ThreatStatus>
+				<ThreatStatus>En peligro de extinción</ThreatStatus>
+				<Thread>ND</Thread>
+				<ConservationActions>Protección de sitio/área</ConservationActions>
+				<Authority>N/A</Authority>
+				<AppliesTo>
+					<DistributionArea>
+						<para>NOM-059-SEMARNAT-2010: En Peligro de Extinción (P)</para>
+						<para>NOM-059-SEMARNAT-2001: En Peligro de Extinción (P) </para>
+						<para>UICN: En Peligro Crítico (CR), A4d; C2a(ii)  ver 3.1 </para>
+					</DistributionArea>
+				</AppliesTo>
+			</ThreatStatus>
+			<ThreatStatus>Las vaquitas son muy vulnerables a la extinción debido a que son naturalmente raras y a que tienen una distribución limitada con una sola población. Se han enlistado numerosos factores de riesgo para la vaquita, entre ellos la mortalidad incidental por redes agalleras, la falta de flujo del río Colorado, la contaminación y la depresión endogámica. 
+
+De acuerdo a Rojas-Bracho and Taylor (1999), el riesgo principal e inmediato para las vaquitas es la mortalidad por pesquerías. La vaquita ha sido capturada incidentalmente en redes agalleras para totoaba (Totoaba macdonaldi)  cerca de San Felipe y a lo largo de la costa de Sonora. La pesquería inició a finales de la década de 1940, cerrando en 1975 debido a la disminución de la población (Ávalos de Haro &amp; Mathews 1973; Flanagan &amp; Hendrickson 1976; Magatagan et al. 1983; Ruiz- Durá 1985). Las vaquitas tienen una incidencia mayor de caer en redes agalleras con una luz de malla de 150-305 mm, utilizadas para capturar totoaba (Brownell Jr. 1983; Vidal 1995; Villa-R 1976, 1978). Sin embargo, las vaquitas también se enmallan en otras redes agalleras y con distinta luz de malla. La luz de malla de los chinchorros de línea es variable: 70 mm (camarones), 85 mm (macarelas, curvinas, pequeños tiburones), 100-120 mm (chano Micropogonias megalops), 100-150 mm (tiburones grandes y rayas) y 150-305 mm (totoaba) (D'Agrosa et al. 1995; Vidal 1995; Vidal et al. 1999). Las redes de luz de malla pequeña hacen susceptibles a las crías y juveniles más que a cualquier otra clase de edad (Vidal et al. 1999). Un estudio (D'Agrosa et al. 2000) estimó que la mortalidad de vaquitas por captura incidental es de 39 vaquitas al año en El Golfo de Santa Clara, estimando una cifra similar para San Felipe. Modificado de Rojas-Bracho et al. (2006) y Urbán-R. and Guerrero-Ruiz (2008).
+
+Leatherwood and Reeves (1983) sugirieron que la disminución en la productividad del Golfo de California, debido a la represa del Río Colorado, junto con la contaminación por pesticidas, han afectado negativamente a la vaquita. Sin embargo, Rojas-Bracho and Taylor (1999) reportan que, aparentemente, la contaminación del norte del Golfo no representa un riesgo para la vaquita, ni que la reducción del flujo del Río Colorado en la zona ha reducido suficientemente la productividad como para representar un riesgo para la especie a corto plazo. Un estudio demostró que la zona presenta una alta concentración de nutrientes y elevada abundancia de fitoplancton y zooplancton, de tal manera que es posible sostener un rico ecosistema marino con fauna abundante y diversa, incluyendo aves y mamíferos marinos (Álvarez-Borrego, 2003). En febrero del 2012 el CIRVA  volvió a revisar este tema, y concluyó nuevamente que en términos de nutrientes y clorofila, el Alto Golfo se encuentra en buen estado de salud, como consecuencia de diversos mecanismos de fertilización de sus aguas (CIRVA 2012). Modificado de Semarnat et al. (-) y Urbán-R. and Guerrero-Ruiz (2008).
+
+Al parecer, tampoco hay un fundamento para considerar que las vaquitas desaparecerán debido a la carencia de variabilidad genética (Munguia-Vega et al. 2007; Rojas-Bracho et al. 2006). Como una especie naturalmente rara, la vaquita presenta una variabilidad genética baja. La especie presenta una falta de variabilidad genética, anormalidades como un sexto dígito en las aletas pectorales (Ortega-Ortiz 1993; Ortega-Ortiz &amp; Villa-Ramirez 2000) anormalidades vertebrales, y calcificaciones ováricas en algunas hembras  (Hohn et al. 1996). Las características anteriormente mencionadas son desconocidas, y se desconoce si estaban presentes en las formas ancestrales de la especie o si se trata de características poco comunes debido a la deriva genética. Modificado de Urbán-R. and Guerrero-Ruiz (2008).
+			</ThreatStatus>
+			<Thread>La vaquita es considerada la especie de mamífero marino en mayor peligro de extinción en el mundo (Turvey et al. 2007).</Thread>
+			<ConservationActions type="Protección de sitio/área">De 1949 a 1974 fueron implementadas algunas medidas regulatorias para especies de interés económico del Alto Golfo de California como la totoaba, el camarón y la corvina cabaicucho. Sin embargo, fue hasta el año de 1975 cuando la vaquita la captura incidental de la especie pudo haber descendido tras el establecimiento de la veda permanente de totoaba y la prohibición del empleo de las redes totoaberas (Bobadilla et al. 2011; Rojas-Bracho et al. 2006). En 1993, el gobierno mexicano estableció la parte alta del Golfo de California y el Delta del rio colorado como Reserva de la Biosfera, con la intención de proteger a la vaquita y la totoaba entre otras especies. En 1993 se publica la NOM-012-PESC-1993 en la que se establecen las medidas para la protección de las especies de totoaba y vaquita en el Golfo de California (Diario Oficial de la Federación 1994). Un año más tarde, la vaquita es incluida en la NOM-059-ECOL-1994 (Semarnat 2002) bajo la categoría de “En Peligro de Extinción”, categoría que aún conserva. 
+
+En 1997 el Instituto Nacional de la Pesca (INP/SAGARPA) anunció la creación y primera reunión, del Comité Internacional para la Recuperación de la Vaquita (CIRVA). El mandato de este grupo fue la elaboración del plan de recuperación de esta especie endémica de nuestro país. El CIRVA está integrado por reconocidos investigadores de Canadá, Escocia, Inglaterra, Estados Unidos, Noruega y México; funcionarios del Gobierno Federal y organizaciones de la sociedad civil. Tomado de (Urbán-R. &amp; Guerrero-Ruiz 2008). Entre las recomendaciones emitidas por el CIRVA se encuentran la eliminación de la captura incidental de la vaquita y adopción de medidas de compensación y alternativas para los pobladores afectados por los cambios impuestos en sus prácticas pesqueras; todo esto con el objetivo de que la pesca continúe y la captura incidental para la vaquita sea eliminada (Rojas-Bracho et al. 2006; Urbán-R. &amp; Guerrero-Ruiz 2008). 
+
+En el año de 2002 se publica la NOM-EM-139-ECOL-2002 en la cual se establecen las medidas de protección de los ecosistemas marinos y costeros y de las especies sujetas a protección especial (vaquita y totoaba) en las aguas de la Reserva de la Biosfera del Alto Golfo de California y Delta del Rio Colorado (Diario Oficial de la Federación 2002).
+
+En el 2005 se estableció el Área de Refugio para la Protección de la Vaquita (Diario Oficial de la Federación 2005). En el período del 2005-2009 se otorgaron compensaciones económicas para la pesca con redes de enmalle y se realizaron actividades de promoción para alternativas de pesca en el Alto Golfo de California (Bobadilla et al. 2011).
+
+En el año de 2008 se implementó Programa de Acción para la Conservación de la Especie: Vaquita, Estrategia Integral para el Manejo Sustentable de los Recursos Marinos y Costeros en el Alto Golfo de California (PACE: Vaquita) (Semarnat 2008). El objetivo principal de este programa es eliminar la mortalidad de vaquitas por captura incidental, objetivo que se pretende cumplir mediante la eliminación de las redes agalleras en el área de distribución de esta marsopa, el apoyo y la promoción de alternativas pesqueras y económicas para los pescadores de la región y el desarrollo de métodos y artes de pesca seguros para la especie. Durante la primer fase de implementación en 2008-2009 se logró reducir el número de embarcaciones pesqueras en un 30% (Gerrodette &amp; Rojas-Bracho 2011). Aunque aún falta para alcanzar el objetivo de captura incidental nula, se debe continuar con el esfuerzo. Un estudio reciente ha estimado que existe más del 99% de probabilidad de que la población de vaquita se recupere y tenga un crecimiento positivo siempre y cuando se proteja toda el área de distribución de la especie, eliminando las redes agalleras (Gerrodette &amp; Rojas-Bracho 2011).   Es crucial que se re-establezcan los límites y regulaciones de la Reserva del Alto Golfo y Delta de Río Colorado, ya que se ha demostrado que la distribución de las vaquitas no concuerda con los límites de la Reserva de la Biosfera, que supuestamente da protección para la especie (Gerrodette et al. 2011; Jaramillo-Legorreta et al. 1999). 
+
+Un análisis más detallado de las medidas de conservación de la especie puede consultarse en Rojas-Bracho et al. (2006) y Bobadilla et al. (2011).
+			</ConservationActions>
+			<AncillaryData>
+				<dc:identifier>23</dc:identifier>
+				<dwc:taxonID>20676727</dwc:taxonID>
+				<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+				<mimeType>text/html</mimeType>
+				<audience>General public</audience>
+				<subject></subject>
+				<dc:description xml:lang="en"></dc:description>
+				<reference id="29">Rojas-Bracho, L., and B. L. Taylor. 1999. Risk factors affecting the vaquita (Phocoena sinus). Marine Mammal Science 15:974-989.</reference>
+				<reference id="30">Ávalos de Haro, and Mathews. 1973. Pesquerías in UABC, editor. Estudio Químico sobre la Contaminación por Insecticidas en la Desembocadura del Río Colorado. 2. Reporte final a la Dirección de Acuacultura de la Secretaría de Recursos Hidráulicos, Ensenada, B.C., México.</reference>
+				<reference id="31">Flanagan, C. A., and J. R. Hendrickson. 1976. Observations on the commercial fishery and reproductive biology of the totoaba, Cynoscion macdonaldi, in the northern Gulf of California. US Fish Bulletin 74:531-544.</reference>
+				<reference id="32">Magatagan, M. D., E. H. Boyer, and P. J. Turk. 1983. Report on Phocoena sinus and other common marine mammals of the Puerto Peñasco, Sonora, Mexico Area of the Gulf of California. VIII Reunión Internacional sobre el Estudio de los Mamíferos Marinos de la Peninsula de Baja California, La Paz, B.C.S., México.</reference>
+				<reference id="33">Ruiz- Durá, M. F. 1985. Recursos Pesqueros de Las Costas de México. Editorial Limusa.
+Semarnat. 2002. Protección ambiental-Especies nativas de México de flora y  fauna silvestres. Categorías de riesgo y especificaciones para su inclusión, exclusión o cambio. Lista de especies en riesgo. NOM-059-ECOL-2001.
+</reference>
+				<reference id="5">Brownell Jr., R. L. 1983. Phocoena sinus. Mammalian Species 198:1-3.</reference>
+				<reference id="17">Vidal, O. 1995. Population biology and incidental mortality of the Vaquita, Phocoena sinus. Report of the International Whaling Commission 16:247-272.</reference>
+				<reference id="">Villa-R, B. 1976. Report on the status of Phocoena sinus, Norris and McFarland 1958, in the Gulf of California. Anal. Inst. Biol., UNAM, Ser. Zool. 47:203-208.</reference>
+				<reference id="34">Villa-R, B. 1978. Especies mexicanas de vertebrados silvestres raras o en peligro de extinción. An. Inst. Biol., UNAM., Ser. Zool 1:303-320.</reference>
+				<reference id="23">D'Agrosa, C., O. Vidal, and W. C. Graham. 1995. Mortality of the vaquita (Phocoena sinus) in gillnet fisheries during 1993-94. Rep. int. Whal. Commn.</reference>
+				<reference id="3">Vidal, O., R. L. Brownell Jr., and L. T. Findley. 1999. Vaquita Phocoena sinus Norris and McFarland 1958 in S. H. Ridgway, and S. R. Harrison, editors. Handbook of Marine Mammals. Academic Press, San Diego, CA.</reference>
+				<reference id="28">D'Agrosa, C., C. E. Lennert-Cody, and l. O. Vida. 2000. Vaquita bycatch in Mexico's artisanal gillnet fisheries: driving a small population to extinction. Conservation Biology 14:1110-1119.</reference>
+				<reference id="18">Rojas-Bracho, L., R. R. Reeves, and A. Jaramillo-Legorreta. 2006. Conservation of the vaquita Phocoena sinus. Mammal Review 36:179-216.</reference>
+				<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+				<reference id="35">Leatherwood, S., and R. R. Reeves 1983. The Sierra Club handbook of whales and dolphins. Sierra Club Books.</reference>
+				<reference id="29">Rojas-Bracho, L., and B. L. Taylor. 1999. Risk factors affecting the vaquita (Phocoena sinus). Marine Mammal Science 15:974-989.</reference>
+				<reference id="">CIRVA. 2012. Report of the fourth meeting of the international committee for the recovery of the vaquita (Comité Internacional para la Recuperación de la Vaquita, CIRVA). Reporte no publicado. Disponible en: www.iucn-csg.org/wp-content/uploads/2010/03/Report-of-the-Fourth-Meeting-of-the-International-Committee-for-the-Recovery-of-Vaquita.pdf.</reference>
+				<reference id="25">Semarnat, CONANP, and Comisión Asesora de la Presidencia de México para la Recuperación de la Vaquita. -. Resumen del estado del conocimiento y conservación de la vaquita (Phocoena sinus).</reference>
+				<reference id="4">Urbán-R., J., and M. Guerrero-Ruiz. 2008. Ficha técnica de Phocoena sinus in J. Urbán-R., editor. Conocimiento biológico de las especies de mamíferos marinos, incluidas en la Norma Oficial Mexicana-059-SEMARNAT-2001, Universidad Autónoma de Baja California Sur. Bases de datos SNIB-CONABIO. Proyecto No. CK009. México D.F.</reference>
+				<reference id="36">Munguia-Vega, A., Y. Esquer-Garrigos, L. Rojas-Bracho, R. Vazquez-Juarez, and A. Castro-Prieto. 2007. Genetic drift vs. natural selection in a long-term small isolated population: major histocompatibility complex class II variation in the Gulf of California endemic porpoise (Phocoena sinus). Molecular Ecology 16:4051-4065.</reference>
+				<reference id="18">Rojas-Bracho, L., R. R. Reeves, and A. Jaramillo-Legorreta. 2006. Conservation of the vaquita Phocoena sinus. Mammal Review 36:179-216.</reference>
+				<reference id="37">Ortega-Ortiz, J. G. 1993. Descripción osteológica de la aleta pectoral de vaquita Phocoena sinus (Cetacea: Phocoenidae). Departamento de Biología, Facultad de Ciencias. Universidad Nacional Autónoma de México, México.</reference>
+				<reference id="38">Ortega-Ortiz, J. G., and B. Villa-Ramirez. 2000. Polydactyly and other features of the manus of the vaquita, Phocoena sinus. Marine Mammal Science 16:277-286.</reference>
+				<reference id="2">Hohn, A. A., A. J. Read, S. Fernández, O. Vidal, and T. L. Findley. 1996. Life history of the vaquita Phocoena sinus (Phocoenidae, Cetacea). J. Zool. 239:235-251.</reference>
+			</AncillaryData> 
+        </ThreatStatus> 
+    </taxonRecord>
+</dataset>

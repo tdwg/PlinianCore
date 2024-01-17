@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response xmlns="http://www.eol.org/transfer/content/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xsi:schemaLocation="http://www.eol.org/transfer/content/1.0 http://services.eol.org/schema/content_1_0.xsd">
+  <taxonConcept>
+    <taxonConceptID>324404</taxonConceptID>
+    <dwc:ScientificName>Microcebus murinus (J. F. Miller, 1777)</dwc:ScientificName>
+    <commonName xml:lang="en" eol_preferred="true">gray mouse lemur</commonName>
+    <commonName xml:lang="en">Gray Mouse-lemur</commonName>
+    <commonName xml:lang="en">Grey mouse-lemur</commonName>
+    <commonName xml:lang="en">Lesser mouse-lemur</commonName>
+    <commonName xml:lang="en">grey mouse lemur</commonName>
+    <commonName xml:lang="es" eol_preferred="true">Makisratone</commonName>
+    <commonName xml:lang="es">Maki ratón</commonName>
+    <commonName xml:lang="fr" eol_preferred="true">Petit microcèbe</commonName>
+    <commonName xml:lang="fr">Microcèbe murin</commonName>
+    <commonName xml:lang="ru" eol_preferred="true">Лемур серый мышиный</commonName>
+    <reference>1998. website, Mammal Species of the World</reference>
+    <reference>Accessed (Date Unknown) at http://mommensj.web2010.com/.</reference>
+    <reference>Austad (1997) Small nonhuman primates as potential models of human aging. ILAR J, 38:142-147.</reference>
+    <reference>E. Schwarz. 1931. A revision of the genera and species of Madagascar Lemuridae. Proceedings of the Zoological Society of London 101(2):399-428</reference>
+    <reference>July 25, 1999. "Grey Mouse Lemur" (On-line). Accessed October 12, 1999 at http://www.duke.edu/web/primate/mouse.html.</reference>
+    <reference>Kappeler, P., J. Ganzhorn. 1993. Lemur Social Systems and Their Ecological Basis. New York: Plenum Press.</reference>
+    <reference>Orrell T. (custodian) (2013). ITIS Global: The Integrated Taxonomic Information System (version Sept 12). In: Species 2000 &amp; ITIS Catalogue of Life, 11th March 2013 (Roskov Y., Kunze T., Paglinawan L., Orrell T., Nicolson D., Culham A., Bailly N., Kirk P., Bourgoin T., Baillargeon G., Hernandez F., De Wever A., eds). Digital resource at www.catalogueoflife.org/col/. Species 2000: Reading, UK.</reference>
+    <reference>Richard Weigl (2005) Longevity of Mammals in Captivity; from the Living Collections of the World. Kleine Senckenberg-Reihe 48: Stuttgart.</reference>
+    <reference>Wild Life preservation Trust International, 1998. "The Wild Ones" (On-line). Accessed (Date Unknown) at http://www.thewildones.org/Animals/lemur.html.</reference>
+    <reference>Wilson, Don E., and DeeAnn M. Reeder, eds. 1992. Mammal Species of the World: A Taxonomic and Geographic Reference, 2nd ed., 3rd printing</reference>
+    <reference>Wilson, Don E., and DeeAnn M. Reeder, eds. 1993. Mammal Species of the World: A Taxonomic and Geographic Reference, 2nd ed., 3rd printing. xviii + 1207</reference>
+    <reference>Wilson, Don E., and F. Russell Cole. 2000. Common Names of Mammals of the World</reference>
+    <reference>Wilson, Don E., and F. Russell Cole. 2000. Common Names of Mammals of the World. xiv + 204</reference>
+    <additionalInformation>
+      <richness_score>82.485</richness_score>
+      <taxon>
+        <dc:identifier>IUCN-13323</dc:identifier>
+        <dwc:taxonID>24945748</dwc:taxonID>
+        <dwc:scientificName>Microcebus murinus</dwc:scientificName>
+        <dwc:nameAccordingTo>IUCN Red List (Species Assessed for Global Conservation)</dwc:nameAccordingTo>
+        <dwc:taxonRank/>
+      </taxon>
+      <taxon>
+        <dc:identifier>572861</dc:identifier>
+        <dwc:taxonID>46592485</dwc:taxonID>
+        <dwc:scientificName>Microcebus murinus (J. F. Miller, 1777)</dwc:scientificName>
+        <dwc:nameAccordingTo>Integrated Taxonomic Information System (ITIS)</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+      <taxon>
+        <dc:identifier>urn:paleodb:tn232487</dc:identifier>
+        <dwc:taxonID>49344294</dwc:taxonID>
+        <dwc:scientificName>Microcebus murinus (Miller 1777)</dwc:scientificName>
+        <dwc:nameAccordingTo>Paleobiology Database</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+      <taxon>
+        <dc:identifier>30608</dc:identifier>
+        <dwc:taxonID>51377916</dwc:taxonID>
+        <dwc:scientificName>Microcebus murinus</dwc:scientificName>
+        <dwc:nameAccordingTo>NCBI Taxonomy</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+      <taxon>
+        <dc:identifier>6873510</dc:identifier>
+        <dwc:taxonID>52573532</dwc:taxonID>
+        <dwc:scientificName>Microcebus murinus (J. F. Miller, 1777)</dwc:scientificName>
+        <dwc:nameAccordingTo>Species 2000 &amp; ITIS Catalogue of Life: April 2013</dwc:nameAccordingTo>
+        <dwc:taxonRank>Species</dwc:taxonRank>
+      </taxon>
+    </additionalInformation>
+  </taxonConcept>
+<dataObject>
+  <dataObjectID>8bedadc13a993a1abb408afa66621e9d</dataObjectID>
+  <taxonConceptID>324404</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+<mimeType>text/html</mimeType>
+<agent homepage="" role="author">Andrainarivo, C., Andriaholinirina, V.N., Feistner, A., Felix, T., Ganzhorn, J., Garbutt, N., Golden, C., Konstant, B., Louis Jr., E., Meyers, D., Mittermeier, R.A., Perieras, A., Princee, F., Rabarivola, J.C., Rakotosamimanana, B., Rasamimanana, H., Ratsimbazafy, J., Raveloarinoro, G., Razafimanantsoa, A., Rumpler, Y., Schwitzer, C., Thalmann, U., Wilmé, L. &amp; Wright, P.</agent>
+<agent homepage="" role="compiler">Andrainarivo, C., Andriaholinirina, V.N., Feistner, A., Felix, T., Ganzhorn, J., Garbutt, N., Golden, C., Konstant, B., Louis Jr., E., Meyers, D., Mittermeier, R.A., Perieras, A., Princee, F., Rabarivola, J.C., Rakotosamimanana, B., Rasamimanana, H., Ratsimbazafy, J., Raveloarinoro, G., Razafimanantsoa, A., Rumpler, Y., Schwitzer, C., Thalmann, U., Wilmé, L. &amp; Wright, P.</agent>
+<agent homepage="http://www.iucn.org/" role="provider">IUCN</agent>
+<dc:title>Range Description</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+<dc:rights>© International Union for Conservation of Nature and Natural Resources</dc:rights>
+<dcterms:rightsHolder>International Union for Conservation of Nature and Natural Resources</dcterms:rightsHolder>
+<dcterms:bibliographicCitation>Andrainarivo, C., Andriaholinirina, V.N., Feistner, A., Felix, T., Ganzhorn, J., Garbutt, N., Golden, C., Konstant, B., Louis Jr., E., Meyers, D., Mittermeier, R.A., Perieras, A., Princee, F., Rabarivola, J.C., Rakotosamimanana, B., Rasamimanana, H., Ratsimbazafy, J., Raveloarinoro, G., Razafimanantsoa, A., Rumpler, Y., Schwitzer, C., Thalmann, U., Wilmé, L. &amp; Wright, P. 2008. &lt;i&gt;Microcebus murinus&lt;/i&gt;. In: IUCN 2010 . IUCN Red List of Threatened Species. Version 2010.4 . &lt;&lt;a href="http://www.iucnredlist.org"&gt;www.iucnredlist.org&lt;/a&gt;&gt;</dcterms:bibliographicCitation>
+<dc:source>http://www.iucnredlist.org/apps/redlist/details/13323</dc:source>
+<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Distribution</subject>
+<dc:description>This species is distributed from about the Onilahy River along the entire west coast to the north perhaps as far as Ankarafantsika National Park. A disjunct population is also found in the southeast up to the littoral forests of the Mandena Conservation Zone (Mittermeier &lt;em&gt;et al.&lt;/em&gt; 2008).</dc:description>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>2.5</dataRating>
+  <dataObjectVersionID>18935220</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+<dataObject>
+  <dataObjectID>e2b79a9892ed09509266e2f2903a3e04</dataObjectID>
+  <taxonConceptID>324404</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+<mimeType>text/html</mimeType>
+<agent homepage="" role="editor">Phil Myers, Museum of Zoology, University of Michigan</agent>
+<agent homepage="" role="author">David Alvarado, University of Michigan</agent>
+<agent homepage="http://animaldiversity.ummz.umich.edu/" role="provider">Animal Diversity Web</agent>
+<dcterms:created>2000-02-17 05:00:00 UTC</dcterms:created>
+<dcterms:modified>2000-02-17 05:00:00 UTC</dcterms:modified>
+<dc:title>Geographic Range</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-nc-sa/3.0/</license>
+<dc:rights>©1995-2012, The Regents of the University of Michigan and its licensors</dc:rights>
+<dcterms:rightsHolder>The Regents of the University of Michigan and its licensors</dcterms:rightsHolder>
+<dcterms:bibliographicCitation>Alvarado, D. 2000. "Microcebus murinus" (On-line), Animal Diversity Web. Accessed April 04, 2012 at http://animaldiversity.ummz.umich.edu/site/accounts/information/Microcebus_murinus.html</dcterms:bibliographicCitation>
+<audience>General public</audience>
+<audience>Children</audience>
+<dc:source>http://animaldiversity.ummz.umich.edu/site/accounts/information/Microcebus_murinus.html</dc:source>
+<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Distribution</subject>
+<dc:description>&lt;p&gt;&lt;span class="taxon-name"&gt;Microcebus murinus&lt;/span&gt; is found throughout Madagascar in dense forest regions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Biogeographic Regions: &lt;/strong&gt; ethiopian  (Native )&lt;/p&gt;</dc:description>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>2.5</dataRating>
+  <dataObjectVersionID>18658332</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+<dataObject>
+  <dataObjectID>6b29c0c88cb839edc7b4f501075c4887</dataObjectID>
+  <taxonConceptID>324404</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+<mimeType>image/jpeg</mimeType>
+<agent homepage="http://www.flickr.com/photos/32005048@N06" role="photographer">Arthur Chapman</agent>
+<agent homepage="http://www.flickr.com/groups/encyclopedia_of_life" role="provider">Flickr: EOL Images</agent>
+<dcterms:created>2005-10-25 19:44:00 UTC</dcterms:created>
+<dc:title>Microcebus murinus (Gray Mouse Lemur)</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-nc-sa/2.0/</license>
+<dc:source>http://www.flickr.com/photos/arthur_chapman/3040436388/</dc:source>
+<dc:description>Gray Mouse Lemur (Microcebus murinus) at Ranomafana, Madagascar. Photographed on 25 October 2005</dc:description>
+<mediaURL>http://farm4.static.flickr.com/3215/3040436388_ca574abf68_o.jpg</mediaURL>
+<mediaURL>http://media.eol.org/content/2011/11/02/14/46206_orig.jpg</mediaURL>
+<thumbnailURL>http://media.eol.org/content/2011/11/02/14/46206_98_68.jpg</thumbnailURL>
+<location>Ranomafana, Fianarantsoa, Madagascar</location>
+<geo:Point>
+  <geo:lat>-21.2539</geo:lat>
+  <geo:long>47.4235</geo:long>
+</geo:Point>
+<additionalInformation>
+  <vettedStatus>Trusted</vettedStatus>
+  <dataRating>2.5</dataRating>
+  <dataObjectVersionID>13542174</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+<dataObject>
+  <dataObjectID>f71d4824a2a4333089e9cbb9103e924d</dataObjectID>
+  <taxonConceptID>324404</taxonConceptID>
+<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+<mimeType>image/jpeg</mimeType>
+<agent homepage="http://en.wikipedia.org/wiki/User:Stavenn" role="photographer">self, Stavenn</agent>
+<agent homepage="http://commons.wikimedia.org/" role="provider">Wikimedia Commons</agent>
+<dc:title>File:Stavenn Microcebus murinus 00.jpg</dc:title>
+<dc:language>en</dc:language>
+<license>http://creativecommons.org/licenses/by-sa/3.0/</license>
+<dc:source>http://commons.wikimedia.org/wiki/File:Stavenn_Microcebus_murinus_00.jpg</dc:source>
+<dc:description>&lt;b&gt;English:&lt;/b&gt; Gray Mouse-lemur in American Museum of Natural History, New York</dc:description>
+<mediaURL>http://upload.wikimedia.org/wikipedia/commons/5/53/Stavenn_Microcebus_murinus_00.jpg</mediaURL>
+<mediaURL>http://media.eol.org/content/2009/09/16/04/57764_orig.jpg</mediaURL>
+<thumbnailURL>http://media.eol.org/content/2009/09/16/04/57764_98_68.jpg</thumbnailURL>
+<additionalInformation>
+  <vettedStatus>Unreviewed</vettedStatus>
+  <dataRating>2.5</dataRating>
+  <dataObjectVersionID>5903795</dataObjectVersionID>
+</additionalInformation>
+</dataObject>
+</response>
