@@ -71,17 +71,7 @@ This group welcomes participation from all interested parties on implementing sp
 
  If you are interested in participating in the group, please contact the convenor or a core member.
  
-### Latest developments and current status (2022)
-During this year the Plinian Core “core members” has been meeting and working on a weekly basis. We can articulate the work done in  three areas:
- 
-Improving the coherence and detail of PliC terms' definitions
-Improving the documentation available in the PliC GitHub repository
-Presenting the documentation standard in a format compliant with TDWG's SDS 
- 
-In this latest area, we have counted with the invaluable help of Steve Baskauf , who has provided us  with constant advice on how to do things (e.g. dealing with terms borrowed from other standards, treatment of controlled vocabularies, etc.) and also with scripts to produce the normative documentation for Plinian Core. Draft documentation in SDS compliant form has been already produced.
-
-	
-https://github.com/mfvargas/rs.tdwg.org/blob/master/process/page_build_scripts/pc.md
-
+### Latest developments and current status
+In recent years the Plinian Core “core members” has been meeting and working on a weekly basis. We can articulate the work done in three areas: (i) improving the coherence and detail of PliC terms' definitions, (ii) improving the documentation available in the PliC GitHub repository, (iii) presenting the documentation standard in a format compliant with TDWG's SDS. In this latest area, we have counted with the invaluable help of Steve Baskauf, who has provided us with constant advice on how to do things (e.g. dealing with terms borrowed from other standards, treatment of controlled vocabularies, etc.) and also with scripts to produce the normative documentation for Plinian Core. Draft documentation in SDS compliant form has been already produced.
 
 ### [Use cases and examples](https://github.com/tdwg/PlinianCore/tree/master/Use%20cases%20and%20examples)
