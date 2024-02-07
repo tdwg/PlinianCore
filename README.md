@@ -15,7 +15,7 @@ Plinian Core Task Group. 2021. Plinian Core, a Species-level Data Specification.
 https://github.com/tdwg/PlinianCore
 
 ## Plinian Core Task Group Charter
-This group works forward to develop a data specification -the Plinian Core-  that can be used to describe different aspects of  biological species information. By "biological species Information" all kinds of properties or traits related to taxa, --biological and non-biological -- are included. Thus, for instance, terms pertaining to descriptions,  legal aspects, conservation, management, demography, nomenclature, and related resources are incorporated.
+This group works forward to develop a data specification -the Plinian Core- that can be used to describe different aspects of biological species information. By "biological species Information" all kinds of properties or traits related to taxa --biological and non-biological-- are included. Thus, for instance, terms pertaining to descriptions, legal aspects, conservation, management, demography, nomenclature, and related resources are incorporated.
  
 The Plinian Core’s aim is to facilitate the exchange of information about species and higher taxa, covering biological and non biological aspects pertaining to all taxonomic groups.
 
