@@ -102,6 +102,8 @@ Plinian Core ,--following good practices-- re-uses a number of elements already 
 
 Table 1. Vocabularies from which terms have been borrowed:
 
+**Specification: [Darwin Core](https://dwc.tdwg.org/terms/#cite-darwin-core) (DWC)**
+
 | **Borrowed Terms** | **Categories in which the term is used** |
 | --- | --- |
 | [dwc:taxonConceptID](https://dwc.tdwg.org/terms/#dwc:taxonConceptID) | Record Metadata |
