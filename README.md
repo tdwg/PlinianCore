@@ -31,7 +31,7 @@ Species level information is one of the most demanded services or products from 
 ### Goals outputs and outcomes (current status and plans)
 * An assessment on how Plinian Core relates to other TDWG standards. Done: https://doi.org/10.3897/biss.2.25869 
 * A detailed documentation on the different terms included in Plinian Core. Done: https://github.com/tdwg/PlinianCore/wiki 
-* At least three implementations of species information systems based on Plinian Core. Done: See below, section “Use cases and examples”
+* At least three implementations of species information systems based on Plinian Core. Done: See below, section [Use cases and examples](https://github.com/tdwg/PlinianCore/tree/master/Use%20cases%20and%20examples)
 * A SPARQL Endpoint and underlying ontology implemented and working. Done: https://datos.iepnb.es/visor/
 * A standard specification complying with the TDWG SDS. The TG plans to make a formal submission of the documentation to the TDWG Executive by October 2022. In progress
 
