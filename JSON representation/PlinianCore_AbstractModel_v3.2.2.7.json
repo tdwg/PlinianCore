@@ -1,0 +1,3361 @@
+{
+	"XML": {
+		"version": 1.0,
+		"encoding": "UTF-8"
+	},
+	"Comment": [
+		" editado con XMLSpy v2013 sp1 (x64) (http://www.altova.com) por Santiago Martínez de la Riva/Francisco Pando (Real Jardín Botánico - CSIC) ", " edited with XMLSpy v2007 rel. 3 sp1 (http://www.altova.com) by Francisco Pando (Real Jardin Botanico-CSIC) ", "  publisher: Plinian Core TDWG Task Group; modified to point to __GISIN___ XSDs  in GitHub/TDWG  29 jun 2018 ", "description: The Plinian Core  is structured set of concepts  that can be used to describe different aspects of biological species information. Under \"biological species Information\" all kinds of properties or traits related to taxa—biological and non-biological—are included. Thus, for instance, terms pertaining descriptions, legal aspects, conservation, management, demographics, nomenclature, or related resources are incorporated. ", "  publisher: Plinian Core TDWG Task Group; modified to point to __GISIN___ XSDs  in GitHub/TDWG  29 jun 2018 ", " v3.2.2 modified:2018-07-10: ", " v3.2.4 Term Strategy renamed to TrophicStrategy; term StrategyRemarks renamed to TrophicStrategyRemarks; v3.2.3 was an interin version never published. F. Pando   "
+	],
+	"xs:schema": {
+		"xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+		"xmlns:plic": "http://www.gbif.es/PliC/",
+		"xmlns:dc": "http://purl.org/dc/terms/",
+		"xmlns:dcelem": "http://purl.org/dc/elements/1.1/",
+		"xmlns:dwc": "http://rs.tdwg.org/dwc/terms/",
+		"xmlns:abcd": "http://www.tdwg.org/schemas/abcd/2.06",
+		"xmlns:tcs": "http://www.tdwg.org/schemas/tcs/1.01",
+		"xmlns:simple": "http://rs.tdwg.org/dwc/xsd/simpledarwincore/",
+		"xmlns:gisin": "http://www.gisin.org/gisin/SpeciesStatus",
+		"xmlns:eol": "http://www.eol.org/transfer/content/0.3",
+		"xmlns:eml": "eml://ecoinformatics.org/eml-2.1.1",
+		"xmlns:sql": "urn:schemas-microsoft-com:mapping-schema",
+		"xmlns:ns1": "https://github.com/tdwg/dwc/tree/master/xsd",
+		"xs:import": [
+			{
+				"namespace": "http://www.tdwg.org/schemas/abcd/2.06",
+				"schemaLocation": "http://rs.tdwg.org/abcd/2.06/ABCD_2.06.xsd"
+			}, {
+				"namespace": "http://www.tdwg.org/schemas/tcs/1.01",
+				"schemaLocation": "https://raw.githubusercontent.com/tdwg/tcs/master/TCS101/v101.xsd"
+			}, {
+				"namespace": "http://www.gisin.org/gisin/SpeciesStatus",
+				"schemaLocation": "https://raw.githubusercontent.com/tdwg/gisin/master/xsd/SpeciesStatus.xsd"
+			}, {
+				"namespace": "http://rs.tdwg.org/dwc/terms/",
+				"schemaLocation": "https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/tdwg_dwc_extensions.xsd"
+			}, {
+				"namespace": "eml://ecoinformatics.org/eml-2.1.1",
+				"schemaLocation": "https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/eml.xsd"
+			}, {
+				"namespace": "http://www.eol.org/transfer/content/0.3",
+				"schemaLocation": "https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/content_0_3.xsd"
+			}, {
+				"namespace": "http://purl.org/dc/terms/",
+				"schemaLocation": "http://dublincore.org/schemas/xmls/qdc/dcterms.xsd"
+			}, {
+				"namespace": "http://purl.org/dc/elements/1.1/",
+				"schemaLocation": "http://dublincore.org/schemas/xmls/qdc/dc.xsd"
+			}
+		],
+		"xs:element": {
+			"name": "Dataset",
+			"xs:annotation": {
+				"xs:documentation": "Root element from which all other elements will branch from"
+			},
+			"xs:complexType": {
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "Metadata",
+							"xs:annotation": {
+								"xs:documentation": "Information about the collections of records. This is an extension of the metadata of eml-gbif-profile."
+							}
+						}, {
+							"ref": "TaxonRecord",
+							"maxOccurs": "unbounded"
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}
+		},
+		"Comment": [
+			"  =============================================   ", "Elements", "  =============================================   "
+		],
+		"xs:element": [
+			{
+				"name": "Abstract",
+				"type": "xs:string"
+			}, {
+				"name": "AncillaryData",
+				"type": "eol:dataObjectBaseType",
+				"xs:annotation": {
+					"xs:documentation": " "
+				}
+			}, {
+				"name": "AnnualCycleAtomized",
+				"type": "AnnualCycleAtomizedType"
+			}, {
+				"name": "AnnualCycles",
+				"type": "AnnualCyclesType"
+			}, {
+				"name": "AnnualCycleUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "DistributionAtomized",
+				"type": "DistributionAtomizedType"
+			}, {
+				"name": "Audience",
+				"xs:annotation": {
+					"xs:documentation": "Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low). "
+				},
+				"xs:simpleType": {
+					"xs:restriction": {
+						"base": "xs:string",
+						"xs:enumeration": [
+							{
+								"value": "Expert",
+								"xs:annotation": {
+									"xs:documentation": "Professionals on Biodiversity (researchers, decision makers, students of higher levels, etc.). By training and experience they have a good knowledge of scientific terminology and taxonomic and nomenclatural issues."
+								}
+							}, {
+								"value": "Knowledgeable",
+								"xs:annotation": {
+									"xs:documentation": "Public interest in the knowledge of living organisms but whose training and experience is not directly linked to knowledge of biodiversity, or to be enjoined, their training has not been directly related to biodiversity (professionals from other areas of knowledge, students, amateurs, etc.). Your level of interest is high but not usually use and know the terminology, taxonomy and scientific nomenclature."
+								}
+							}, {
+								"value": "General",
+								"xs:annotation": {
+									"xs:documentation": "General Public (anyone interested in living organisms). Persons interested on biodiversity, frequently or timely, but lack the training, expertise or basic knowledge on terminology, taxonomy or scientific nomenclature."
+								}
+							}
+						]
+					}
+				}
+			}, {
+				"name": "AudiencesUnstructured",
+				"type": "xs:string",
+				"xs:annotation": {
+					"xs:documentation": "List audience codes separated by means of comma or /."
+				}
+			}, {
+				"name": "BaseElements",
+				"type": "BaseElementsType"
+			}, {
+				"name": "Behavior",
+				"type": "BehaviorType",
+				"xs:annotation": {
+					"xs:documentation": "Responses, reactions or movements made by an organism in a particular situation."
+				}
+			}, {
+				"name": "BehaviorAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "BehaviorUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "BriefDescription",
+				"xs:annotation": {
+					"xs:documentation": "Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa."
+				}
+			}, {
+				"name": "CommonNamesAtomized",
+				"type": "CommonNamesAtomizedType"
+			}, {
+				"name": "CommonNames",
+				"type": "CommonNamesType"
+			}, {
+				"name": "DemographyAndThreat",
+				"type": "DemographyAndThreatType"
+			}, {
+				"name": "DemographyAndThreatUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "DetailAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "DetailUnstructured",
+				"xs:complexType": {
+					"xs:simpleContent": {
+						"xs:extension": {
+							"base": "xs:string",
+							"xs:attribute": {
+								"name": "type"
+							}
+						}
+					}
+				}
+			}, {
+				"name": "DirectThreats",
+				"type": "DirectThreatsType",
+				"xs:annotation": {
+					"xs:documentation": "Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future."
+				}
+			}, {
+				"name": "DirectThreatAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "DirectThreatUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Dispersal",
+				"type": "DispersalType"
+			}, {
+				"name": "DispersalAtomized",
+				"type": "DispersalAtomizedType"
+			}, {
+				"name": "DispersalUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Distribution",
+				"type": "DistributionType"
+			}, {
+				"name": "DistributionUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "EcologicalSignificance",
+				"type": "EcologicalSignificanceType",
+				"xs:annotation": {
+					"xs:documentation": "Ecological importance of the taxon. (Placeholder)"
+				}
+			}, {
+				"name": "EcologicalSignificanceAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "EcologicalSignificanceUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Endemic",
+				"type": "EndemicType"
+			}, {
+				"name": "EndemicAtomized",
+				"type": "EndemicAtomizedType",
+				"xs:annotation": {
+					"xs:documentation": "List of areas structured and categorized the degree of safety."
+				}
+			}, {
+				"name": "EnvironmentalEnvelope",
+				"type": "EnvironmentalEnvelopeType"
+			}, {
+				"name": "EnvironmentalEnvelopeAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "EnvironmentalEnvelopeUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "EndemicUnstructured",
+				"type": "xs:string",
+				"xs:annotation": {
+					"xs:documentation": "List of areas presented in an unstructured and categorized the degree of safety."
+				}
+			}, {
+				"name": "Feeding",
+				"type": "FeedingType"
+			}, {
+				"name": "FeedingAtomized",
+				"type": "FeedingAtomizedType"
+			}, {
+				"name": "FeedingUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "FullDescription",
+				"type": "FullDescriptionType",
+				"xs:annotation": {
+					"xs:documentation": "Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism."
+				}
+			}, {
+				"name": "FullDescriptionAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "FullDescriptionUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "HabitatAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "HabitatAndDistribution",
+				"type": "HabitatAndDistributionType"
+			}, {
+				"name": "HabitatAndDistributionUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Habitats",
+				"type": "HabitatsType"
+			}, {
+				"name": "HabitatUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Hierarchy",
+				"type": "HierarchyType"
+			}, {
+				"name": "InteractionAtomized",
+				"type": "InteractionAtomizedType"
+			}, {
+				"name": "IdentificationKeys",
+				"type": "IdentificationKeysType",
+				"xs:annotation": {
+					"xs:documentation": "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons. \rFor example: \rIf we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms) \r"
+				}
+			}, {
+				"name": "Interactions",
+				"type": "InteractionsType"
+			}, {
+				"name": "InteractionUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Invasiveness",
+				"type": "InvasivenessType",
+				"xs:annotation": {
+					"xs:documentation": "Information about invasive exotic species that could threaten to ecosystem, habitats and species"
+				}
+			}, {
+				"name": "InvasivenessAtomized",
+				"type": "InvasivenessAtomizedType"
+			}, {
+				"name": "InvasivenessUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Keys",
+				"type": "xs:string",
+				"xs:annotation": {
+					"xs:documentation": "Dichotomic or multientrance keys."
+				}
+			}, {
+				"name": "LegislationAtomized",
+				"type": "LegislationAtomizedType"
+			}, {
+				"name": "Language",
+				"type": "xs:string",
+				"xs:annotation": {
+					"xs:documentation": "The language of the taxon record, according to ISO 639."
+				}
+			}, {
+				"name": "LifeCycle",
+				"type": "LifeCycleType",
+				"xs:annotation": {
+					"xs:documentation": "Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes. "
+				}
+			}, {
+				"name": "LifeForm",
+				"type": "LifeFormType",
+				"xs:annotation": {
+					"xs:documentation": "General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs. "
+				}
+			}, {
+				"name": "LifeCycleAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "LifeCycleUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "LifeFormAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "LifeFormUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Legislation",
+				"type": "LegislationType"
+			}, {
+				"name": "LegislationUnstructured",
+				"type": "xs:string",
+				"xs:annotation": {
+					"xs:documentation": ""
+				}
+			}, {
+				"name": "ManagementAndConservation",
+				"type": "ManagementAndConservationType",
+				"xs:annotation": {
+					"xs:documentation": "Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve  specie "
+				}
+			}, {
+				"name": "ManagementAndConservationAtomized",
+				"type": "ManagementAndConservationAtomizedType"
+			}, {
+				"name": "ManagementAndConservationUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "MeasurementOrFact",
+				"type": "MeasurementOrFactType"
+			}, {
+				"name": "Metadata",
+				"type": "MetadataType"
+			}, {
+				"name": "Migratory",
+				"type": "MigratoryType"
+			}, {
+				"name": "MigratoryAtomized",
+				"type": "MigratoryAtomizedType"
+			}, {
+				"name": "MigratoryUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "MiscDetails",
+				"type": "MiscDetailType"
+			}, {
+				"name": "MolecularData",
+				"type": "MolecularDataType",
+				"xs:annotation": {
+					"xs:documentation": "Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)"
+				}
+			}, {
+				"name": "MolecularDataAtomized",
+				"type": "MolecularDataAtomizedType"
+			}, {
+				"name": "MolecularDataUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "NaturalHistory",
+				"type": "NaturalHistoryType"
+			}, {
+				"name": "NaturalHistoryUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "NomenclatureAndClassification",
+				"type": "NomenclatureAndClassificationType"
+			}, {
+				"name": "CommonNamesUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "PopulationBiology",
+				"type": "PopulationBiologyType"
+			}, {
+				"name": "PopulationBiologyAtomized",
+				"type": "PopulationBiologyAtomizedType"
+			}, {
+				"name": "PopulationBiologyUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "RecordMetadata",
+				"type": "RecordMetadataType",
+				"xs:annotation": {
+					"xs:documentation": "This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record."
+				}
+			}, {
+				"name": "ReproductionAtomized",
+				"type": "DetailType"
+			}, {
+				"name": "Revision",
+				"type": "RevisionType"
+			}, {
+				"name": "References",
+				"type": "eol:referenceType"
+			}, {
+				"name": "Reproduction",
+				"type": "ReproductionType",
+				"xs:annotation": {
+					"xs:documentation": "All data related to the production of offspring. "
+				}
+			}, {
+				"name": "ReproductionUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "SynonymsAtomized",
+				"type": "SynonymsAtomizedType"
+			}, {
+				"name": "Synonyms",
+				"type": "SynonymsType"
+			}, {
+				"name": "SynonymsUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "TargetAudiences",
+				"type": "TargetAudiencesType"
+			}, {
+				"name": "TaxonomicDescription",
+				"type": "TaxonomicDescriptionType"
+			}, {
+				"name": "TaxonomicDescriptionUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "TaxonRecord",
+				"xs:annotation": {
+					"xs:documentation": "Information about the record."
+				},
+				"xs:complexType": {
+					"xs:sequence": {
+						"xs:element": [
+							{
+								"ref": "BaseElements",
+								"xs:annotation": {
+									"xs:documentation": "Basic information to identify the record."
+								}
+							}, {
+								"ref": "RecordMetadata"
+							}, {
+								"ref": "NomenclatureAndClassification",
+								"minOccurs": 0,
+								"xs:annotation": {
+									"xs:documentation": "Standard information for every known taxon."
+								}
+							}, {
+								"ref": "TaxonomicDescription",
+								"minOccurs": 0
+							}, {
+								"ref": "NaturalHistory",
+								"minOccurs": 0,
+								"xs:annotation": {
+									"xs:documentation": "Most relevant description about the species."
+								}
+							}, {
+								"ref": "Invasiveness",
+								"minOccurs": 0,
+								"xs:annotation": {
+									"xs:documentation": "Information about introduce exotic species that could threaten to ecosystem, habitats and species. Ref: www.cbd.int/doc/legal/cbd-es.pdf"
+								}
+							}, {
+								"ref": "HabitatAndDistribution",
+								"minOccurs": 0,
+								"xs:annotation": {
+									"xs:documentation": "Distribution of the species"
+								}
+							}, {
+								"ref": "DemographyAndThreat",
+								"minOccurs": 0,
+								"xs:annotation": {
+									"xs:documentation": "Information concerning the demographic aspects of the species, as well as the conservation status"
+								}
+							}, {
+								"ref": "UsesManagementAndConservation",
+								"minOccurs": 0
+							}, {
+								"ref": "associatedParty",
+								"minOccurs": 0,
+								"maxOccurs": "unbounded"
+							}, {
+								"ref": "dwc:MeasurementOrFact",
+								"minOccurs": 0,
+								"maxOccurs": "unbounded"
+							}, {
+								"ref": "References",
+								"minOccurs": 0,
+								"maxOccurs": "unbounded"
+							}, {
+								"ref": "AncillaryData",
+								"minOccurs": 0,
+								"maxOccurs": "unbounded"
+							}
+						]
+					}
+				}
+			}, {
+				"name": "TaxonRecordName",
+				"type": "TaxonRecordNameType"
+			}, {
+				"name": "TerritoryUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "Territory",
+				"type": "TerritoryType"
+			}, {
+				"name": "TerritoryAtomized",
+				"type": "TerritoryAtomizedType"
+			}, {
+				"name": "ThreatStatusUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "ThreatStatus",
+				"type": "ThreatStatusType"
+			}, {
+				"name": "ThreatStatusAtomized",
+				"type": "ThreatStatusAtomizedType"
+			}, {
+				"name": "UsesAtomized",
+				"type": "UsesAtomizedType"
+			}, {
+				"name": "Uses",
+				"type": "UsesType",
+				"xs:annotation": {
+					"xs:documentation": "Ways in which species are utilized by people "
+				}
+			}, {
+				"name": "UsesManagementAndConservation",
+				"type": "UsesManagementAndConservationType"
+			}, {
+				"name": "UsesManagementAndConservationUnstructured",
+				"type": "xs:string"
+			}, {
+				"name": "UsesUnstructured",
+				"type": "xs:string",
+				"xs:annotation": {
+					"xs:documentation": "Uses in a unstructured format."
+				}
+			}, {
+				"name": "Version",
+				"type": "VersionType"
+			}
+		],
+		"Comment": [
+			"  =============================================   ", "Datatypes", "  =============================================   "
+		],
+		"xs:complexType": [
+			{
+				"name": "AnnualCycleAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "Event",
+							"xs:annotation": {
+								"xs:documentation": "VC"
+							}
+						}, {
+							"name": "startTimeInterval",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VC"
+							}
+						}, {
+							"name": "endTimeInterval",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VC"
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "AnnualCyclesType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "AnnualCycleAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "AnnualCycleUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "BaseElementsType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "TaxonRecordID",
+							"type": "xs:string",
+							"xs:annotation": {
+								"xs:documentation": "Unique identifier of the record within the database."
+							}
+						}, {
+							"ref": "dwc:nameAccordingTo",
+							"minOccurs": 0
+						}, {
+							"ref": "dwc:taxonConceptID",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon."
+							}
+						}, {
+							"name": "GlobalUniqueIdentifier",
+							"type": "xs:string",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "An Uniform Resource Name (URN) used as an unique identifier of the taxon record."
+							}
+						}, {
+							"ref": "Abstract",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "A brief summary of the most relevant or attractive features of this taxón to the general public. Could point to any kind of information. Example: Blue whale is the largest mammal in the world."
+							}
+						}
+					]
+				}
+			}, {
+				"name": "BehaviorType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "BehaviorAtomized"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "BehaviorUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "CommonNamesAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "CommonName",
+							"type": "xs:string"
+						}, {
+							"name": "Language",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The language of the taxon record, according to ISO 639."
+							}
+						}, {
+							"name": "UsedIn",
+							"type": "DistributionType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Location where the common name is used"
+							}
+						}, {
+							"name": "UsedBy",
+							"type": "xs:string",
+							"minOccurs": 0
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "CommonNamesType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "CommonNamesAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "CommonNamesUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "DemographyAndThreatType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "Territory",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Information associated mostly to vertebrates, referring to the territorial extension of the individual or group in terms of its activities (feeding, mating, etc.)"
+									}
+								}, {
+									"ref": "PopulationBiology",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Study of the variations in time and space as well as size and density of populations, and the factors that cause such variations."
+									}
+								}, {
+									"ref": "ThreatStatus",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Information about the status of the taxon."
+									}
+								}, {
+									"ref": "DirectThreats",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "VCR. Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future."
+									}
+								}, {
+									"ref": "Legislation",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "A national proposed law or group of laws. A regional proposed law or group of laws."
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DemographyAndThreatUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "DescriptionItemType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "ItemAttribute"
+						}, {
+							"name": "ItemValue"
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "DetailType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "dwc:MeasurementOrFact",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "DispersalType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DispersalAtomized"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DispersalUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "DistributionAtomizedType",
+				"xs:sequence": {
+					"xs:choice": {
+						"xs:element": {
+							"name": "GeographicEntity",
+							"xs:annotation": {
+								"xs:documentation": "Name of the geographic entity."
+							},
+							"xs:complexType": {
+								"xs:simpleContent": {
+									"xs:extension": {
+										"base": "xs:string",
+										"xs:attribute": {
+											"name": "Catalogue",
+											"use": "required",
+											"xs:annotation": {
+												"xs:documentation": "VC. The geographic entity according to ISO 3166.Catalogue where the GeographicEntity is documented."
+											}
+										}
+									}
+								}
+							}
+						},
+						"xs:sequence": {
+							"xs:element": [
+								{
+									"ref": "dwc:country"
+								}, {
+									"ref": "dwc:stateProvince",
+									"minOccurs": 0
+								}, {
+									"ref": "dwc:county",
+									"minOccurs": 0
+								}, {
+									"ref": "dwc:municipality",
+									"minOccurs": 0
+								}, {
+									"ref": "dwc:locality",
+									"minOccurs": 0
+								}
+							]
+						}
+					},
+					"xs:element": {
+						"ref": "AncillaryData",
+						"minOccurs": 0,
+						"maxOccurs": "unbounded",
+						"xs:annotation": {
+							"xs:documentation": " "
+						}
+					}
+				}
+			}, {
+				"name": "DirectThreatsType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DirectThreatAtomized"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DirectThreatUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "DispersalAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "Purpose",
+							"type": "MeasurementOrFactType",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Makes reference to any data being measured "
+							}
+						}, {
+							"name": "DispersalMeans",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VCR. Zoochory, Anemochory, Hydrochory, Barochory, Autochory"
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Zoochory"
+										}, {
+											"value": "Anemochory"
+										}, {
+											"value": "Hydrochory"
+										}, {
+											"value": "Barochory"
+										}, {
+											"value": "Autochory"
+										}
+									]
+								}
+							}
+						}, {
+							"name": "StructureDispersed",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VCR: Seed, Fruit, Vegetative structure, Spores, Gametes, Eggs, ffspring and Individuals"
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Seed"
+										}, {
+											"value": "Fruit"
+										}, {
+											"value": "Vegetative structure"
+										}, {
+											"value": "Spores"
+										}, {
+											"value": "Gametes"
+										}, {
+											"value": "Eggs"
+										}, {
+											"value": "Offspring"
+										}, {
+											"value": "Individuals"
+										}
+									]
+								}
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}, {
+							"name": "Distance",
+							"minOccurs": 0,
+							"xs:complexType": {
+								"xs:sequence": {
+									"xs:element": [
+										{
+											"ref": "dwc:MeasurementOrFact"
+										}, {
+											"name": "RelatedTo",
+											"type": "xs:string",
+											"minOccurs": 0
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			}, {
+				"name": "DistributionType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "DistributionScope",
+							"minOccurs": 0,
+							"xs:complexType": {
+								"xs:sequence": {
+									"xs:element": {
+										"ref": "AncillaryData",
+										"xs:annotation": {
+											"xs:documentation": " "
+										}
+									}
+								},
+								"xs:attribute": {
+									"name": "Type",
+									"xs:annotation": {
+										"xs:documentation": "VC"
+									}
+								}
+							}
+						}, {
+							"ref": "temporalCoverage",
+							"minOccurs": 0
+						}
+					],
+					"xs:sequence": {
+						"xs:sequence": [
+							{
+								"minOccurs": 0,
+								"xs:element": [
+									{
+										"ref": "DistributionAtomized",
+										"maxOccurs": "unbounded"
+									}, {
+										"ref": "AncillaryData",
+										"minOccurs": 0,
+										"maxOccurs": "unbounded",
+										"xs:annotation": {
+											"xs:documentation": " "
+										}
+									}
+								]
+							}, {
+								"minOccurs": 0,
+								"xs:element": [
+									{
+										"ref": "DistributionUnstructured"
+									}, {
+										"ref": "AncillaryData",
+										"minOccurs": 0,
+										"maxOccurs": "unbounded",
+										"xs:annotation": {
+											"xs:documentation": " "
+										}
+									}
+								]
+							}
+						]
+					}
+				}
+			}, {
+				"name": "EcologicalSignificanceType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "EcologicalSignificanceAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "EcologicalSignificanceUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "EndemicAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "EndemicTo",
+							"type": "xs:string",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "The concept is applied to one or several countries. Ex:- Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama\r\t"
+							}
+						}, {
+							"name": "EndemicIn",
+							"type": "xs:string",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The concept is applied to an area either multinational or local. Ex: - Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region. - Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain). "
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "EndemicType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "EndemicAtomized",
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": "List of areas structured and categorized the degree of safety."
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "EndemicUnstructured",
+									"xs:annotation": {
+										"xs:documentation": "List of areas presented in an unstructured and categorized the degree of safety."
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "EnvironmentalEnvelopeType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "EnvironmentalEnvelopeAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "EnvironmentalEnvelopeUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "FeedingType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "FeedingAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "FeedingUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "FeedingAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "Thropic",
+							"minOccurs": 0,
+							"xs:complexType": {
+								"xs:sequence": {
+									"xs:element": [
+										{
+											"name": "TrophicStrategy",
+											"minOccurs": 0,
+											"xs:annotation": {
+												"xs:documentation": "VC. Tactic used to obtain energy or nutrients."
+											},
+											"xs:simpleType": {
+												"xs:restriction": {
+													"base": "xs:string",
+													"xs:enumeration": [
+														{
+															"value": "Chemosynthetic"
+														}, {
+															"value": "Photosynthetic"
+														}, {
+															"value": "Vermin"
+														}, {
+															"value": "Decomposers"
+														}, {
+															"value": "FilterFeeders"
+														}, {
+															"value": "Sedimentívoros"
+														}, {
+															"value": "Borers"
+														}, {
+															"value": "Foragers"
+														}, {
+															"value": "Fluidófagos"
+														}
+													]
+												}
+											}
+										}, {
+											"name": "TrophicStrategyRemarks",
+											"minOccurs": 0,
+											"xs:annotation": {
+												"xs:documentation": "Information notes about specific strategy of feeding."
+											}
+										}
+									]
+								}
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}, {
+							"name": "FeedingType",
+							"xs:annotation": {
+								"xs:documentation": "VC. Primary diet source. "
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Autotrophs"
+										}, {
+											"value": "Palynivore"
+										}, {
+											"value": "Nectarivore"
+										}, {
+											"value": "Granivore"
+										}, {
+											"value": "Frugivore"
+										}, {
+											"value": "Rhizophagus"
+										}, {
+											"value": "Hematophagy"
+										}, {
+											"value": "Insectivore"
+										}, {
+											"value": "Piscivore"
+										}, {
+											"value": "Oophagy"
+										}, {
+											"value": "Omnivore"
+										}, {
+											"value": "Scavenger"
+										}, {
+											"value": "Saprophagous"
+										}, {
+											"value": "Detritivore"
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			}, {
+				"name": "FullDescriptionType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"xs:element": [
+								{
+									"ref": "FullDescriptionAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"xs:element": [
+								{
+									"ref": "FullDescriptionUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "HabitatAndDistributionType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "Habitats",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "General description of the sites where the species are found (ecosystem, forest, environment or microhabitat). (Placeholder)."
+									}
+								}, {
+									"ref": "Distribution",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": "Species geographical distribution."
+									}
+								}, {
+									"ref": "Endemic",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Organism that lives exclusively in a particular territory and not found anywhere else."
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "HabitatAndDistributionUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "HabitatsType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "HabitatAtomized",
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": "VCR."
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "HabitatUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "HierarchyType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "dwc:kingdom",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the kingdom in which the taxon is classified. Example: \"Animalia\", \"Plantae\"."
+							}
+						}, {
+							"ref": "dwc:phylum",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the phylum or division in which the taxon is classified. Example: \"Chordata\" (phylum), \"Bryophyta\" (division)."
+							}
+						}, {
+							"ref": "dwc:class",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the class in which the taxon is classified. Example: \"Mammalia\", \"Hepaticopsida\"."
+							}
+						}, {
+							"ref": "dwc:order",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the order in which the taxon is classified. Example: \"Carnivora\", \"Monocleales\"."
+							}
+						}, {
+							"ref": "dwc:family",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the family in which the taxon is classified. Example: \"Felidae\", \"Monocleaceae\"."
+							}
+						}, {
+							"ref": "dwc:genus",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the genus in which the taxon is classified. Example: \"Puma\", \"Monoclea\"."
+							}
+						}, {
+							"ref": "dwc:subgenus",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The full scientific name of the subgenus in which the taxon is classified. Values should include the genus to avoid homonym confusion. Example: \"Strobus (Pinus)\", \"Puma (Puma)\" \"Loligo (Amerigo)\", \"Hieracium subgen. Pilosella\"."
+							}
+						}, {
+							"ref": "dwc:taxonRank",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The taxonomic rank of the most specific name in the scientificName. Recommended best practice is to use a controlled vocabulary. Examples: \"subspecies\", \"varietas\", \"forma\", \"species\", \"genus\"."
+							}
+						}, {
+							"ref": "dwc:specificEpithet",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The name of the first or species epithet of the scientificName. Example: \"concolor\", \"gottschei\"."
+							}
+						}, {
+							"ref": "dwc:infraspecificEpithet",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation. Example: \"concolor\", \"oxyadenia\", \"sayi\"."
+							}
+						}, {
+							"ref": "dwc:higherClassification",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "A list (concatenated and separated) of taxa names terminating at the rank immediately superior to the taxon referenced in the taxon record. Recommended best practice is to order the list starting with the highest rank and separating the names for each rank with a semi-colon (\";\"). Example: \"Animalia;Chordata;Vertebrata;Mammalia;Theria;Eutheria;Rodentia;Hystricognatha;Hystricognathi;Ctenomyidae;Ctenomyini;Ctenomys\"."
+							}
+						}, {
+							"name": "ParentTaxon",
+							"minOccurs": 0,
+							"xs:complexType": {
+								"xs:sequence": {
+									"xs:element": [
+										{
+											"name": "TaxonRecordID",
+											"type": "xs:string",
+											"minOccurs": 0,
+											"xs:annotation": {
+												"xs:documentation": "Unique identifier of the record within the database."
+											}
+										}, {
+											"ref": "dwc:taxonRank",
+											"xs:annotation": {
+												"xs:documentation": "The taxonomic rank of the most specific name in the scientificName. Recommended best practice is to use a controlled vocabulary. Examples: \"subspecies\", \"varietas\", \"forma\", \"species\", \"genus\"."
+											}
+										}, {
+											"name": "taxonValue",
+											"minOccurs": 0
+										}
+									]
+								}
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				},
+				"xs:attribute": [
+					{
+						"name": "classification"
+					}, {
+						"name": "recommended"
+					}
+				]
+			}, {
+				"name": "IdentificationKeysType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "Keys",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Dichotomic or multientrance keys."
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "InteractionAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "SpeciesInteraction",
+							"type": "ResourceRelationshipType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The category of information pertaining to relationships between resources (instances of data records, such as Occurrences, Taxa, Locations, Events."
+							}
+						}, {
+							"name": "SpeciesInteractionType",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "VC. String with the type of interaction."
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "InteractionsType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "InteractionAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "InteractionUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "InvasivenessType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "InvasivenessAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "InvasivenessUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "InvasivenessAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "gisin:origin",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:presence",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:persistence",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:distribution",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}, {
+							"ref": "gisin:harmful",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:modified",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:startValidDate",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:endValidDate",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:countryCode",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:stateProvince",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:county",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:localityName",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:language",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:citation",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:abundance",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:trend",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:rateOfSpread",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:regulatoryListing",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:memo",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:publicationDate",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:localityType",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:locationValue",
+							"minOccurs": 0
+						}, {
+							"ref": "gisin:publicationDatePrecision",
+							"minOccurs": 0
+						}, {
+							"name": "WhatImpact",
+							"xs:annotation": {
+								"xs:documentation": "What the actual impact is, for instance: Is it eating all the riparian vegetation? Are their burrows destroying irrigation systems? Is it displacing Arvicola sapidus?"
+							}
+						}, {
+							"name": "vector",
+							"minOccurs": 0
+						}, {
+							"name": "Route",
+							"minOccurs": 0
+						}, {
+							"name": "impactTarget",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Who/what is impacting."
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Economy"
+										}, {
+											"value": "Environment"
+										}, {
+											"value": "HumanHealth"
+										}, {
+											"value": "Unknown"
+										}
+									]
+								}
+							}
+						}, {
+							"name": "impactMechanism",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Mechanism of introduction or impact to a new location."
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Allergeny"
+										}, {
+											"value": "Competition"
+										}, {
+											"value": "DiseaseTransmission"
+										}, {
+											"value": "Fouling"
+										}, {
+											"value": "Herbivory"
+										}, {
+											"value": "Hybridization"
+										}, {
+											"value": "InhibitsGrowthOfOtherSpecies"
+										}, {
+											"value": "InteractionWithOtherInvasiveSpecies"
+										}, {
+											"value": "ModifiesFireRegime"
+										}, {
+											"value": "ModifiesHydrology"
+										}, {
+											"value": "ModifiesNaturalBenthicCommunities"
+										}, {
+											"value": "ModifiesNutrientRegime"
+										}, {
+											"value": "ModifiesSuccessionalPatterns"
+										}, {
+											"value": "OtherSeeMemoForDescription"
+										}, {
+											"value": "Parasitism"
+										}, {
+											"value": "Pathogenic"
+										}, {
+											"value": "PhysicalDisturbance"
+										}, {
+											"value": "PollenSwamping"
+										}, {
+											"value": "Predation"
+										}, {
+											"value": "Transpiration "
+										}, {
+											"value": "Unknown"
+										}
+									]
+								}
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "LegislationAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "LegislationName",
+							"type": "xs:string",
+							"xs:annotation": {
+								"xs:documentation": "Word or phrase to designate the law or group of laws"
+							}
+						}, {
+							"name": "ProtectionLegalStatus",
+							"type": "xs:string",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VC. Description of the status."
+							}
+						}, {
+							"name": "LegislationRead",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The oficial document in which the user can read the legislation."
+							}
+						}, {
+							"name": "legislationStatus",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VCR: Consolidated, Repealed"
+							}
+						}, {
+							"name": "legislationType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VCR: included, not included"
+							}
+						}, {
+							"name": "legalNorm",
+							"minOccurs": 0
+						}, {
+							"name": "AppliesTo",
+							"type": "DistributionType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Location where the legislation is used."
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "LegislationType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LegislationAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LegislationUnstructured",
+									"xs:annotation": {
+										"xs:documentation": "Enumeration of the law or group of laws in an unstructured format."
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "LifeCycleType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LifeCycleAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LifeCycleUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "LifeFormType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LifeFormAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LifeFormUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "ManagementAndConservationType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "ManagementAndConservationAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "ManagementAndConservationUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "ManagementAndConservationAtomizedType",
+				"xs:sequence": {
+					"xs:element": {
+						"name": "Objectives",
+						"minOccurs": 0
+					},
+					"xs:sequence": {
+						"xs:element": [
+							{
+								"name": "ManagementPlan",
+								"type": "xs:string",
+								"minOccurs": 0,
+								"Comment": "<xs:complexType>\r\t\t\t\t\t\t<xs:sequence>\r\t\t\t\t\t\t\t<xs:element name=\"AdministrativeManagement\" type=\"xs:string\"/>\r\t\t\t\t\t\t\t<xs:element name=\"TechnicalManagement\" type=\"xs:string\"/>\r\t\t\t\t\t\t\t<xs:element name=\"PopulationPerformance\" type=\"xs:string\"/>\r\t\t\t\t\t\t\t<xs:element name=\"ControlInformation\">\r\t\t\t\t\t\t\t\t<xs:complexType>\r\t\t\t\t\t\t\t\t\t<xs:sequence>\r\t\t\t\t\t\t\t\t\t\t<xs:element name=\"MonitoringProcedure\" type=\"xs:string\"/>\r\t\t\t\t\t\t\t\t\t\t<xs:element name=\"UsedTools\" type=\"xs:string\"/>\r\t\t\t\t\t\t\t\t\t</xs:sequence>\r\t\t\t\t\t\t\t\t</xs:complexType>\r\t\t\t\t\t\t\t</xs:element>\r\t\t\t\t\t\t</xs:sequence>\r\t\t\t\t\t</xs:complexType>"
+							}, {
+								"name": "Actions",
+								"maxOccurs": "unbounded",
+								"xs:complexType": {
+									"xs:attribute": {
+										"name": "type",
+										"xs:annotation": {
+											"xs:documentation": "VCR"
+										}
+									}
+								}
+							}
+						]
+					},
+					"xs:element": [
+						{
+							"name": "HumanAndEnvironmentalRelevance",
+							"type": "xs:string",
+							"minOccurs": 0
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				},
+				"xs:attribute": {
+					"name": "type",
+					"type": "xs:string",
+					"xs:annotation": {
+						"xs:documentation": "VCR"
+					}
+				}
+			}, {
+				"name": "MeasurementOrFactType",
+				"xs:annotation": {
+					"xs:documentation": " From dwc"
+				},
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "dwc:MeasurementOrFact"
+						}, {
+							"name": "RelatedTo",
+							"type": "xs:string",
+							"minOccurs": 0
+						}
+					]
+				}
+			}, {
+				"name": "MetadataType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "Dataset_ID",
+							"type": "xs:string"
+						}, {
+							"name": "dateStamp",
+							"type": "xs:date",
+							"xs:annotation": {
+								"xs:documentation": "The date the metadata document was created or modified."
+							}
+						}, {
+							"name": "citation",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "A single citation for use when citing the dataset."
+							},
+							"xs:complexType": {
+								"xs:attribute": {
+									"name": "identifier",
+									"xs:annotation": {
+										"xs:documentation": "A URI, DOI or other persistent identifier for the citation."
+									}
+								}
+							}
+						}, {
+							"ref": "dataset"
+						}, {
+							"name": "resourceLogoUrl",
+							"type": "xs:anyURI",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "URL of the logo associated with this dataset."
+							}
+						}, {
+							"ref": "References",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "MigratoryAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "Causes",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "VCR: Seasonal climatic variation, Resource availability and Reproduction "
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Seasonal climatic variation"
+										}, {
+											"value": "Resource availability"
+										}, {
+											"value": "Reproduction "
+										}
+									]
+								}
+							}
+						}, {
+							"name": "Patterns",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "VCR. Latitudinal, Longitudinal , Altitudinal , Vertical in water columns and Local migrant"
+							},
+							"xs:simpleType": {
+								"xs:restriction": {
+									"base": "xs:string",
+									"xs:enumeration": [
+										{
+											"value": "Latitudinal"
+										}, {
+											"value": "Longitudinal"
+										}, {
+											"value": "Altitudinal"
+										}, {
+											"value": "Vertical in water columns"
+										}, {
+											"value": "Local migrant"
+										}
+									]
+								}
+							}
+						}, {
+							"name": "Routes",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Trajectory followed by the species"
+							}
+						}, {
+							"name": "Season",
+							"type": "xs:string",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Time of year in which a species migrates. "
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "MigratoryType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "MigratoryAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "MigratoryUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "MiscDetailType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DetailAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "DetailUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "MolecularDataType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "MolecularDataAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "MolecularDataUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "MolecularDataAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "dwc:MeasurementOrFact",
+							"minOccurs": 0
+						}, {
+							"name": "RelatedTo",
+							"type": "xs:string",
+							"minOccurs": 0
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "NaturalHistoryType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "LifeForm",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "VC. General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs. "
+									}
+								}, {
+									"ref": "LifeCycle",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "VC. Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes. "
+									}
+								}, {
+									"ref": "Reproduction",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "All data related to the production of offspring. "
+									}
+								}, {
+									"ref": "AnnualCycles",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Set of changes or events that recurrently take place at the same time of year and are influenced by seasonal and interannual climate variations. For example: reproduction, flowering, fruiting, emergence of insects, etc. Also called phenology, mainly in plants. In the case of migration, refers only to the timing of it; other data about this are gathered in MigratoryData."
+									}
+								}, {
+									"ref": "Feeding",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Information related to supply food for the development and sustenance of the individual and/or its offspring."
+									}
+								}, {
+									"ref": "Dispersal",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "The permanent spreading of individuals away from each other not including return. Dispersal determines the range over which genetic mixing occurs, and thus, the degree of homogeneity and inbreeding in a population"
+									}
+								}, {
+									"ref": "Behavior",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Responses, reactions or movements made by an organism in a particular situation."
+									}
+								}, {
+									"ref": "Interactions",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Mutual or reciprocal actions or influences. For example, predation, parasitism, mutualism, etc. Relations with products grown and stored by man (plagues) are also included."
+									}
+								}, {
+									"ref": "MolecularData",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)"
+									}
+								}, {
+									"ref": "Migratory",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "The regular, usually seasonal, movement of all or part of an animal population to and from a given area, which can occur in variable periods of time and even involve more than one generation. "
+									}
+								}, {
+									"ref": "EcologicalSignificance",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "VCR. Ecological importance of the taxon. (Placeholder)"
+									}
+								}, {
+									"ref": "MiscDetails",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Miscellaneus: notes attached to the taxon natural history information"
+									}
+								}, {
+									"ref": "EnvironmentalEnvelope",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Environmental ranges in which species live, e.g. annual rainfall, average, 450 mm"
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "NaturalHistoryUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "NomenclatureAndClassificationType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "TaxonRecordName",
+									"xs:annotation": {
+										"xs:documentation": "Complete information about the name of the taxon"
+									}
+								}, {
+									"ref": "Synonyms",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Different names for this taxon. This concept is a placeholder field. "
+									}
+								}, {
+									"ref": "CommonNames",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "List of vernacular names."
+									}
+								}, {
+									"ref": "Hierarchy",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": "Hierarchical categories. Modified from Linnean Core. Option: fill all or principal ranks and optionally provide keys. "
+									}
+								}, {
+									"ref": "MiscDetails",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Miscellaneus: notes attached to the taxon information. E.g. Pronunciation, etymology, ..."
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"name": "NomenclatureAndClassificationUnstructured",
+									"type": "xs:string"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "PopulationBiologyType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "PopulationBiologyAtomized",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "PopulationBiologyUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "PopulationBiologyAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "AbundanceData",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Total number of individuals of a population"
+							}
+						}, {
+							"name": "DensityData",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Size of a population in relation to a definite unit of space "
+							}
+						}, {
+							"name": "PatternDistribution",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VCR Clumped, Uniform and Random"
+							}
+						}, {
+							"name": "Size",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Estimation of the size, usually expressed as a range, of the populations of a species. (E.g. “total population size is estimated between 200,000 to 400,000 ducks in its distribution area”)."
+							}
+						}, {
+							"name": "SexRatio",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The relative number of males to females in a population "
+							}
+						}, {
+							"name": "Fecundity",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Potential ability of an organism to produce eggs or young;\r\t\t\t\t\t\trate of production of young by a female "
+							}
+						}, {
+							"name": "MortalityRate",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The probability of dying; the ratio of number dying in a given time interval to the number alive at the beginning of the time interval "
+							}
+						}, {
+							"name": "BirthRate",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Production of new individuals in a population "
+							}
+						}, {
+							"name": "NumberIndividualsPerObservation",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "In case of having census data "
+							}
+						}, {
+							"name": "AverageDensity",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Average of the densities obtained for a population"
+							}
+						}, {
+							"name": "PopulationTrend",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VCR Stable, Increasing and Dreasing"
+							}
+						}, {
+							"name": "Recruitment",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Proportion of plants or animals that reach a size or age when  become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce "
+							}
+						}, {
+							"name": "PopulationGrowthRate",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Rate that estimates the annual growth rate of a population based on the births, rates, emigration and immigration."
+							}
+						}, {
+							"name": "Emigration",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Movement of individuals outside a population, or from one area to another "
+							}
+						}, {
+							"name": "Immigration",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Individuals entering a population "
+							}
+						}, {
+							"name": "DescriptionLifeStages",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Sex/age categories or life stages of a species; can be size in the case of plants."
+							}
+						}, {
+							"name": "ProportionIndividualsPerStageLife",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Percentage of individuals that belong to each life stage"
+							}
+						}, {
+							"name": "CarryingCapacity",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Maximum population density defined by resources in the absence of predator and parasites."
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				},
+				"xs:attribute": {
+					"name": "Region"
+				}
+			}, {
+				"name": "RecordMetadataType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "Language",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The language of the taxon record, according to ISO 639."
+							}
+						}, {
+							"ref": "TargetAudiences",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Users to which the information is addressed. The defined audiences are: Biodiversity researchers, teachers and students, decision makers, professionals from another areas and general public."
+							}
+						}, {
+							"ref": "Version",
+							"xs:annotation": {
+								"xs:documentation": "Number and date of the current version."
+							}
+						}, {
+							"ref": "Revision",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " Creators, revision status and dates of the entire data collection."
+							}
+						}
+					]
+				}
+			}, {
+				"name": "ReproductionType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "ReproductionAtomized",
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": "VC"
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "ReproductionUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "ResourceRelationshipType",
+				"xs:annotation": {
+					"xs:documentation": " From dwc"
+				},
+				"xs:sequence": {
+					"xs:element": {
+						"ref": "dwc:ResourceRelationship"
+					}
+				}
+			}, {
+				"name": "RevisionType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"ref": "associatedParty",
+							"minOccurs": 0
+						}, {
+							"ref": "pubDate"
+						}, {
+							"ref": "dc:created"
+						}
+					]
+				}
+			}, {
+				"name": "SynonymsAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "SynonymName",
+							"type": "tcs:ScientificName"
+						}, {
+							"name": "SynonymStatus",
+							"type": "xs:string",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "VC"
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "SynonymsType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "SynonymsAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "SynonymsUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "TargetAudiencesType",
+				"xs:choice": {
+					"xs:element": [
+						{
+							"ref": "Audience",
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "VC. Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low). "
+							}
+						}, {
+							"ref": "AudiencesUnstructured",
+							"xs:annotation": {
+								"xs:documentation": "List audience codes separated by means of comma or /."
+							}
+						}
+					]
+				}
+			}, {
+				"name": "TaxonomicDescriptionType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "BriefDescription",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa."
+									}
+								}, {
+									"ref": "FullDescription",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism."
+									}
+								}, {
+									"ref": "IdentificationKeys",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons. For example: If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms) "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "TaxonomicDescriptionUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "TaxonRecordNameType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "ScientificName",
+							"type": "tcs:ScientificName",
+							"xs:annotation": {
+								"xs:documentation": "Complete name of the taxon."
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "TerritoryType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "TerritoryAtomized"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "TerritoryUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "TerritoryAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "ExtentOfOccurrence",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Area contained within the shortest continuous imaginary boundary which can be drawn to encompass all the known, inferred or projected sites of present occurrence of a taxon, excluding cases of vagrancy."
+							}
+						}, {
+							"name": "AreaOfOccupancy",
+							"type": "DetailType",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Area within its 'extent of occurrence' (see EOO) which is occupied by a taxon, excluding cases of vagrancy. The measure reflects the fact that a taxon will not usually occur throughout the area of its extent of occurrence, which may contain unsuitable or unoccupied habitats. Reference: http://www.iucnredlist.org/technical-documents/categories-and-criteria/2001-categories-criteria#definitions\r"
+							}
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": " "
+							}
+						}
+					]
+				}
+			}, {
+				"name": "TextDescriptionType",
+				"xs:sequence": {
+					"xs:element": {
+						"ref": "description"
+					}
+				}
+			}, {
+				"name": "ThreatStatusType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "ThreatStatusAtomized",
+									"maxOccurs": "unbounded"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "ThreatStatusUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "ThreatStatusAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "ThreatCategory",
+							"type": "xs:string",
+							"xs:annotation": {
+								"xs:documentation": "VCR. Description of the threat status."
+							}
+						}, {
+							"name": "Authority",
+							"type": "xs:string",
+							"maxOccurs": "unbounded",
+							"xs:annotation": {
+								"xs:documentation": "Organism or institution that assess the status"
+							}
+						}, {
+							"name": "AppliesTo",
+							"type": "DistributionType",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Location where the status is used."
+							}
+						}
+					]
+				}
+			}, {
+				"name": "UsesManagementAndConservationType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "Uses",
+									"minOccurs": 0,
+									"xs:annotation": {
+										"xs:documentation": "Ways in which species are utilized by people. Including Folklore"
+									}
+								}, {
+									"ref": "ManagementAndConservation",
+									"minOccurs": 0
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "UsesManagementAndConservationUnstructured"
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "UsesType",
+				"xs:sequence": {
+					"xs:sequence": [
+						{
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "UsesAtomized",
+									"maxOccurs": "unbounded",
+									"xs:annotation": {
+										"xs:documentation": "Are also applied to Animals and Fungis"
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}, {
+							"minOccurs": 0,
+							"xs:element": [
+								{
+									"ref": "UsesUnstructured",
+									"xs:annotation": {
+										"xs:documentation": " "
+									}
+								}, {
+									"ref": "AncillaryData",
+									"minOccurs": 0,
+									"maxOccurs": "unbounded"
+								}
+							]
+						}
+					]
+				}
+			}, {
+				"name": "UsesAtomizedType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "SourceOfInformation",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations should be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the informant recorded (name, gender, approximate age, occupation, ethnic identity, locality and language spoken)."
+							},
+							"xs:complexType": {
+								"xs:sequence": {
+									"xs:element": [
+										{
+											"name": "References",
+											"type": "eol:referenceType",
+											"maxOccurs": "unbounded"
+										}, {
+											"name": "SourceOfInformationText"
+										}
+									]
+								}
+							}
+						}, {
+							"name": "Use-Value",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a weed affecting food production, or as an accident al poison)?"
+							}
+						}, {
+							"name": "PartUsed",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Which plant parts are used, or have any negative values ?"
+							}
+						}, {
+							"name": "Users",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Who recognises the value of the plant? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/area )."
+							}
+						}, {
+							"name": "Organisms",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Which organisms use the plant/plant parts (e.g . for forage , medicines) or are affected by the plant (e.g. by poisons)?"
+							}
+						}, {
+							"name": "VernacularNameUseAnnotations",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. The name of the taxon must be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refers to more than one taxon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to which the names belong should be stated along with details of ethnic group . Care should be taken with transliteration into the Roman alphabet; if a standard system exists, use it and note which one it is."
+							}
+						}, {
+							"name": "ProductionDetails",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. (where relevant). Are wild /protected /cultivated plants used? Give details of cultivation, harvesting , yields, processing and storage methods and take note of special tools, timing etc."
+							}
+						}, {
+							"name": "MeansOfApplication-Administration",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. This is of particular relevance to medicines, poisons (e.g. insecticides), social products and some environmental purposes (e.g. fert ilisers)."
+							}
+						}, {
+							"name": "SeasonOfAvailability-Use",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Note these and , if relevant, time of day."
+							}
+						}, {
+							"name": "Conservation-ExplotationData",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Record frequency of plants, details of regeneration, sustainability or over-exploitation and note any locally imposed bans on felling or harvesting."
+							}
+						}, {
+							"name": "UseTypeAtomized",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Is it a traditional, modern industrial or just a possible use?"
+							}
+						}, {
+							"name": "Economics",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Is t here trade in the live plants, plant parts, or derived products , and , if so , on what scale?"
+							}
+						}, {
+							"name": "RatingPopularity",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Is the plant highly valued for its use or are other species preferred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessibility, depleted source, or low quality, ineffectiveness, difficult harvesting or processing requirements."
+							}
+						}, {
+							"name": "Properties",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Provide details of properties which influence its value for a specified purpose, e.g . nutritional value for foods; occurrence of bioactive compounds for medicines/poisons; mechanical and physical properties of woods; nectar flow periods and flowering dates for bee plants; calorific values and burning qualities of fuels; sizes of plants used environmentally etc."
+							}
+						}, {
+							"name": "Potential",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Acc. TDWG Economic Botany. Could the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?"
+							}
+						}, {
+							"name": "UseNotes",
+							"minOccurs": 0
+						}, {
+							"ref": "AncillaryData",
+							"minOccurs": 0,
+							"maxOccurs": "unbounded"
+						}
+					]
+				}
+			}, {
+				"name": "VersionType",
+				"xs:sequence": {
+					"xs:element": [
+						{
+							"name": "Major",
+							"type": "xs:nonNegativeInteger",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "The major version number ('1' in 1.2) as defined by the\r\t\t\t\t\t\tcontent creators."
+							}
+						}, {
+							"name": "Minor",
+							"type": "xs:nonNegativeInteger",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "An optional minor version number ('2' in 1.2)"
+							}
+						}, {
+							"name": "Modifier",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed."
+							}
+						}, {
+							"name": "DateIssued",
+							"type": "xs:date",
+							"xs:annotation": {
+								"xs:documentation": "Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!"
+							}
+						}, {
+							"name": "PreferredFlag",
+							"minOccurs": 0,
+							"xs:annotation": {
+								"xs:documentation": "TRUE to indicate currente version when providers serve more than one record per taxon."
+							}
+						}
+					]
+				}
+			}
+		],
+		"Comment": [
+			"  =============================================   ", "Basic datatypes", "  =============================================   "
+		],
+		"xs:complexType": {
+			"name": "NormalDate",
+			"xs:annotation": {
+				"xs:documentation": "String (i. e. xs:string with minimum length=1) extended with language attribute"
+			},
+			"xs:simpleContent": {
+				"xs:extension": {
+					"base": "xs:date",
+					"xs:attribute": {
+						"name": "language",
+						"type": "xs:language",
+						"use": "optional"
+					}
+				}
+			}
+		}
+	}
+}
