@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/style/human.xsl"?>
+<extension xmlns="http://rs.gbif.org/extension/"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:dc="http://purl.org/dc/terms/"
+           xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
+           dc:title="Plinian Core Endemicity Extension"
+           name="Endemicity" namespace="http://rs.tdwg.org/plic/terms/" rowType="http://rs.tdwg.org/plic/terms/Endemicity"
+           dc:subject="plic:Endemicity; dwc:Taxon"
+           dc:issued="2024-04-18"
+           dc:relation="https://github.com/tdwg/PlinianCore/blob/master/Normative%20term%20list.md"
+           dc:description="A marker that indicates that an organism lives exclusively in a particular territory and can not be found anywhere else. List of areas structured and categorized by the degree of safety.">
+    <property name='EndemicTo'
+              group='Endemicity'
+              namespace='http://rs.tdwg.org/plic/terms'
+              type='string'
+              qualName='http://rs.tdwg.org/plic/terms/EndemicTo'
+              dc:relation='https://github.com/tdwg/PlinianCore/blob/master/Normative%20term%20list.md#plic_EndemicTo'
+              dc:description="The concept is applied to one or several countries, in this case it's recommended to separate the values with a vertical bar (';');"
+              examples='"Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China.", "Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama."'
+              required='false'/>
+    <property name='EndemicIn'
+              group='Endemicity'
+              namespace='http://rs.tdwg.org/plic/terms'
+              type='string'
+              qualName='http://rs.tdwg.org/plic/terms/EndemicIn'
+              dc:relation='https://github.com/tdwg/PlinianCore/blob/master/Normative%20term%20list.md#plic_EndemicIn'
+              dc:description='The area that works as a context for specifying endemic areas of a species. A controlled vocabulary is recommended. The term may go from local to above-country levels. If not specified, the Earth as a whole is assumed as the geographical context.'
+              examples='"Vicuña (Vicugna vicugna Molina, 1782) endemic to the Andean region.", "Manzanilla Real (Artemisia granatensis Boiss.) endemic to the peaks of Sierra Nevada (Spain)."'
+              required='false'/>
+</extension>
