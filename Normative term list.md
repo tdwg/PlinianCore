@@ -175,7 +175,6 @@ Table 1. Vocabularies from which terms have been borrowed:
 
 | **Borrowed Terms** | **Categories in which the term is used** |
 | --- | --- |
-| Citation | Dataset Metadata |
 | dateStamp | Dataset Metadata |
 | resourceLogoUrl | Dataset Metadata |
 | RangeOfDates | Habitat And Distribution, Demography And Threat |
