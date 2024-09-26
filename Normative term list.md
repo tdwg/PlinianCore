@@ -116,6 +116,7 @@ Table 1. Vocabularies from which terms have been borrowed:
 | [dwc:genus](https://dwc.tdwg.org/terms/#dwc:genus) | Nomenclature And Classification |
 | [dwc:subgenus](https://dwc.tdwg.org/terms/#dwc:subgenus) | Nomenclature And Classification |
 | [dwc:specificEpithet](https://dwc.tdwg.org/terms/#dwc:specificEpithet) | Nomenclature And Classification |
+| [dwc:infraspecificEpithet](https://dwc.tdwg.org/terms/#dwc:infraspecificEpithet) | Nomenclature And Classification |
 | [dwc:infragenericEpithet](https://dwc.tdwg.org/terms/#dwc:infragenericEpithet) | Nomenclature And Classification |
 | [dwc:taxonRank](https://dwc.tdwg.org/terms/#dwc:taxonRank) | Nomenclature And Classification |
 | [dwc:higherClassification](https://dwc.tdwg.org/terms/#dwc:higherClassification) | Nomenclature And Classification |
